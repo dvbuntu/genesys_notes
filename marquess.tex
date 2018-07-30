@@ -1,0 +1,229 @@
+\documentclass{article}
+\usepackage{calc}
+\usepackage{genesys}
+\geometry{margin=0.5in}
+
+\setmainfont[Scale=0.9]{Crimson}
+\setsansfont[Scale=0.9]{Bebas Neue}
+
+% Characteristics
+\newcommand{\Bra}{3}
+\newcommand{\Agi}{2}
+\newcommand{\Int}{2}
+\newcommand{\Cun}{3}
+\newcommand{\Wil}{2}
+\newcommand{\Pre}{3}
+
+
+
+
+\begin{document}
+\begin{minipage}{0.6\linewidth}
+    {\Huge Alexandria Lloyd-Cunningham}\\
+    {\LARGE Marquess Slingsby of Southwark-on-Rey}
+
+% archetype/career
+{\large Aristocrat Leader}
+
+\vspace{1.5em}
+
+\end{minipage}\hfill%
+\\
+
+\begin{minipage}{0.33\linewidth}
+\vspace{0em}\raggedright
+%\includegraphics[width=.9\linewidth]{elf}\\
+\end{minipage}
+
+
+\begin{center}
+\Characteristics{\Bra}{\Agi}{\Int}{\Cun}{\Wil}{\Pre}
+
+% Derived values
+\noindent\null\hfill\Derived{Soak Value}{4}\quad
+\Derived{Wound Threshold}{13}\null\quad
+\Derived{Strain Threshold}{12}\quad
+\DerivedSplit{Defense}{1}{1}{Melee}{Ranged}\quad
+\Derived{Encumbrance Thresh}{8}\hfill\null
+\end{center}
+
+%{\centering
+%\tikz \node[signal, draw, minimum width=0.3\linewidth, fill=black, text=white, signal to=east and west]{\bfseries\sffamily CHARACTERISTICS};\\[0.5em]}
+
+\vspace{0.5em}
+
+\CharSect{SKILLS}
+
+
+\vspace{-3em}
+
+\begin{multicols}{2}
+{\sffamily
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{General Skills} & Dice Pool & Rank \\
+Alchemy (Int) & \skilldice{\Int}{0}   & \skill[0] \\
+Athletics (Br) & \skilldice{\Bra}{0}   & \skill[0] \\
+Cool* (Pr) & \skilldice{\Pre}{1}   & \skill[1] \\
+Coordination (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Discipline* (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Medicine (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Mechanic (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Operating (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Perception* (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Resilience (Br) & \skilldice{\Bra}{0}   & \skill[0]\\
+Riding (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Skulduggery (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Stealth (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Streetwise (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Survival (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Vigilance (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+\end{GenesysTable}
+%\begin{GenesysTable}{l X[l] X[c]}
+%\textbf{Magic Skills} & Dice Pool & Rank \\ 
+%Arcane (Int) & \skilldice{2}{0}   & \skill[0]\\
+%Divine (Will) & \skilldice{2}{0}   & \skill[0]\\
+%Primal (Cun) & \skilldice{3}{1}   & \skill[1]\\
+%\end{GenesysTable}
+    \vspace*{\fill}\columnbreak
+\begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Combat Skills} & Dice Pool & Rank \\ 
+Brawl (Br) & \skilldice{\Bra}{0}   & \skill[0]\\
+Melee* (Br) & \skilldice{\Bra}{1}   & \skill[1]\\
+Ranged--Light (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Ranged--Heavy (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+\end{GenesysTable}
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Social Skills} & Dice Pool & Rank \\ 
+Charm* (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+Coercion* (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Deception (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Leadership* (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+Negotiation* (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+\end{GenesysTable}
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Knowledge Skills} & Dice Pool & Rank \\ 
+Education (Int) & \skilldice{\Int}{1}   & \skill[1]\\
+Lore (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+\end{GenesysTable}}
+{\small{* Indicates a career skill}}
+\end{multicols}
+
+
+\CharSect{ABILITIES/TALENTS}
+
+\begin{itemize}[noitemsep]
+    \item\textbf{Forceful Personality:} Once per session, spend a story point as an incidental.  During the next skill check that turn, double the strain you inflict or heal (choose before check).
+%    \Advantage\  \Threat\ 
+    \item\textbf{Duelist:} Add \BoostDie to melee combat checks while engaged with a single opponent.  Add \SetbackDie to melee combat checks when engaged with 3 or more opponents.
+    \item\textbf{Parry:} Once per melee hit, while wielding a melee weapon, suffer 3 strain to reduce damage (before soak) by 2 + ranks in Parry.
+    \item\textbf{Scathing Tirade:} As an action, make a \DifficultyDie\DifficultyDie Coercion check.  For each \Success, one enemy within Short range suffers 1 strain.  For each \Advantage, one enemy affected by Scathing Tirade suffers one additional strain.
+\end{itemize}
+
+
+\CharSect{WEAPONS}
+
+
+{\small\sffamily
+\begin{GenesysTable}{l c c c c X[l]}
+\textbf{Weapon} & \textbf{Skill} & \textbf{Damage} & \textbf{Crit} & \textbf{Range} & \textbf{Special}\\
+Sword Cane & Melee & +1 & 2 & Engaged & Defensive 1 \\
+\end{GenesysTable}
+}
+
+
+\vfill
+\pagebreak
+
+%%%%%
+% Page Break
+%%%%%
+
+\CharSect{MOTIVATIONS}
+
+\null\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Strength:}\small\ Courageous\\ Keep calm and carry on.
+\end{minipage}}\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Flaw:} \small\ Intolerance\\ Nobility is meant to lead...others to follow.
+\end{minipage}}\hfill\null
+
+\vspace{0.5em}
+
+\null\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Desire:}\small\ Knowledge\\ Surely the Tyrenian colonies cannot have been completely uninhabited.
+\end{minipage}}\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Fear:}\small\ Change\\ The House of Heliotrope rules and always will.
+\end{minipage}}\hfill\null
+
+\vspace{2em}
+
+
+
+
+\CharSect{EQUIPMENT}
+
+
+{\centering
+\begin{GenesysTable}{l r r r r}
+    Item & Enc & \$ & Rarity & Qty\\
+    Sword Cane & 1 & 110 & 3 & 1\\
+    Cogsuit & 3 & 275 & 3 & 1\\
+    Painkiller & 0 & 25 & 2& 3\\
+\end{GenesysTable}\\[0.5em]
+}
+
+\vspace{2em}
+
+\CharSect{NOTES}
+
+
+\begin{itemize}
+    \item +1 Melee defense when wielding sword cane
+    \item Personal Rival: Michel Chartres-Rouen
+\end{itemize}
+
+\CharSect{CHANGE LOG}
+
+\begin{multicols}{2}
+\setlength{\columnseprule}{0.3pt}
+\begin{itemize}[noitemsep]
+\item 50XP Bra 1 \faArrowRight\ 2 \faArrowRight\ 3
+\item 30XP Cun 2 \faArrowRight\ 3
+\item 5XP Duelist
+\item 5XP Parry
+\item 10XP Scathing Tirade
+\item +25XP for completed threads
+\end{itemize}
+\end{multicols}
+
+
+\vspace*{\fill}
+
+\fbox{\parbox{5em}{\centering 100\\Total XP}}\hfill\fbox{\parbox{5em}{\centering 0\\Available XP}}
+
+
+\pagebreak
+
+\CharSect{TALENT PYRAMID}
+
+\noindent\begin{tabu} to \linewidth{*{5}{X}}
+\rowfont{\bfseries\sffamily\centering} Tier 1 & Tier 2 & Tier 3 & Tier 4 & Tier 5\\
+\rowfont{\small\sffamily\centering} 5XP & 10XP & 15XP & 20XP & 25XP\\
+Duelist\\
+\cline{1-1}
+Parry & Scathing Tirade \\
+\cline{1-2}
+ &  & \\
+\cline{1-3}
+ &  & & \\
+\cline{1-4}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+
+\end{tabu}
+
+\end{document}

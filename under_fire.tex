@@ -1,29 +1,49 @@
 \documentclass{book}
 
+\usepackage[dvipsnames, table]{xcolor}
 \usepackage{swrpg}
 \usepackage{genesys}
+\usepackage{hyperref}
 %\geometry{paperheight=13in}
+\usepackage{multicol}
 
 \swrpgbackground
 
 % starwars dice
 \newcommand{\df}{\difficulty}
-\newcommand{\sb}{\setback}
+\newcommand{\stb}{\setback}
 \newcommand{\ch}{\challenge}
 
+\renewcommand\Characteristics[6]{
+\noindent\hfill
+\charPart{BRAWN}{#1}\kern-.1em
+\charPart{AGILITY}{#2}\kern-.1em
+\charPart{INTELLECT}{#3}\kern-.1em
+\charPart{CUNNING}{#4}\kern-.1em
+\charPart{WILLPOWER}{#5}\kern-.1em
+\charPart{PRESENCE}{#6}%
+\hfill\null}
+
+
 \newcommand{\npc}[9]{
-    \emph{#1} \\ name
+    \emph{#1} \\ %name
     \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
-    \DerivedSplit{Health}{#8}{#9}{Wounds}{Soak} % wounds/soak
-    \DerivedSplit{Defense}{#10}{#11}{Melee}{Ranged}\\ % defense
-    #12 \\ %description, abilities, etc
+    \Derived{Wounds}{#8}
+    \Derived{Soak}{#8}
+}
+\newcommand{\npccontinued}[3]{
+    \DerivedSplit{Defense}{#1}{#2}{Melee}{Ranged}\\ % defense
+    #3 %description, abilities, etc
 }
 
+\title{Episode XIII: UNDER FIRE}
+\author{jendefer}
 
 \begin{document}
+\maketitle
 
-Episode XIII\\
-UNDER FIRE\\
+\begin{multicols}{2}
+\section{Intro}
 (Sullust)\\
 
 It is a time of civil war. The evil GALACTIC EMPIRE continues to strike against the rag-tag REBEL ALLIANCE. During this time of downed ships and lost causes, outlaw technician JAE TESSA has created a new style of emergency beacon. Discreet and more powerful than the standard model, these engineering marvels could save countless Rebel lives, but only if they get into the right hands before they are needed.
@@ -34,7 +54,7 @@ Playthe intro for your players: \url{https://starwarsintrocreator.kassellabs.io/
 
 (based on ``First Flight'' \url{https://archiveofourown.org/works/7030051})
 
-\emph{Goal}: Deliver transponders to Aadlan Myder of the Cobalt Laborers’ Reformation Front in Pinyumb.
+\emph{Goal}: Deliver transponders to Aadlan Myder of the Cobalt Laborers’ Reformation Front in Pinyumb.\\
 
 \difficulty\difficulty Knowledge(Outer Rim)\\
 \begin{itemize}
@@ -44,12 +64,18 @@ Playthe intro for your players: \url{https://starwarsintrocreator.kassellabs.io/
     \item \advantage Descended from rodents, Sullustans have a natural sense of direction, which serves them well in the dark caverns and twisting tunnels they call home.
     \item \advantage  Their engineering prowess has tamed their hostile environment. Sullustan cities have nothing to fear from volcanic eruption; shunts divert lava to the surface after passing through geothermal energy collectors. The abundance of lava provides for most of Sullust’s energy needs, and shielded geothermal power plants speckle the surface to power the lights of underground cities.
     \item \advantage SoroSuub Corporation, one of the largest companies in the galaxy. While SoroSuub exports a variety of products throughout the galaxy, it also manufactures and sells almost all consumer goods on Sullust and employs ninety percent of Sullust’s workforce. SoroSuub enjoys a vertical monopoly; it mines, designs, manufactures, transports, and even sells its own products throughout the galaxy. Lucrative Imperial contracts.
+	\item \advantage SoroSuub disbanded the Sullustan Council in 2 BBY, corporate takeover.
     \item \advantage Reduced to vassal status after Clone Wars and a source of fuel for the Imperial Military, becoming an essential mining and manufacturing center for the Empire. Sullustans don’t even count as citizens in the Empire.
-    \item \triumph For years, Sullust remained relatively peaceful as workers accepted the stability offered under the Empire's reign. However, the Cobalt Laborers' Reformation Front steadily began to increase in numbers, sending letters to the Imperial governor demanding better working conditions and increased local autonomy. In response, the Empire detained roughly eighty percent of those in the organization and those it deemed most radical.
+    \item \advantage For years, Sullust remained relatively peaceful as workers accepted the stability offered under the Empire's reign. However, the Cobalt Laborers' Reformation Front steadily began to increase in numbers, sending letters to the Imperial governor demanding better working conditions and increased local autonomy. In response, the Empire detained roughly eighty percent of those in the organization and those it deemed most radical.
+    \item \advantage Was on the side of the Confederacy of Independent Systems during the Clone Wars.
+    \item \advantage Sullustan resistance is independent from but allied with the Rebel Alliance.
+    \item \triumph Stan Tevv, former Senator, is now CEO.  He has a secret agreement with the Rebel Alliance but officially claims neutrality.
+    \item \threat transpose a minor detail in one of the above extra facts
+    \item \despair transpose a major detail (like Sullustans planning to betray the Rebels)
 \end{itemize}
 
 
-\chapter{Arrival on Sullust}
+\section{Arrival on Sullust}
 
 Description:\\
 Half the planet’s surface is covered with belches of ash and toxic gases from its ever-active volcanos; the enormous factories below can be glimpsed through swirls of smoky atmosphere as twinkling lights nestled between traceries of magma.
@@ -58,8 +84,11 @@ The Comms tower contacts all incoming vessels.  Provided the party has legitimat
 
 \begin{quote}
 State the nature of your business in Pinyumb and transmit your crew identifications.
+
 Responding with flight path and docking permit.
+
 Cleared for three-day tourist/work visa. 
+
 Should you choose to remain longer, you’ll need to renew your visa.
 \end{quote}
 
@@ -74,7 +103,7 @@ As they step off the lift, it’s into a commercial district. Neon signs and fla
 
 The party has residential address for Aadlan Myder.
 
-\chapter{Not Home}
+\section{Not Home}
 
 Sullustan woman (Nuev) answers at apartment. There’s a milky film over her black eyes; she’s crying.
 \begin{quote}
@@ -109,13 +138,18 @@ Rescue by ship? Volcanoes are constantly spewing ash and gases and sometimes mag
 
 Zien can provide climbing gear and target coordinates if PCs agree to mount the rescue. Filtration masks with cheek-lamps, rope, canteens of water, harnesses, etc
 
-\chatper{Getting to the Site}
+\section{Getting to the Site}
 
-\difficulty\difficulty\setback\setback Piloting
+Silhouette/2 + \stb\stb\stb Piloting
 
-\threat \threat Landing spot gets blown up by column of surging magma. Have to find alternate landing spot
+\begin{itemize}
+	\item \advantage Gain familiarity with the timing of lava eruptions.  +\boost on next Pilot check or social interaction with a Sullustan.
+	\item \failure Landing spot gets blown up by column of surging magma. Have to find alternate landing spot.
+	\item \threat \threat A lava eruption strikes the ship.  Suffer 2 system strain
+	\item \despair Lava briefly engulfs the ship, causing a critical injury
+\end{itemize}
 
-A Force-sensitive could try Foresee to help with lava spouts. Starting nearby, there is the glow of each organic companions, something positive about each shining with a brilliant light. Potentially have that player identify what that is for each of the characters.
+A Force-sensitive could try Foresee to help with lava spouts. Starting nearby, there is the glow around each of organic companions, something positive about each shining with a brilliant light. Potentially have that player identify what that is for each of the characters.
 
 Examples:
 \begin{itemize}
@@ -128,153 +162,109 @@ Examples:
 Stretching out from there: Around them and under them Sullust is a much more complicated presence. The planet is in pain. Not so much from its ceaseless volcanic activity—there’s a kind of balance in that ever-changing instability, a rhythm to the chaos. But the factories that riddle its surface and the mines that bore into its depth are upsetting its own fragile harmony-in-motion, and the people—the people are exhausted, overworked, impoverished, and afraid. The Force here is not in balance.
 
 
-Best place to land is a ridge at the lip of a volcano. (It’s already blown.)
+\difficulty\difficulty\difficulty\setback Perception: Best place to land is a ridge at the lip of a volcano. (It’s already blown.)
 
 \difficulty\difficulty\difficulty\setback Perception/Computers: Use ships sensors to look for life signs (or the Force).
 
 Hot, sulfurous air, ash and smoke blackening it. They’ll take \setback\setback from heat if they’re out too long.  If they lack filter masks, each PC takes one wound ``per round'' (in structured play, else as narratively appropriate).
 
-\difficulty\difficulty\difficulty Athletics checks to climb down through vertical conduits. \boost from the climbing gear.  \failure could mean Short Fall (10 W/10S)
+\difficulty\difficulty\difficulty Athletics checks to climb down through vertical conduits. \boost from the climbing gear.
+\begin{itemize}
+  \item \threat\threat Accidentally unhook filter mask, suffering 1 wound
+  \item \despair Slip and suffer a  Short Fall (10 W/10 S) onto hard rock
+\end{itemize}
 
 The planet shifts and groans around them. The distant, arrhythmic hiss of venting steam never entirely ceases. Even through the masks, the air smells terrible.
 
 \df\df Coordination check to squeeze through a crack to get into a side passage. \boost for narratively small PCs (all Silhouette 0 characters, humans with a slighter frame), \setback for larger ones (all Silhouette 2+ characters, Wookies, brawny humans, etc). Creatures attack when they’re in the crack!
 
-Green Bug Swarm from Beyond the Rim 44.
-\npc{Green Bug Swarm}{1}{4}{1}{1}{1}{1}{20}{1}{0}{0}{
-    Skills:\\
-    \begin{itemize}
-        \item Melee 2
-        \item Coordination 2
-    \end{itemize}
-    Abilities:
-    \begin{itemize}
-        \item Swarm - Unless blast or burn, halve damage before applying soak\\
-        \item Venomous Stinger - If Green Bug Swarm successfully hits a character, that character must make at \df\df Resilience check or be disoriented (+\setback) for 3 rounds.
-        \item Knockout Poison - If Green Bug Swarm would deal a crit or cause a target to exceed its strain threshold, target must make a \df\df\df Resilience check or fall unconscious for 5 minuts (revive with \df\df Medicine)
-    \end{itemize}
+Green Bug Swarm from Beyond the Rim 44.  One in front and one behind.
 
-
-}
-\newcommand{\npc}[9]{
-    \emph{#1} \\ name
-    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
-    \DerivedSplit{Health}{#8}{#9}{Wounds}{Soak} % wounds/soak
-    \DerivedSplit{Defense}{#10}{#11}{Melee}{Ranged}\\ % defense
-    #12 \\ %description, abilities, etc
-}
-
-
+\npc{Green Bug Swarm}{1}{4}{1}{1}{1}{1}{20}{1}
+%   \emph{Green Bug Swarm} \\ %name
+%   \Characteristics{1}{4}{1}{1}{1}{1}\\
+%   \DerivedSplit{Health}{20}{1}{Wounds}{Soak} % wounds/soak
+\npccontinued{0}{0}{
+   Skills:
+   \begin{itemize}
+       \item Brawl 2
+       \item Coordination 2
+   \end{itemize}
+   Abilities:
+   \begin{itemize}
+       \item Swarm - Unless blast or burn, halve damage before applying soak
+       \item Venomous Stinger - If Green Bug Swarm successfully hits a character, that character must make at \df\df Resilience check or be disoriented (+\setback) for 3 rounds.
+       \item Knockout Poison - If Green Bug Swarm would deal a crit or cause a target to exceed its strain threshold, target must make a \df\df\df Resilience check or fall unconscious for 5 minutes (revive with \df\df Medicine)
+   \end{itemize}}
 
 After the crack, the passage is wider and tends uphill.
 
-\chapter{The Miners}
+\section{The Miners}
 
-Tunnel comes to a ledge, opening up into a small circular cavern. Main tunnel continues on the other side, angling back up to the surface. Miners are below under a collapsed section. The oepning is no wider than an arm.
+Tunnel comes to a ledge, opening up into a small circular cavern. Main tunnel continues on the other side, angling back up to the surface. Miners are below under a collapsed section. The opening is no wider than an arm.
  
-Perception to see flash of miners’ lamp lights. 
+\df\df Perception or \df\df\df Vigilance to see flash of miners’ lamp lights. 
 
 Miners will be suspicious unless told PCs were sent by Zien Myder.
-> Are you from SoroSuub?
+\begin{quote}
+Are you from SoroSuub?
+\end{quote}
+
+\df\df\stb\stb Charm to convince miners of PCs good intentions.
+\begin{itemize}
+	\item +\boost if PC making check is Sullustan
+	\item \advantage They have some useful equipment that combined with the PCs' gear, can help escape.
+	\item \threat The miners are especially weakened and have to be carried out
+	\item \threat\threat Miners need immediate medical attention
+	\item \despair A minion group of miners is hallucinating from dehydration and thinks the PCs are attacking them.
+\end{itemize}
 
 
 Aadlan Myder and four other Sullustans (Cars Mun, Truvv Nryll, Fri Anb, Omo Riirs, Mi Wull). They will ask for water. If PCs explain that they are here to guide the miners back to the surface, there will be some protests and objections because of how unstable that is. Aadlan will try to calm them down.
 
+Must widen opening. Explosives or Force Move is probably the way to go. The miners may have some explosives that can be reeled up to the PCs to place.
 
-Must widen opening. Explosives or Force Move is probably the way to go. The miners have some explosives that can be reeled up to the PCs to place.
+A Force-sensitive PC will have a sense of unease, that they need to hurry. When miners are starting to be pulled up, \df\df\df Perception to sense rumbling under feet.
 
-
-Caldovan will have a sense of unease, that they need to hurry. When miners are starting to be pulled up, Perception to sense rumbling under feet.
-
-Miners start to panic and say they need to hurry. There’s a rockrender on the way, drawn by the explosion. When the last miner is on the way up, in breaks through.
+Miners start to panic and say they need to hurry. There’s a rockrender on the way, drawn by the explosion. When the last miner is on the way up, it breaks through.
 
 Breaking into the cavern is a giant beast—reddish, quadrupedal, with enormous curved talons the size of a human body, and a set of tusks to match. It shakes off the rubble it created with its own entrance and lifts its head, as if sniffing. The last of the miners is dangling only about a meter above the beast. 
-Knowledge (Xenology)
-* Rockrender isn’t the danger, the paths it opens are the danger.
+
+\df\df\df Knowledge (Xenology): Rockrender isn’t the danger, the paths it opens are
+
+\npc{Rockrender}{6}{3}{1}{2}{1}{1}{60}{15}
+\npccontinued{0}{0}{
+   Rockrender is really just passing through and will not attack anyone unless provoked.\\
+   Skills:
+   \begin{itemize}
+       \item Brawl 1
+       \item Coordination 2
+   \end{itemize}
+   Abilities:
+   \begin{itemize}
+       \item Burrow - \df\df Coordination to dig into the rock to escape
+       \item Sharp claws - +2 brawl damage
+   \end{itemize}
+\url{http://starwars.wikia.com/wiki/Rockrender}
+}
+
 
 Behind it, in the passage it made, there’s a dull orange glow that’s getting steadily brighter. The magma is rising.
 
 The miners are all exhausted/dehydrated and will move slowly. The PCs could try using explosives to collapse the tunnel behind them to slow the magma. Going back the way they came means heading downhill, and the magma will follow them that way. They can try going uphill on the other side of the cavern.
-V. Aftermath
+
+Need 3x successes on \df\df\df Athletics checks to get all the miners out before the chamber floods with magma.  Failure to do so means either a PC suffers a critical injury to rescue a miner, or the Sullustans lose trust in the PCs (and possibly the Rebel Alliance).
+
+\section{Aftermath}
 
 Aadlan will want medical personnel to meet them in Pinyumb, rather than have any private treatment from the PCs. Wants them to call ahead to the comm operator there.
-> Make it public. They can’t assassinate me without plausible deniability.
-> You’ve seen what they’ll do to silence the Cobalt Laborer’s Reformation Front.
+\begin{quote}
+Make it public. They can’t assassinate me without plausible deniability.
+
+You’ve seen what they’ll do to silence the Cobalt Laborer’s Reformation Front.
+\end{quote}
 
 Zien and the rest of the Myder family will be waiting at Pinyumb to greet the rescued miners. PCs can slip the box of transponders in among all the gear they are returning.
 
-
-http://starwars.wikia.com/wiki/Rockrender
-
-
-
-This is a sample document for the \emph{Genesys} \LaTeX\ package. Please see below for the various commands.
-
-\section{Dice}
-
-All dice types and symbols have their own commands:
-
-\begin{multicols}{2}
-
-\begin{itemize}[noitemsep,nolistsep]
-\item \verb|\BoostDie| produces \BoostDie
-\item \verb|\AbilityDie| produces \AbilityDie
-\item \verb|\ProficiencyDie| produces \ProficiencyDie
-\item \verb|\SetbackDie| produces \SetbackDie
-\item \verb|\DifficultyDie| produces \DifficultyDie
-\item \verb|\ChallengeDie| produces \ChallengeDie
-\item \verb|\Advantage| produces \Advantage
-\item \verb|\Success| produces \Success
-\item \verb|\Triumph| produces \Triumph
-\item \verb|\Threat| produces \Threat
-\item \verb|\Failure| produces \Failure
-\item \verb|\Despair| produces \Despair
-\end{itemize}
-
 \end{multicols}
-
-\section{Tables}
-
-Tables are easy to use with the \verb|GenesysTable| environment. If you're using the \verb|\begin{table}| command to add a \verb|\caption{}| to the table that you add the \verb|[H]| optional argument or else the table will float to the nearest open space (the \verb|\begin{table}[H]| tells \LaTeX\ to put the table \textbf{right here}).
-
-\begin{table}[H]
-\caption{Sample Table}
-\begin{GenesysTable}{l X}
-Heading & Long Heading\\
-Table line one & with the second column in blue!\\
-And here's & the second line, with white background!\\
-Last line & again in blue\\
-\end{GenesysTable}
-\end{table}
-
-\section{Characters}
-
-When you are making stat blocks for NPCs, be sure to use the \verb|\Characteristics| command which takes 6 arguments, once for each characteristic. \verb|\Characteristics{1}{3}{2}{2}{2}{2}| grants:
-
-\vspace{1em}
-
-\Characteristics{1}{3}{2}{2}{2}{2}
-
-\vspace{1em}
-
-
-Lastly, we have the derived numbers: soak, WT and ST. Use the \verb|\Derived| command, with two arguments?one for the title and the second for the number. For Melee/Ranged defense, we use \verb|\DerivedSplit| with 5 arguments: title, first number, second number, first subtitle and second subtitle. Using \verb|\Derived{Soak}{4}| and \verb|\DerivedSplit{Defense}{2}{0}{Melee}{Ranged}|, for instance, gives us:
-
-\vspace{1em}
-
-\hspace*{\fill}\Derived{Soak}{4}\qquad\DerivedSplit{Defense}{2}{0}{Melee}{Ranged}\hspace*{\fill}
-
-\section{Talents}
-
-There is now a \verb|\Talent| command that takes 4 arguments. \verb|\Talent{talent name}{tier}{activation}{ranked?}|. 
-
-\verb|\Talent{Grit}{1}{Passive}{Yes}| would give you: 
-
-\Talent{Grit}{1}{Passive}{Yes}
-
-
-
-
-
-
 \end{document}

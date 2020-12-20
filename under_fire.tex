@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 %\geometry{paperheight=13in}
 \usepackage{multicol}
+\usepackage[noorphans,font=itshape]{quoting}
 
 \swrpgbackground
 
@@ -26,7 +27,7 @@
 
 
 \newcommand{\npc}[9]{
-    \emph{#1} \\ %name
+    \textbf{#1} \\ %name
     \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
     \Derived{Wounds}{#8}
     \Derived{Soak}{#9}
@@ -89,7 +90,7 @@ Description:\\
 The ship comes out of hyperspace and approaches Sullust. Half the planet’s surface is covered with belches of ash and toxic gases from its ever-active volcanos; the enormous factories below can be glimpsed through swirls of smoky atmosphere as twinkling lights nestled between traceries of magma.
 
 Check:\\
-To gain information about Sullust, players may make Average [\df\df] Knowledge (Outer Rim). Could also do Average [\df\df] Knowledge (Xenology) for information about Sullustans. Extra information can be given for advantages, misinformation for disadvantages. Success provides information in first few bullets.\\
+    To gain information about Sullust, players may make Average [\df\df] \textbf{Knowledge (Outer Rim)}. Could also do Average [\df\df] \textbf{Knowledge (Xenology)} for information about Sullustans. Extra information can be given for advantages, misinformation for disadvantages. Success provides information in first few bullets.\\
 \begin{itemize}
     \item Volcanic world on inner edge of Outer Rim
     \item Breath masks needed on surface when volcanoes active
@@ -111,29 +112,31 @@ Landing on Sullust\\
 Check:\\
 The Comms tower contacts all incoming vessels.  Provided the party has legitimate credentials, this should present no problems.
 
-\begin{quote}
-\emph{State the nature of your business in Pinyumb and transmit your crew identifications.}
-\end{quote}
+\begin{quoting}
+State the nature of your business in Pinyumb and transmit your crew identifications.
+\end{quoting}
 
 If necessary, PCs can make a Average [\df\df] check using the social skill of their choice to circumvent any unpleasantness at this point.
 
-\begin{quote}
-\emph{Responding with flight path and docking permit.
+\begin{quoting}
+Responding with flight path and docking permit.
 
 Cleared for three-day tourist/work visa. 
 
-Should you choose to remain longer, you’ll need to renew your visa.}
-\end{quote}
+Should you choose to remain longer, you’ll need to renew your visa.
+\end{quoting}
 
 Description:\\
 The black swirling face of Sullust takes up more and more of the view as your craft angles towards the surface. The ship emerges from the ash cloud, headed directly for a yawning opening in the planet’s surface. There’s a magnetic shield across the entry, presumably to maintain the integrity of the atmosphere within: the ship passes through without incident. Inside, lights on each side of the tunnel guide you deeper into the planet’s crust. Other craft fly alongside you, both coming and going. The intake tunnel opens up into a hangar with your assigned berth.
 
-Hanger\\
+\emph{Hanger}\\
 Check:\\
-When the airlock opens, check for any threats: Average [\df\df] Perception \\
-\success It’s just crews loading and unloading, no one paying any special attention to the PCs. The few guards standing around near the exits are wearing corporate uniforms, not stormtrooper armor. If there’s an Imperial presence here, it’s light.
-    \failure PCs think they have attracted attention of local security
-    \threat A detail that suggests heavier Imperial presence
+When the airlock opens, check for any threats: Average [\df\df] Perception
+\begin{itemize}
+    \item \success It’s just crews loading and unloading, no one paying any special attention to the PCs. The few guards standing around near the exits are wearing corporate uniforms, not stormtrooper armor. If there’s an Imperial presence here, it’s light.
+    \item \failure PCs think they have attracted attention of local security
+    \item \threat A detail that suggests heavier Imperial presence
+\end{itemize}
 
 
 Turbolift down to Pinyumb\\
@@ -147,40 +150,37 @@ The party has residential address for Aadlan Myder.
 \section{Encounter: Not Home}
 
 Sullustan woman (Nuev) answers at apartment. There’s a milky film over her black eyes; she’s crying. Beyond here, the PCs can she that there’s a group of Sullustans here, a whole family supporting each other emotionally.
-\begin{quote}
-\emph{You’ve come to say goodbye to Aadlan? }
-\end{quote}
+\begin{quoting}
+You’ve come to say goodbye to Aadlan? 
+\end{quoting}
 
 Younger Sullustan woman (Zien, a teenager) will clarify that he’s not leaving or sick.
-\begin{quote}
-\emph{He’s being murdered.}
-\end{quote}
+\begin{quoting}
+He’s being murdered.
+\end{quoting}
 
 Talking the Zien:\\
 Zien blames Cobalt Front for this emergency. SoroSuub is calling it an accident, but there’s a saying on Sullust, “Accidents can happen to anyone, but they always happen to troublemakers.”
 
 Check:\\
-Social checks to interact with Zien are \difficult\difficult. If Coercion is tried, that gets \setback added, as she does not like being bossed around. If Negotition is tried in order to get payment for the rescue, that will earn a cinematic punch to the nose from her. 
+Social checks to interact with Zien are \df\df. If Coercion is tried, that gets \setback added, as she does not like being bossed around. If Negotition is tried in order to get payment for the rescue, that will earn a cinematic punch to the nose from her. 
 
 On \success or \failure, Zien will provide information, but her demeanor will be affected by the result. With \success, she will also provide supplies. She does not want to get her mother's hopes up, though, so she keeps the conversation quiet. 
 
 What is the current sitation?\\
-\begin{quote}
-\emph{
-My father and his entire crew were trapped inside a side tunnel when a magma vent diverted behind them. They don’t have the equipment they’d need to get out, and all SoroSuub will say is that ‘rescue efforts are continuing.’ But my father says there’s been no contact at all from his superiors. Sometimes his comm signal still gets through. They’re going to die of thirst down there.}
-\end{quote}
+\begin{quoting}
+My father and his entire crew were trapped inside a side tunnel when a magma vent diverted behind them. They don’t have the equipment they’d need to get out, and all SoroSuub will say is that ‘rescue efforts are continuing.’ But my father says there’s been no contact at all from his superiors. Sometimes his comm signal still gets through. They’re going to die of thirst down there.
+\end{quoting}
 
 What kind of equipment is needed? \\
-\begin{quote}
-\emph{
-Massive earth-movers, industrial grade lava dams, and the kind of specialized expertise required to reroute an active magma flow without melting the whole passage and drowning the miners in fire. Only SoroSuub could do it. But they won’t.}
-\end{quote}
+\begin{quoting}
+Massive earth-movers, industrial grade lava dams, and the kind of specialized expertise required to reroute an active magma flow without melting the whole passage and drowning the miners in fire. Only SoroSuub could do it. But they won’t.
+\end{quoting}
 
 Can't they get out on their own?  \\
-\begin{quote}
-\emph{
-They do have filtration masks, so toxins aren’t an issue. And there are vents to the surface. But they have no climbing gear and if they did, they’d just be stranded on the surface.}
-\end{quote}
+\begin{quoting}
+They do have filtration masks, so toxins aren’t an issue. And there are vents to the surface. But they have no climbing gear and if they did, they’d just be stranded on the surface.
+\end{quoting}
 
 Rescue by ship? \\
 Volcanoes are constantly spewing ash and gases and sometimes magma. Visibility is near zero and lava geysers are completely unpredictable. 
@@ -193,7 +193,7 @@ Zien can provide climbing gear and target coordinates if PCs agree to mount the 
 Reaching the coordinates from Zien requires weaving through gouts of flaming rock and threading in and out of black clouds of ash. But as the ship nears their target, the atmosphere grows denser. Before making the Pilot check to reach the coordinates, other PCs can aid the pilot
 
 Check: Plot path with sensors\\
-Hard [\df\df\df] +\setback  Perception 
+Hard [\df\df\df] +\setback  \textbf{Perception}
 \begin{itemize}
 \item \success Each uncanceled \success removes a \setback for difficult terrain
 \end{itemize}
@@ -214,7 +214,7 @@ Around them and under them Sullust is a much more complicated presence. The plan
 A successful check removes the \setback\setback\setback for difficult terrain from the Piloting check.
 
 Check: Reach coordinates\\
-Piloting \difficulty per Silhouette + \stb\stb\stb + Handling 
+\textbf{Piloting} \difficulty per Silhouette + \stb\stb\stb + Handling 
 
 \begin{itemize}
 	\item \advantage Gain familiarity with the timing of lava eruptions.  +\boost on next Pilot check or social interaction with a Sullustan.
@@ -226,45 +226,44 @@ Piloting \difficulty per Silhouette + \stb\stb\stb + Handling
 
 Check: Land\\
 Once at the coordinates, another Piloting check is required to land without damaging the ship.
-\difficulty per Silhouette + \stb\stb + Handling 
-\failure Hull trama
-\threat System strain
+\difficulty per Silhouette + \stb\stb + Handling \textbf{Pilot}
+\begin{itemize}
+    \item \failure Hull trama
+    \item \threat System strain
+\end{itemize}
 
 Check: Leads\\
-Hard [\df\df\df] Perception or Computers +\setback to use the ships sensors to look for life signs (or use the Force). Doing this now will grant +\boost on the Survival check to come.
+Hard [\df\df\df] \textbf{Perception} or \textbf{Computers} +\setback to use the ships sensors to look for life signs (or use the Force). Doing this now will grant +\boost on the \textbf{Survival} check to come.
 
 \section{Underground Travel}
 
 The PCs exit the ship into hot, sulfurous air, with ash and smoke blackening it. They’ll take +\setback from heat to rolls if they’re out too long. If they lack filter masks, each PC takes one wound ``per round'' (in structured play, else as narratively appropriate).
 
 Check: Climb below the surface\\
-Hard [\df\df\df] Athletics +\boost for climbing gear
+Hard [\df\df\df] \textbf{Athletics} +\boost for climbing gear
 \begin{itemize}
   \item \threat\threat Accidentally unhook filter mask, suffering 1 wound that ignores soak
   \item \despair Slip and suffer a  Short Fall (10 W/10 S) onto hard rock
 \end{itemize}
 
 Check: Environment wearing you down?\\
-If two or more PCs failed their Athletics check for climbing, the party has taken too long to make it down the shaft. Every PC must make Easy [\df] Resilience. On a \failure that PC now suffers +/setback on rolls until back in the cool confines of the ship. This condition can be removed with a Easy [\df] Medicine check.
+If two or more PCs failed their Athletics check for climbing, the party has taken too long to make it down the shaft. Every PC must make Easy [\df] \textbf{Resilience}. On a \failure that PC now suffers +\setback on rolls until back in the cool confines of the ship. This condition can be removed with a Easy [\df] \textbf{Medicine} check.
 
 After the climb, the party is now underground and can search for the missing Sullustans. 
 
 Check: Plot a course\\
-Average [\df\df] Survival +\boost for sensor aid if available.
+Average [\df\df] \textbf{Survival} +\boost for sensor aid if available.
 
 Check: Environment wearing you down?\\
-If this check fails, it costs the party more time. Every PC must make Easy [\df] Resilience. On a \failure that PC now suffers +/setback on rolls until back in the cool confines of the ship. This condition can be removed with a Easy [\df] Medicine check.
+If this check fails, it costs the party more time. Every PC must make Easy [\df] \textbf{Resilience}. On a \failure that PC now suffers +/setback on rolls until back in the cool confines of the ship. This condition can be removed with a Easy [\df] \textbf{Medicine} check.
 
 As they travel underground, the planet shifts and groans around them. The distant, arrhythmic hiss of venting steam never entirely ceases. Even through the masks, the air smells terrible. Eventually, they come upon a narrow crack that they must squeeze through.
 
-\df\df Coordination check to squeeze through a crack to get into a side passage. \boost for narratively small PCs (all Silhouette 0 characters, humans with a slighter frame, for example), \setback for larger PCs (all Silhouette 2+ characters, Wookies, brawny humans, etc). Drutash scarabs attack when they’re in the crack!
+\df\df \textbf{Coordination} check to squeeze through a crack to get into a side passage. \boost for narratively small PCs (all Silhouette 0 characters, humans with a slighter frame, for example), \setback for larger PCs (all Silhouette 2+ characters, Wookies, brawny humans, etc). Drutash scarabs attack when they’re in the crack!
 
 Green Bug Swarm from Beyond the Rim 44.  One in front and one behind.
 
 \npc{Drutash Scarab Swarm Rival}{1}{4}{1}{1}{1}{1}{20}{1}
-%   \emph{Drutash Scarab Swarm Rival} \\ %name
-%   \Characteristics{1}{4}{1}{1}{1}{1}\\
-%   \DerivedSplit{Health}{20}{1}{Wounds}{Soak} % wounds/soak
 \npccontinued{0}{0}{
    Skills:
    \begin{itemize}
@@ -274,7 +273,7 @@ Green Bug Swarm from Beyond the Rim 44.  One in front and one behind.
    Abilities:
    \begin{itemize}
        \item Swarm - Unless an attack has the Blast or Burn quality (regardless of if it is activated), halve the damage before applying soak
-       \item Venomous Pincers - If Swarm successfully hits a PC for enough damage to get through Soak, that PC must make at Average [\df\df] Resilience check or be disoriented (+\setback) for 3 rounds.
+       \item Venomous Pincers - If Swarm successfully hits a PC for enough damage to get through Soak, that PC must make at Average [\df\df] \textbf{Resilience} check or be disoriented (+\setback) for 3 rounds.
    \end{itemize}}
 
 After the crack, the passage is wider and tends uphill.
@@ -283,12 +282,9 @@ After the crack, the passage is wider and tends uphill.
 
 The tunnel comes to a ledge, opening up into a small circular cavern. Main tunnel continues on the other side, angling back up to the surface. Miners are below under a collapsed section. The opening is no wider than an arm.
  
-Average [\df\df] Perception or Hard [\df\df\df] Vigilance to see flash of miners’ lamp lights. 
+Average [\df\df] \textbf{Perception} or Hard [\df\df\df] \textbf{Vigilance} to see flash of miners’ lamp lights. 
 
 \npc{Aadlan Myder}{2}{2}{2}{2}{3}{3}{12}{3}
-%   \emph{Aadlan Myder} \\ %name
-%   \Characteristics{2}{2}{2}{2}{3}{3}\\
-%   \DerivedSplit{Health}{12}{3}{Wounds}{Soak} % wounds/soak
 \npccontinued{0}{0}{
    Skills:
    \begin{itemize}
@@ -300,12 +296,12 @@ Average [\df\df] Perception or Hard [\df\df\df] Vigilance to see flash of miners
 
 
 Miners will be suspicious.
-\begin{quote}
-\empth{Are you from SoroSuub?}
-\end{quote}
+\begin{quoting}
+Are you from SoroSuub?
+\end{quoting}
 
 Check: Reassure miners\\
-Hard [\challenge\df\df\stb\stb] Charm to convince Aadlan Myder of PCs good intentions. 
+Hard [\challenge\df\df\stb\stb] \textbf{Charm} to convince Aadlan Myder of PCs good intentions. 
 \begin{itemize}
 	\item +\boost if PC making check is Sullustan.
 	\item  +\boost if PC mentions they were sent by Zien Myder.
@@ -319,19 +315,19 @@ Hard [\challenge\df\df\stb\stb] Charm to convince Aadlan Myder of PCs good inten
 \end{itemize}
 
 
-The miners are Aadlan Myder and four other Sullustans (Cars Mun, Truvv Nryll, Fri Anb, Omo Riirs). Their first concern will be to ask for water. If the PCs explain that they are here to guide the miners back to the surface, there will be some protests and objections because of how unstable that is. Aadlan will try to calm them down, and an Average [/df/df] Leadership check from a PC would be helpful.
+The miners are Aadlan Myder and four other Sullustans (Cars Mun, Truvv Nryll, Fri Anb, Omo Riirs). Their first concern will be to ask for water. If the PCs explain that they are here to guide the miners back to the surface, there will be some protests and objections because of how unstable that is. Aadlan will try to calm them down, and an Average [\df\df] \textbf{Leadership} check from a PC would be helpful.
 
 The PCs must widen the opening to get the miners out. Possible options are explosives (including overloaded weapons) or Force Move. The miners may have some explosives that can be reeled up to the PCs to place. Support any creative approaches that the party comes up with.
 
-A Force-sensitive PC will have a sense of unease, that they need to hurry. When miners are starting to be pulled up, All PCs can make a Hard [\df\df\df] Perception check to sense rumbling under their feet.
+A Force-sensitive PC will have a sense of unease, that they need to hurry. When miners are starting to be pulled up, All PCs can make a Hard [\df\df\df] \textbf{Perception} check to sense rumbling under their feet.
 
 The miners start to panic and say they need to hurry. There’s a rockrender on the way, drawn by the explosion (or by the flip of a Dark Side point). When the last miner is on the way up, it breaks through.
 
-\begin{quote}
+\begin{quoting}
 Breaking into the cavern is a giant beast—reddish, quadrupedal, with enormous curved talons the size of a human body, and a set of tusks to match. It shakes off the rubble it created with its own entrance and lifts its head, as if sniffing. The last of the miners is dangling only about a meter above the beast. 
-\end{quote}
+\end{quoting}
 
-Hard [\df\df\df] Knowledge (Xenology): Rockrender isn’t the danger, the paths it opens are, as lava flows quickly through those.
+Hard [\df\df\df] \textbf{Knowledge (Xenology)}: Rockrender isn’t the danger, the paths it opens are, as lava flows quickly through those.
 
 \npc{Rockrender}{6}{3}{1}{2}{1}{1}{60}{15}
 \npccontinued{0}{0}{
@@ -343,7 +339,7 @@ Hard [\df\df\df] Knowledge (Xenology): Rockrender isn’t the danger, the paths 
    \end{itemize}
    Abilities:
    \begin{itemize}
-       \item Burrow - Average [\df\df] Coordination to dig into the rock to escape
+       \item Burrow - Average [\df\df] \textbf{Coordination} to dig into the rock to escape
        \item Sharp claws - +2 brawl damage
    \end{itemize}
 \url{https://starwars.fandom.com/wiki/Rockrender}
@@ -354,27 +350,24 @@ Behind the creature, in the passage it made, there’s a dull orange glow that�
 
 The miners are all exhausted/dehydrated and will move slowly. The PCs could try using explosives to collapse the tunnel behind them to slow the magma. Going back the way they came means heading downhill, and the magma will follow them that way. They can try going uphill on the other side of the cavern.
 
-Need 3 successful Hard [\df\df\df] Athletics checks to get all the miners out before the chamber floods with magma.  Failure to do so means either a PC suffers a critical injury to rescue a miner, or the Sullustans lose trust in the PCs (and possibly the Rebel Alliance).
+Need 3 successful Hard [\df\df\df] \textbf{Athletics} checks to get all the miners out before the chamber floods with magma.  Failure to do so means either a PC suffers a critical injury to rescue a miner, or the Sullustans lose trust in the PCs (and possibly the Rebel Alliance).
 
 That is the end of the action. Of course, you can have PCs make Medicine checks on the miners or a Piloting check to get back to Pinyumb. 
 
 \section{Aftermath}
 
 Aadlan will want medical personnel to meet them in Pinyumb, rather than have any private treatment from the PCs. Wants them to call ahead to the comm operator there.
-\begin{quote}
-\emph{Make it public. They can’t assassinate me without plausible deniability.
+\begin{quoting}
+Make it public. They can’t assassinate me without plausible deniability.
 
-You’ve seen what they’ll do to silence the Cobalt Laborer’s Reformation Front.}
-\end{quote}
+You’ve seen what they’ll do to silence the Cobalt Laborer’s Reformation Front.
+\end{quoting}
 
 Zien and the rest of the Myder family will be waiting at Pinyumb to greet the rescued miners. Some media/reporters will be on the scene as well. PCs can slip the box of transponders in among all the gear they are returning. SoroSuub representatives led by Ub Nub will also be present, acting relieved at how safe the workers are and trying to put a positive spin on things.
 
 The PCs may be content to just leave at that point. However, if they are looking for someone to blame or to blackmail for SoroSuub's lack of effort, Ub Nub is a reasonble target.
 
-\npc{Ub Nub}{2}{2}{2}{3}{3}{3}{2}{12}
-%   \emph{Ub Nub Corrupt Bureaucrat Rival} \\ %name
-%   \Characteristics{2}{2}{2}{3}{3}{3}\\
-%   \DerivedSplit{Health}{12}{2}{Wounds}{Soak} % wounds/soak
+\npc{Ub Nub}{2}{2}{2}{3}{3}{3}{12}{2}
 \npccontinued{0}{0}{
    Skills:
    \begin{itemize}

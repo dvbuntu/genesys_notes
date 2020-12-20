@@ -32,7 +32,7 @@
     \emph{#1} \\ %name
     \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
     \Derived{Wounds}{#8}
-    \Derived{Soak}{#8}
+    \Derived{Soak}{#9}
 }
 \newcommand{\npccontinued}[3]{
     \DerivedSplit{Defense}{#1}{#2}{Melee}{Ranged}\\ % defense
@@ -49,13 +49,27 @@
 \section{Intro}
 (North Africa, 1942)\\
 
-PCs are allied 2nd stringers, worn out from weeks of fighting Rommel in the desert.  Things were finally looking up as Montgomery's Eighth Army finally clawed back some territory from the Axis.  But Rommel has been desperate, meddling with dark forces and tombs long covered by the sand.  Worse than breaking into such a reliquary is breaking out\cdots.
+    PCs are allied 2nd stringers (33rd Lowland Division), worn out from weeks of fighting Rommel in the desert.  Things were finally looking up as Montgomery's Eighth Army finally clawed back some territory from the Axis.  But Rommel has been desperate, meddling with dark forces and tombs long covered by the sand.  Worse than breaking into such a reliquary is breaking out\cdots.
 
 Stuff around the camp, maybe someone telling ghost stories
 
 Sergeant Slattery, total hardass.
 
 PCs on latrine duty as ``light work''
+
+All-American Super Squad just leaving, mocking PCs saying they just ``left a deposit'' for the party to clean up.
+
+    \subsection{Adventure Limitations}
+
+    War has been straining the 8th Army beyond the breaking point.  Few supplies are available, morale is nearly rock-bottom, and the campaign drags on.  But, they have tasted their first crucial victory and are battled tested veterans.
+    
+    During this adventure, PCs face the following global modifiers:
+
+    \begin{itemize}
+        \item Rationed supplies, \Threat\Threat is enough to run out of ammo or other limited use items (med kits, flares, etc).  Scrounging may recover additional ammo or supplies
+        \item Low Morale, \Despair causes all \emph{other} party members to suffer one strain in addition to normal effects
+        \item Turning point, Aid Another maneuver adds an extra \Advantage\Advantage in addition to normal benefits
+    \end{itemize}
 
 \section{Benign Transposition}
 
@@ -72,6 +86,8 @@ ghost spends last bit of vigor weirdly teleporting PCs from surface to within to
     \end{itemize}
 
 
+It is completely dark.  There are no sounds of the typical encampment.  A brief sobbing wail wanes nearby as the ghost laments what it had to do.
+
 social interaction with ghost can reveal info about nazi occult experiments and possibly dangers of the tomb, mix of ancient mechanical traps and leftover Nazi occult experiments
 
     occult check may reveal nature of ghost (summoned spirit, not some long-serving guardian).  powerful but slowly recharging abilities
@@ -81,147 +97,36 @@ social interaction with ghost can reveal info about nazi occult experiments and 
         \item \Failure Lose full connection to material reality.  +\stb for next encounter as slowly rematerialize completely.
         \item \Advantage See something interesting while phasing.  +\bbb to Perception (may be occult aligned)
         \item \Triumph Limited control of phasing between planes with \df\df\df Discipline check
-        \item \Despair Still phasing in and out
+        \item \Despair Still phasing in and out.  May phase out at an inopportune time chosen by the GM, lasting for 1 round of structured time
     \end{itemize}
 
-It is a time of civil war. The evil GALACTIC EMPIRE continues to strike against the rag-tag REBEL ALLIANCE. During this time of downed ships and lost causes, outlaw technician JAE TESSA has created a new type of emergency beacon. Discreet and more powerful than the standard model, these engineering marvels could save countless Rebel lives, if only they get into the right hands before they are needed.
+ghost is bound to this room by occult wards, and will only help PCs out if they let him out.
 
-As they follow jobs across the galaxy, the crew of the DESSERT ROSÉ has been delivering boxes of transponders to Rebel operatives and sympathizers. Next on their list is AADLAN MYDER of the Cobalt Front. But finding this contact on the lava-licked world of SULLUST may prove a challenge….
+\df\df Knowledge to ascertain nature of occult wards
+    \begin{itemize}
+        \item \Success Clearly German design, +\abd to remove
+        \item \Advantage Other German scribblings here as well, translated, ``I can't believe we're supposed to tunnel behind the allied lines through this god forsaken tomb''
+    \end{itemize}
 
-Playthe intro for your players: \url{https://starwarsintrocreator.kassellabs.io/#!/BLPZ_JmTREzj7nAwkb2O/edit}
+\df\df\stb\stb Skulduggery to safely break the ward
+    \begin{itemize}
+        \item \Advantage Able to repurpose some occult component
+        \item \Failure Suffer 5 wounds as occult energy zaps you
+    \end{itemize}
 
-(based on ``First Flight'' \url{https://archiveofourown.org/works/7030051})
+\section{Uphill Battle}
 
-\emph{Goal}: Deliver transponders to Aadlan Myder of the Cobalt Laborers’ Reformation Front in Pinyumb.\\
+A windy staircase leads up to a larger chamber, dry from thousands of years of desert.  Sand is everywhere, mixed with more recent German equipment.  Curiously, the retreating forces still left a few lights on.
 
-\difficulty\difficulty Knowledge(Outer Rim)\\
-\begin{itemize}
-    \item Volcanic world on inner edge of Outer Rim
-    \item Breath masks needed on surface when volcanoes active
-    \item The noxious surface of ash, lava, and toxic gases make Sullust an unlikely home, for intelligent life, but the native Sullustans evolved in an underground ecosystem.
-    \item \advantage Descended from rodents, Sullustans have a natural sense of direction, which serves them well in the dark caverns and twisting tunnels they call home.
-    \item \advantage  Their engineering prowess has tamed their hostile environment. Sullustan cities have nothing to fear from volcanic eruption; shunts divert lava to the surface after passing through geothermal energy collectors. The abundance of lava provides for most of Sullust’s energy needs, and shielded geothermal power plants speckle the surface to power the lights of underground cities.
-    \item \advantage SoroSuub Corporation, one of the largest companies in the galaxy. While SoroSuub exports a variety of products throughout the galaxy, it also manufactures and sells almost all consumer goods on Sullust and employs ninety percent of Sullust’s workforce. SoroSuub enjoys a vertical monopoly; it mines, designs, manufactures, transports, and even sells its own products throughout the galaxy. Lucrative Imperial contracts.
-	\item \advantage SoroSuub disbanded the Sullustan Council in 2 BBY, corporate takeover.
-    \item \advantage Reduced to vassal status after Clone Wars and a source of fuel for the Imperial Military, becoming an essential mining and manufacturing center for the Empire. Sullustans don’t even count as citizens in the Empire.
-    \item \advantage For years, Sullust remained relatively peaceful as workers accepted the stability offered under the Empire's reign. However, the Cobalt Laborers' Reformation Front steadily began to increase in numbers, sending letters to the Imperial governor demanding better working conditions and increased local autonomy. In response, the Empire detained roughly eighty percent of those in the organization and those it deemed most radical.
-    \item \advantage Was on the side of the Confederacy of Independent Systems during the Clone Wars.
-    \item \advantage Sullustan resistance is independent from but allied with the Rebel Alliance.
-    \item \triumph Stan Tevv, former Senator, is now CEO.  He has a secret agreement with the Rebel Alliance but officially claims neutrality.
-    \item \threat transpose a minor detail in one of the above extra facts
-    \item \despair transpose a major detail (like Sullustans planning to betray the Rebels)
-\end{itemize}
+\df\df\stb Perception to search the room for clues
+    \begin{itemize}
+        \item \Success Find misc electronics and occult equipment buried in sand.   Strangely large number of dog treats (or maybe lunar diagrams).
+        \item \Advantage Westward tunnel was collapsed on purpose, signs of explosives.
+        \item \Advantage Find extra ammo/other supplies
+        \item \Threat\Threat disturb a Scarab Swarm (see below)
+    \end{itemize}
 
-
-\section{Arrival on Sullust}
-
-Description:\\
-Half the planet’s surface is covered with belches of ash and toxic gases from its ever-active volcanos; the enormous factories below can be glimpsed through swirls of smoky atmosphere as twinkling lights nestled between traceries of magma.
-
-The Comms tower contacts all incoming vessels.  Provided the party has legitimate credentials, this should present no problems.
-
-\begin{quote}
-State the nature of your business in Pinyumb and transmit your crew identifications.
-
-Responding with flight path and docking permit.
-
-Cleared for three-day tourist/work visa. 
-
-Should you choose to remain longer, you’ll need to renew your visa.
-\end{quote}
-
-The black swirling face of Sullust takes up more and more of the view as your craft angles towards the surface. The ship emerges from the ash cloud, headed directly for a yawning opening in the planet’s surface. There’s a magnetic shield across the entry, presumably to maintain the integrity of the atmosphere within: the ship passes through without incident. Inside, lights on each side of the tunnel guide you deeper into the planet’s crust. Other craft fly alongside you, both coming and going. The intake tunnel opens up into a hangar with your assigned berth.
-
-\difficulty \difficulty Perception \\
-When the airlock opens, check for any threat: but it’s just crews loading and unloading, none paying any special attention to them. The few guards standing around near the exits are wearing corporate uniforms, not stormtrooper armor. If there’s an Imperial presence here, it’s light.
-
-Turbolift down to Pinyumb. Two guards (human and Sullustan) give you a bored once-over as you approach the lift. The lift itself is a wonder. Its walls are transparisteel, giving them a full view of the city as they’re lowered down to ground level. Pinyumb is built in a vast underground cavern, and its artificial towers rise like stalagmites, the tallest of them actually supporting the cave ceiling. The lights of the residences within glimmer in the perpetual twilight, their reflections sparkling like stars from the obsidian crystals overhead. Some kind of dusk-winged creatures wheel in the shadowy heights.
-
-As they step off the lift, it’s into a commercial district. Neon signs and flashing holos advertise shops and services to the foot traffic and speeders weaving among the towers.
-
-The party has residential address for Aadlan Myder.
-
-\section{Not Home}
-
-Sullustan woman (Nuev) answers at apartment. There’s a milky film over her black eyes; she’s crying.
-\begin{quote}
-You’ve come to say goodbye to Aadlan? 
-\end{quote}
-
-Younger Sullustan woman (Zien) will clarify that he’s not leaving or sick.
-\begin{quote}
-He’s being murdered.
-\end{quote}
-
-There’s a group of Sullustans here, a whole family supporting each other emotionally.
-
-Zien blames Cobalt Front for this emergency. SoroSuub is calling it an accident, but there’s a saying on Sullust, “Accidents can happen to anyone, but they always happen to troublemakers.”
-
-Zien says, her voice steely:
-\begin{quote}
-My father and his entire crew were trapped inside a side tunnel when a magma vent diverted behind them. They don’t have the equipment they’d need to get out, and all SoroSuub will say is that ‘rescue efforts are continuing.’ But my father says there’s been no contact at all from his superiors. Sometimes his comm signal still gets through. They’re going to die of thirst down there.
-\end{quote}
-
-
-What kind of equipment is needed? \\
-\begin{quote}
-Massive earth-movers, industrial grade lava dams, and the kind of specialized expertise required to reroute an active magma flow without melting the whole passage and drowning the miners in fire. Only SoroSuub could do it. But they won’t.
-\end{quote}
-
-They do have filtration masks, so toxins aren’t an issue. And there are vents to the surface. But they have no climbing gear and if they did, they’d just be stranded on the surface.
-
-
-Rescue by ship? Volcanoes are constantly spewing ash and gases and sometimes magma. Visibility is near zero and lava geysers are completely unpredictable. 
-
-
-Zien can provide climbing gear and target coordinates if PCs agree to mount the rescue. Filtration masks with cheek-lamps, rope, canteens of water, harnesses, etc
-
-\section{Getting to the Site}
-
-Silhouette/2 + \stb\stb\stb Piloting
-
-\begin{itemize}
-	\item \advantage Gain familiarity with the timing of lava eruptions.  +\boost on next Pilot check or social interaction with a Sullustan.
-	\item \failure Landing spot gets blown up by column of surging magma. Have to find alternate landing spot.
-	\item \threat \threat A lava eruption strikes the ship.  Suffer 2 system strain
-	\item \despair Lava briefly engulfs the ship, causing a critical injury
-\end{itemize}
-
-A Force-sensitive could try Foresee to help with lava spouts. Starting nearby, there is the glow around each of organic companions, something positive about each shining with a brilliant light. Potentially have that player identify what that is for each of the characters.
-
-Examples:
-\begin{itemize}
-    \item compassion
-    \item courage
-    \item detemination
-    \item drive to protect
-\end{itemize}
-
-Stretching out from there: Around them and under them Sullust is a much more complicated presence. The planet is in pain. Not so much from its ceaseless volcanic activity—there’s a kind of balance in that ever-changing instability, a rhythm to the chaos. But the factories that riddle its surface and the mines that bore into its depth are upsetting its own fragile harmony-in-motion, and the people—the people are exhausted, overworked, impoverished, and afraid. The Force here is not in balance.
-
-
-\difficulty\difficulty\difficulty\setback Perception: Best place to land is a ridge at the lip of a volcano. (It’s already blown.)
-
-\difficulty\difficulty\difficulty\setback Perception/Computers: Use ships sensors to look for life signs (or the Force).
-
-Hot, sulfurous air, ash and smoke blackening it. They’ll take \setback\setback from heat if they’re out too long.  If they lack filter masks, each PC takes one wound ``per round'' (in structured play, else as narratively appropriate).
-
-\difficulty\difficulty\difficulty Athletics checks to climb down through vertical conduits. \boost from the climbing gear.
-\begin{itemize}
-  \item \threat\threat Accidentally unhook filter mask, suffering 1 wound
-  \item \despair Slip and suffer a  Short Fall (10 W/10 S) onto hard rock
-\end{itemize}
-
-The planet shifts and groans around them. The distant, arrhythmic hiss of venting steam never entirely ceases. Even through the masks, the air smells terrible.
-
-\df\df Coordination check to squeeze through a crack to get into a side passage. \boost for narratively small PCs (all Silhouette 0 characters, humans with a slighter frame), \setback for larger ones (all Silhouette 2+ characters, Wookies, brawny humans, etc). Creatures attack when they’re in the crack!
-
-Green Bug Swarm from Beyond the Rim 44.  One in front and one behind.
-
-\npc{Green Bug Swarm}{1}{4}{1}{1}{1}{1}{20}{1}
-%   \emph{Green Bug Swarm} \\ %name
-%   \Characteristics{1}{4}{1}{1}{1}{1}\\
-%   \DerivedSplit{Health}{20}{1}{Wounds}{Soak} % wounds/soak
+\npc{Scarab Swarm}{1}{4}{1}{1}{1}{1}{20}{1}
 \npccontinued{0}{0}{
    Skills:
    \begin{itemize}
@@ -230,79 +135,15 @@ Green Bug Swarm from Beyond the Rim 44.  One in front and one behind.
    \end{itemize}
    Abilities:
    \begin{itemize}
+       \item Sharp mandibles - +2 brawl damage
        \item Swarm - Unless blast or burn, halve damage before applying soak
-       \item Venomous Stinger - If Green Bug Swarm successfully hits a character, that character must make at \df\df Resilience check or be disoriented (+\setback) for 3 rounds.
-       \item Knockout Poison - If Green Bug Swarm would deal a crit or cause a target to exceed its strain threshold, target must make a \df\df\df Resilience check or fall unconscious for 5 minutes (revive with \df\df Medicine)
+       \item Venomous Stinger - If Scarab Swarm successfully hits a character, that character must make at \df\df Resilience check or be disoriented (+\setback) for 3 rounds.
    \end{itemize}}
 
-After the crack, the passage is wider and tends uphill.
+Two apparent ways out, tunnel up and tunnel ``west'' (if you have a compass).  Westward tunnel is collapsed in.
 
-\section{The Miners}
+\df\df\df Vigilance to listen for faint howling
 
-Tunnel comes to a ledge, opening up into a small circular cavern. Main tunnel continues on the other side, angling back up to the surface. Miners are below under a collapsed section. The opening is no wider than an arm.
- 
-\df\df Perception or \df\df\df Vigilance to see flash of miners’ lamp lights. 
-
-Miners will be suspicious unless told PCs were sent by Zien Myder.
-\begin{quote}
-Are you from SoroSuub?
-\end{quote}
-
-\df\df\stb\stb Charm to convince miners of PCs good intentions.
-\begin{itemize}
-	\item +\boost if PC making check is Sullustan
-	\item \advantage They have some useful equipment that combined with the PCs' gear, can help escape.
-	\item \threat The miners are especially weakened and have to be carried out
-	\item \threat\threat Miners need immediate medical attention
-	\item \despair A minion group of miners is hallucinating from dehydration and thinks the PCs are attacking them.
-\end{itemize}
-
-
-Aadlan Myder and four other Sullustans (Cars Mun, Truvv Nryll, Fri Anb, Omo Riirs, Mi Wull). They will ask for water. If PCs explain that they are here to guide the miners back to the surface, there will be some protests and objections because of how unstable that is. Aadlan will try to calm them down.
-
-Must widen opening. Explosives or Force Move is probably the way to go. The miners may have some explosives that can be reeled up to the PCs to place.
-
-A Force-sensitive PC will have a sense of unease, that they need to hurry. When miners are starting to be pulled up, \df\df\df Perception to sense rumbling under feet.
-
-Miners start to panic and say they need to hurry. There’s a rockrender on the way, drawn by the explosion. When the last miner is on the way up, it breaks through.
-
-Breaking into the cavern is a giant beast—reddish, quadrupedal, with enormous curved talons the size of a human body, and a set of tusks to match. It shakes off the rubble it created with its own entrance and lifts its head, as if sniffing. The last of the miners is dangling only about a meter above the beast. 
-
-\df\df\df Knowledge (Xenology): Rockrender isn’t the danger, the paths it opens are
-
-\npc{Rockrender}{6}{3}{1}{2}{1}{1}{60}{15}
-\npccontinued{0}{0}{
-   Rockrender is really just passing through and will not attack anyone unless provoked.\\
-   Skills:
-   \begin{itemize}
-       \item Brawl 1
-       \item Coordination 2
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Burrow - \df\df Coordination to dig into the rock to escape
-       \item Sharp claws - +2 brawl damage
-   \end{itemize}
-\url{http://starwars.wikia.com/wiki/Rockrender}
-}
-
-
-Behind it, in the passage it made, there’s a dull orange glow that’s getting steadily brighter. The magma is rising.
-
-The miners are all exhausted/dehydrated and will move slowly. The PCs could try using explosives to collapse the tunnel behind them to slow the magma. Going back the way they came means heading downhill, and the magma will follow them that way. They can try going uphill on the other side of the cavern.
-
-Need 3x successes on \df\df\df Athletics checks to get all the miners out before the chamber floods with magma.  Failure to do so means either a PC suffers a critical injury to rescue a miner, or the Sullustans lose trust in the PCs (and possibly the Rebel Alliance).
-
-\section{Aftermath}
-
-Aadlan will want medical personnel to meet them in Pinyumb, rather than have any private treatment from the PCs. Wants them to call ahead to the comm operator there.
-\begin{quote}
-Make it public. They can’t assassinate me without plausible deniability.
-
-You’ve seen what they’ll do to silence the Cobalt Laborer’s Reformation Front.
-\end{quote}
-
-Zien and the rest of the Myder family will be waiting at Pinyumb to greet the rescued miners. PCs can slip the box of transponders in among all the gear they are returning.
 
 \end{multicols}
 \end{document}

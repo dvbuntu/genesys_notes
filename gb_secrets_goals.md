@@ -30,13 +30,13 @@ Start with a medkit.
 
 War is hell and pay is crap, but you can come out ahead.  Rather than let valuables be looted or scrapped for more tanks, you should keep them safe.  It belongs in a museum (or maybe your bank account).
 
-Start with a whip.
+Start with a whip (+1 dmg Melee, but works at short range, Ensnare 1.  Also usable narratively for Atheletics, Coordination, and other skill checks).
 
 ## Take Revenge
 
 The Wehrmacht has taken so much from you, family, friends, or livelihood.  But the tide of war is finally turning.  It's time to make the Germans pay for what they did.
 
-One of your weapons gains Vicious 2.
+One of your weapons gains Vicious 2 (+20 to crit results).
 
 ## Build a Legend
 
@@ -49,3 +49,4 @@ Once per session, add 2 boost dice to a dice pool before you roll.
 The bond with your squadmates is tighter than blood.  You've lost one member already; you cannot bear even the thought of losing another.  You will do whatever you can to ensure everyone survives the war.
 
 When you take the Aid Another maneuver or receive aid, add an extra boost die to the pool.
+

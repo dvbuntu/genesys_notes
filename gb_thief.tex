@@ -11,7 +11,7 @@
 \newcommand{\Int}{2}
 \newcommand{\Cun}{3}
 \newcommand{\Wil}{2}
-\newcommand{\Pre}{3}
+\newcommand{\Pre}{2}
 
 \newcommand{\df}{\DifficultyDie}
 \newcommand{\stb}{\SetbackDie}
@@ -84,8 +84,8 @@ Riding (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
 Skulduggery* (Cun) & \skilldice{\Cun}{1}   & \skill[1]\\
 Stealth* (Ag) & \skilldice{\Agi}{1}   & \skill[1]\\
 Streetwise* (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
-Survival (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
-Vigilance (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Survival (Cun) & \skilldice{\Cun}{1}   & \skill[1]\\
+Vigilance (Will) & \skilldice{\Wil}{1}   & \skill[1]\\
 \end{GenesysTable}
 %\begin{GenesysTable}{l X[l] X[c]}
 %\textbf{Magic Skills} & Dice Pool & Rank \\ 
@@ -105,7 +105,7 @@ Ranged--Heavy (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
     \textbf{Social Skills} & Dice Pool & Rank \\ 
 Charm* (Pr) & \skilldice{\Pre}{0}   & \skill[0]\\
 Coercion (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
-Deception* (Cun) & \skilldice{\Cun}{1}   & \skill[1]\\
+        Deception* (Cun) & \skilldice{\Cun}{1}(-\stb\stb)   & \skill[1]\\
 Leadership (Pr) & \skilldice{\Pre}{0}   & \skill[0]\\
 Negotiation (Pr) & \skilldice{\Pre}{0}   & \skill[0]\\
 \end{GenesysTable}
@@ -122,6 +122,8 @@ Education (Int) & \skilldice{\Int}{0}   & \skill[0]\\
 
 \begin{itemize}[noitemsep]
     \item\textbf{Ready For Anything:} Once per session, you may move a story point from the Game Master's pool to the players' pool.
+    \item\textbf{Knack For It:} Remove up to \stb\stb from every Deception check you make.
+    \item\textbf{Swift:} You suffer no penalties for moving through difficult terrain.
 \end{itemize}
 
 
@@ -131,7 +133,8 @@ Education (Int) & \skilldice{\Int}{0}   & \skill[0]\\
 {\small\sffamily
 \begin{GenesysTable}{l c c c c X[l]}
 \textbf{Weapon} & \textbf{Skill} & \textbf{Damage} & \textbf{Crit} & \textbf{Range} & \textbf{Special}\\
-    Pistol & Ranged (Light) & 5 & 3 & Medium &  \\
+    Pistol & Ranged (Light) \skilldice{\Agi}{1} & 5 & 3 & Medium &  \\
+    Knife & Melee \skilldice{\Bra}{1} & +1 & 3 & Engaged &  \\
 \end{GenesysTable}
 }
 
@@ -171,7 +174,7 @@ Education (Int) & \skilldice{\Int}{0}   & \skill[0]\\
 Item & Enc\\
 Pistol & 2\\
 Lock Picks & 1\\
-Playing Cards & 1\\
+Knife & 1\\
 \end{GenesysTable}\\[0.5em]
 }
 
@@ -192,9 +195,8 @@ Playing Cards & 1\\
 \begin{multicols}{2}
 \setlength{\columnseprule}{0.3pt}
 \begin{itemize}[noitemsep]
-\item 50XP Agi 2 \faArrowRight\ 3 \faArrowRight\ 4
+\item 70XP Agi 2 \faArrowRight\ 3 \faArrowRight\ 4
 \item 30XP Cun 2 \faArrowRight\ 3
-\item 30XP Pr 2 \faArrowRight\ 3
 \end{itemize}
 \end{multicols}
 
@@ -211,9 +213,9 @@ Playing Cards & 1\\
 \noindent\begin{tabu} to \linewidth{*{5}{X}}
 \rowfont{\bfseries\sffamily\centering} Tier 1 & Tier 2 & Tier 3 & Tier 4 & Tier 5\\
 \rowfont{\small\sffamily\centering} 5XP & 10XP & 15XP & 20XP & 25XP\\
-\\
+    Knack For It (Deception)\\
 \cline{1-1}
- &  \\
+Swift &  \\
 \cline{1-2}
  &  & \\
 \cline{1-3}

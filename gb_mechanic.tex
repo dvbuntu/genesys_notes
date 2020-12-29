@@ -1,0 +1,237 @@
+\documentclass{article}
+\usepackage{calc}
+\usepackage{genesys}
+\geometry{margin=0.5in}
+
+\setmainfont[Scale=0.9]{Crimson}
+\setsansfont[Scale=0.9]{Bebas Neue}
+
+\newcommand{\Bra}{3}
+\newcommand{\Agi}{2}
+\newcommand{\Int}{3}
+\newcommand{\Cun}{2}
+\newcommand{\Wil}{2}
+\newcommand{\Pre}{3}
+
+\newcommand{\df}{\DifficultyDie}
+\newcommand{\stb}{\SetbackDie}
+\newcommand{\ch}{\ChallengeDie}
+\newcommand{\abd}{\AbilityDie}
+\newcommand{\bbb}{\BoostDie}
+\newcommand{\pd}{\ProficiencyDie}
+
+
+
+
+\begin{document}
+\begin{minipage}{0.6\linewidth}
+{\Huge Pvt. ``Iron'' }
+
+    {\large Laborer / Tradesperson (melee)}
+
+\vspace{1.5em}
+
+\end{minipage}\hfill%
+\\
+
+%\begin{minipage}{0.33\linewidth}
+\vspace{0em}\raggedright
+\begin{multicols}{2}
+\includegraphics[width=.25\linewidth]{Hellion3}
+
+\columnbreak
+
+An army marches on its stomach, but if the truck works, you don't have to march at all.  You're easy to get along with, or maybe people just respect the size of your swing.
+
+\end{multicols}
+%\end{minipage}
+
+
+\begin{center}
+\Characteristics{\Bra}{\Agi}{\Int}{\Cun}{\Wil}{\Pre}
+
+\noindent\null\hfill\Derived{Soak Value}{4}\quad
+\Derived{Wound Threshold}{15}\null\quad
+\Derived{Strain Threshold}{10}\quad
+\DerivedSplit{Defense}{0}{0}{Melee}{Ranged}\hfill\null
+\Derived{Encumbrance Thresh}{8}\quad
+\end{center}
+
+%{\centering
+%\tikz \node[signal, draw, minimum width=0.3\linewidth, fill=black, text=white, signal to=east and west]{\bfseries\sffamily CHARACTERISTICS};\\[0.5em]}
+
+\vspace{0.5em}
+
+\CharSect{SKILLS}
+
+
+\vspace{-3em}
+
+\begin{multicols}{2}
+{\sffamily
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{General Skills} & Dice Pool & Rank \\
+Athletics* (Br) & \skilldice{\Bra}{1}   & \skill[1] \\
+Cool (Pr) & \skilldice{\Pre}{0}   & \skill[0] \\
+Coordination (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Discipline* (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Medicine (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+        Mechanic* (Int) & \skilldice{\Int}{1}(+\bbb-\stb\stb)   & \skill[1]\\
+Operating (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Perception* (Cun) & \skilldice{\Cun}{1}   & \skill[1]\\
+Resilience* (Br) & \skilldice{\Bra}{0}   & \skill[0]\\
+Riding (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Skulduggery (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Stealth (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Streetwise* (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Survival (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Vigilance (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+\end{GenesysTable}
+%\begin{GenesysTable}{l X[l] X[c]}
+%\textbf{Magic Skills} & Dice Pool & Rank \\ 
+%Arcane (Int) & \skilldice{2}{0}   & \skill[0]\\
+%Divine (Will) & \skilldice{2}{0}   & \skill[0]\\
+%Primal (Cun) & \skilldice{3}{1}   & \skill[1]\\
+%\end{GenesysTable}
+    \vspace*{\fill}\columnbreak
+\begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Combat Skills} & Dice Pool & Rank \\ 
+Brawl (Br) & \skilldice{\Bra}{0}   & \skill[0]\\
+Melee* (Br) & \skilldice{\Bra}{1}   & \skill[1]\\
+Ranged--Light (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Ranged--Heavy (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+\end{GenesysTable}
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Social Skills} & Dice Pool & Rank \\ 
+Charm (Pr) & \skilldice{\Pre}{0}   & \skill[0]\\
+Coercion (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Deception (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Leadership (Pr) & \skilldice{\Pre}{0}   & \skill[0]\\
+Negotiation* (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+\end{GenesysTable}
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Knowledge Skills} & Dice Pool & Rank \\ 
+Education (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+        Lore (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+\end{GenesysTable}}
+{\small{* Indicates a career skill}}
+\end{multicols}
+
+
+\CharSect{ABILITIES/TALENTS}
+
+\begin{itemize}[noitemsep]
+    \item\textbf{Tough as Nails:} Once per session, you may spend a story point as an incidental after suffering a critial injury and determining the result.  If you do so, the result changes to having rolled as 1 (so still add + other modifiers).
+    \item\textbf{Challenge!:} Once per encounter, make a \textbf{Challenge!} maneuver to target an adversary within short range.  Until your character is incapacitated or the end of the encounter, the target gains \bbb when targeting you, and \stb\stb when targeting anyone else.
+    \item\textbf{Knack For It:} Remove up to \stb\stb from every Mechanics check you make.
+    \item\textbf{Inventor:} When your character makes a check to construct new items or modify existing ones, use this talent to add a number of \BoostDie equal to ranks in Inventor.  In addition, your character may attempt to reconstruct devices that they have heard described but have not seen nor have schematics for.
+\end{itemize}
+
+
+\CharSect{WEAPONS}
+
+
+{\small\sffamily
+\begin{GenesysTable}{l c c c c X[l]}
+\textbf{Weapon} & \textbf{Skill} & \textbf{Damage} & \textbf{Crit} & \textbf{Range} & \textbf{Special}\\
+    Shovel & Melee \skilldice{\Bra}{1}\stb & +2 & 4 & Engaged & Inaccurate 1, Disorient 2  \\
+\end{GenesysTable}
+}
+
+
+\vfill
+\pagebreak
+
+%%%%%
+% Page Break
+%%%%%
+
+\CharSect{MOTIVATIONS}
+
+\null\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Strength:}\small\ Independent\\
+\end{minipage}}\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Flaw:} \small\ Deception\\
+\end{minipage}}\hfill\null
+
+\vspace{0.5em}
+
+\null\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Desire:}\small\ Safety\\ 
+\end{minipage}}\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Fear:}\small\ Nemesis\\
+\end{minipage}}\hfill\null
+
+\vspace{2em}
+
+
+
+
+\CharSect{EQUIPMENT}
+
+{\centering
+\begin{GenesysTable}{l r}
+Item & Enc\\
+Shovel & 3\\
+Custom Tool Kit & 2\\
+\end{GenesysTable}\\[0.5em]
+}
+
+\vspace{2em}
+
+\CharSect{NOTES}
+
+
+%\begin{itemize}
+%    \item Alchemy crafting is $\lceil\frac{Rarity}{2} \rceil$
+%    \item Heal \faArrowRight \DifficultyDie
+%    \item Miracle \faArrowRight \DifficultyDie \DifficultyDie\DifficultyDie (+5 wd/+5 st,  \DifficultyDie\DifficultyDie Resil or -5 st)
+%    \item Paralyze \faArrowRight \DifficultyDie\DifficultyDie\DifficultyDie ( \DifficultyDie\DifficultyDie\DifficultyDie Resil or immobile 3 rds)
+%\end{itemize}
+
+\CharSect{CHANGE LOG}
+
+\begin{multicols}{2}
+\setlength{\columnseprule}{0.3pt}
+\begin{itemize}[noitemsep]
+\item 20XP Wil 1 \faArrowRight\ 2
+\item 30XP Pr 2 \faArrowRight\ 3
+\item 30XP Int 2 \faArrowRight\ 3
+\item 5XP Challenge!
+\item 5XP Knack For It
+\item 10XP Inventor
+\end{itemize}
+\end{multicols}
+
+
+\vspace*{\fill}
+
+\fbox{\parbox{5em}{\centering 100\\Total XP}}\hfill\fbox{\parbox{5em}{\centering 0\\Available XP}}
+
+
+\pagebreak
+
+\CharSect{TALENT PYRAMID}
+
+\noindent\begin{tabu} to \linewidth{*{5}{X}}
+\rowfont{\bfseries\sffamily\centering} Tier 1 & Tier 2 & Tier 3 & Tier 4 & Tier 5\\
+\rowfont{\small\sffamily\centering} 5XP & 10XP & 15XP & 20XP & 25XP\\
+Challenge! \\
+\cline{1-1}
+Knack For It & Inventor \\
+\cline{1-2}
+ &  & \\
+\cline{1-3}
+ &  & & \\
+\cline{1-4}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+
+\end{tabu}
+
+\end{document}

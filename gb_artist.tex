@@ -1,0 +1,237 @@
+\documentclass{article}
+\usepackage{calc}
+\usepackage{genesys}
+\geometry{margin=0.5in}
+
+\setmainfont[Scale=0.9]{Crimson}
+\setsansfont[Scale=0.9]{Bebas Neue}
+
+\newcommand{\Bra}{2}
+\newcommand{\Agi}{3}
+\newcommand{\Int}{2}
+\newcommand{\Cun}{3}
+\newcommand{\Wil}{2}
+\newcommand{\Pre}{3}
+
+\newcommand{\df}{\DifficultyDie}
+\newcommand{\stb}{\SetbackDie}
+\newcommand{\ch}{\ChallengeDie}
+\newcommand{\abd}{\AbilityDie}
+\newcommand{\bbb}{\BoostDie}
+\newcommand{\pd}{\ProficiencyDie}
+
+
+
+
+\begin{document}
+\begin{minipage}{0.6\linewidth}
+{\Huge 4th Lt. ``Meadow'' }
+
+    {\large Aristocrat / Entertainer }
+
+\vspace{1.5em}
+
+\end{minipage}\hfill%
+\\
+
+%\begin{minipage}{0.33\linewidth}
+\vspace{0em}\raggedright
+\begin{multicols}{2}
+\includegraphics[width=.25\linewidth]{Grave_Robber1}
+
+\columnbreak
+
+Command insists that ``4th Lieutenant'' is a real rank, and not one they made up to ensure you couldn't accidentally issue orders to anyone.  Still, a commission is a commission.  With any luck, you can open your own studio after the war.
+
+\end{multicols}
+%\end{minipage}
+
+
+\begin{center}
+\Characteristics{\Bra}{\Agi}{\Int}{\Cun}{\Wil}{\Pre}
+
+\noindent\null\hfill\Derived{Soak Value}{3}\quad
+\Derived{Wound Threshold}{12}\null\quad
+\Derived{Strain Threshold}{12}\quad
+\DerivedSplit{Defense}{1}{1}{Melee}{Ranged}\hfill\null
+\Derived{Encumbrance Thresh}{7}\quad
+\end{center}
+
+%{\centering
+%\tikz \node[signal, draw, minimum width=0.3\linewidth, fill=black, text=white, signal to=east and west]{\bfseries\sffamily CHARACTERISTICS};\\[0.5em]}
+
+\vspace{0.5em}
+
+\CharSect{SKILLS}
+
+
+\vspace{-3em}
+
+\begin{multicols}{2}
+{\sffamily
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{General Skills} & Dice Pool & Rank \\
+Athletics (Br) & \skilldice{\Bra}{0}   & \skill[0] \\
+Cool (Pr) & \skilldice{\Pre}{1}   & \skill[1] \\
+Coordination* (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Discipline* (Will) & \skilldice{\Wil}{1}   & \skill[1]\\
+Medicine (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Mechanic (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Operating (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Perception (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Resilience (Br) & \skilldice{\Bra}{0}   & \skill[0]\\
+Riding (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Skulduggery* (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Stealth* (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Streetwise (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Survival (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Vigilance (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+\end{GenesysTable}
+%\begin{GenesysTable}{l X[l] X[c]}
+%\textbf{Magic Skills} & Dice Pool & Rank \\ 
+%Arcane (Int) & \skilldice{2}{0}   & \skill[0]\\
+%Divine (Will) & \skilldice{2}{0}   & \skill[0]\\
+%Primal (Cun) & \skilldice{3}{1}   & \skill[1]\\
+%\end{GenesysTable}
+    \vspace*{\fill}\columnbreak
+\begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Combat Skills} & Dice Pool & Rank \\ 
+Brawl (Br) & \skilldice{\Agi}{0}   & \skill[0]\\
+Melee* (Br) & \skilldice{\Agi}{1}   & \skill[1]\\
+Ranged--Light (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Ranged--Heavy (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+\end{GenesysTable}
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Social Skills} & Dice Pool & Rank \\ 
+Charm* (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+Coercion (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Deception* (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Leadership* (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+Negotiation (Pr) & \skilldice{\Pre}{0}   & \skill[0]\\
+\end{GenesysTable}
+    \begin{GenesysTable}{l X[l] X[c]}
+    \textbf{Knowledge Skills} & Dice Pool & Rank \\ 
+Education (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+        Lore (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+\end{GenesysTable}}
+{\small{* Indicates a career skill}}
+\end{multicols}
+
+
+\CharSect{ABILITIES/TALENTS}
+
+\begin{itemize}[noitemsep]
+    \item\textbf{Forceful Personality:} Once per session, you may spend a story point as an incidental.  If you do so, on your next skill check, double the amount of strain you inflict or heal (choose before making the check).
+    \item\textbf{Finesse:} You may use Agility rather than Brawn for Brawl and Melee checks.
+        \item\textbf{Clever Retort:} Once per encounter, when you are targeted by a social check, you may add \Threat\Threat to the dice pool before it is rolled.
+        \item\textbf{Inspiring Rhetoric:} As an action, you may make an \textbf{Average (\df\df) Leadership} check.  For each \Success, one ally within short range heals one strain.  For each \Advantage, one benefitting ally heals an additional strain.
+\end{itemize}
+
+
+\CharSect{WEAPONS}
+
+
+{\small\sffamily
+\begin{GenesysTable}{l c c c c X[l]}
+\textbf{Weapon} & \textbf{Skill} & \textbf{Damage} & \textbf{Crit} & \textbf{Range} & \textbf{Special}\\
+    Saber & Melee \skilldice{\Agi}{1}\bbb & +2 & 3 & Engaged & Accurate 1 \\
+\end{GenesysTable}
+}
+
+
+\vfill
+\pagebreak
+
+%%%%%
+% Page Break
+%%%%%
+
+\CharSect{MOTIVATIONS}
+
+\null\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Strength:}\small\ Adaptable\\
+\end{minipage}}\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Flaw:} \small\ Timid\\
+\end{minipage}}\hfill\null
+
+\vspace{0.5em}
+
+\null\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Desire:}\small\ Expertise\\ 
+\end{minipage}}\hfill\fbox{\begin{minipage}[t][0.1\textheight][t]{0.45\textwidth}
+\textbf{Fear:}\small\ Failure\\
+\end{minipage}}\hfill\null
+
+\vspace{2em}
+
+
+
+
+\CharSect{EQUIPMENT}
+
+{\centering
+\begin{GenesysTable}{l r}
+Item & Enc\\
+Saber & 2\\
+Officer's Body Armor & 2\\
+\end{GenesysTable}\\[0.5em]
+}
+
+\vspace{2em}
+
+\CharSect{NOTES}
+
+
+%\begin{itemize}
+%    \item Alchemy crafting is $\lceil\frac{Rarity}{2} \rceil$
+%    \item Heal \faArrowRight \DifficultyDie
+%    \item Miracle \faArrowRight \DifficultyDie \DifficultyDie\DifficultyDie (+5 wd/+5 st,  \DifficultyDie\DifficultyDie Resil or -5 st)
+%    \item Paralyze \faArrowRight \DifficultyDie\DifficultyDie\DifficultyDie ( \DifficultyDie\DifficultyDie\DifficultyDie Resil or immobile 3 rds)
+%\end{itemize}
+
+\CharSect{CHANGE LOG}
+
+\begin{multicols}{2}
+\setlength{\columnseprule}{0.3pt}
+\begin{itemize}[noitemsep]
+\item 20XP Bra 1 \faArrowRight\ 2
+\item 30XP Agi 2 \faArrowRight\ 3
+\item 30XP Cun 2 \faArrowRight\ 3
+\item 5XP Finesse
+\item 5XP Clever Retort
+\item 10XP Inspiring Rhetoric
+\end{itemize}
+\end{multicols}
+
+
+\vspace*{\fill}
+
+\fbox{\parbox{5em}{\centering 100\\Total XP}}\hfill\fbox{\parbox{5em}{\centering 0\\Available XP}}
+
+
+\pagebreak
+
+\CharSect{TALENT PYRAMID}
+
+\noindent\begin{tabu} to \linewidth{*{5}{X}}
+\rowfont{\bfseries\sffamily\centering} Tier 1 & Tier 2 & Tier 3 & Tier 4 & Tier 5\\
+\rowfont{\small\sffamily\centering} 5XP & 10XP & 15XP & 20XP & 25XP\\
+Finesse \\
+\cline{1-1}
+Clever Retort & Inspiring Rhetoric \\
+\cline{1-2}
+ &  & \\
+\cline{1-3}
+ &  & & \\
+\cline{1-4}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+\cline{1-5}
+ &  & & & \\
+
+\end{tabu}
+
+\end{document}

@@ -1,0 +1,88 @@
+digraph G {
+  edge [dir=none];
+  node [shape=box];
+  graph [splines=ortho];
+  rankdir="LR";
+
+  "Nasir" [shape=oval, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+  "Penna"     [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Thrandolil" [shape=oval, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+
+  "Anador"     [shape=oval, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+  "Quaemilya"      [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Heppalonia"    [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+
+  "Tric Manu"     [shape=octagon, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+
+  "Rugg"     [shape=box, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+  "Mhaev"    [shape=box, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Terwaen"    [shape=box, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Regina"    [shape=box, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Bayar"     [shape=box, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
+
+  // Penna and Nasir's parents
+  a1 [shape=diamond,label="",height=0.25,width=0.25]; // marriage diamond
+  b1 [shape=circle,label="",height=0.01,width=0.01];
+  b2 [shape=circle,label="",height=0.01,width=0.01];
+  b3 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; a1};
+  {rank=same; b1 -> b2 -> b3};
+  {rank=same; Nasir; Penna};
+  a1 -> b2
+  b1 -> Nasir
+  b3 -> Penna
+
+  // Penna and Thrandolil
+  p1 [shape=diamond,label="",height=0.25,width=0.25];
+  q1 [shape=circle,label="",height=0.01,width=0.01];
+  q2 [shape=circle,label="",height=0.01,width=0.01];
+  q3 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; Penna -> p1 -> Thrandolil};
+  {rank=same; q1 -> q2 -> q3};
+  {rank=same; Quaemilya; Heppalonia};
+  p1 -> q2;
+  q1 -> Quaemilya;
+  q3 -> Heppalonia;
+
+  // Thrandolil and Anador's parents
+  x1 [shape=diamond,label="",height=0.25,width=0.25];
+  y1 [shape=circle,label="",height=0.01,width=0.01];
+  y2 [shape=circle,label="",height=0.01,width=0.01];
+  y3 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; x1};
+  {rank=same; y1 -> y2 -> y3};
+  {rank=same; Thrandolil; Anador};
+  x1 -> y2;
+  y1 -> Thrandolil;
+  y3 -> Anador;
+
+  // Anador and Mhaev
+  am1 [shape=Mdiamond,label="",height=0.25,width=0.25];
+  am11 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; Anador -> am1 -> Mhaev};
+  {rank=same; am11};
+  {rank=same; "Tric Manu"};
+  am1 -> am11;
+  am11 -> "Tric Manu";
+
+  // Mhaev and Rugg
+  mr1 [shape=Mdiamond,label="",height=0.25,width=0.25];
+  mr11 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; Mhaev -> mr1 -> Rugg};
+  {rank=same; mr11};
+  {rank=same; Terwaen};
+  mr1 -> mr11;
+  mr11 -> Terwaen;
+
+  // Rugg and Regina
+  rr1 [shape=diamond,label="",height=0.25,width=0.25];
+  rr11 [shape=circle,label="",height=0.01,width=0.01];
+  {rank=same; Rugg -> rr1 -> Regina};
+  {rank=same; rr11};
+  {rank=same; Bayar};
+  rr1 -> rr11;
+  rr11 -> Bayar;
+
+  // extra lines
+  Nasir -> "Tric Manu" [constraint=false];
+}

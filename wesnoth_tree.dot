@@ -10,7 +10,7 @@ digraph G {
 
   "Anador"     [shape=oval, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
   "Quaemilya"      [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
-  "Heppalonia"    [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
+  "Hepalonia"    [shape=oval, regular=0, color="red", style="filled" fillcolor="pink"] ;
 
   "Tric Manu"     [shape=octagon, regular=0, color="blue", style="filled" fillcolor="lightblue"] ;
 
@@ -39,10 +39,10 @@ digraph G {
   q3 [shape=circle,label="",height=0.01,width=0.01];
   {rank=same; Penna -> p1 -> Thrandolil};
   {rank=same; q1 -> q2 -> q3};
-  {rank=same; Quaemilya; Heppalonia};
+  {rank=same; Quaemilya; Hepalonia};
   p1 -> q2;
   q1 -> Quaemilya;
-  q3 -> Heppalonia;
+  q3 -> Hepalonia;
 
   // Thrandolil and Anador's parents
   x1 [shape=diamond,label="",height=0.25,width=0.25];

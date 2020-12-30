@@ -84,5 +84,5 @@ digraph G {
   rr11 -> Bayar;
 
   // extra lines
-  Nasir -> "Tric Manu" [constraint=false];
+  //Nasir -> "Tric Manu" [constraint=false]; // messes up ordering
 }

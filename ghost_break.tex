@@ -10,6 +10,8 @@
 
 %\swrpgbackground
 
+\newcommand{\gb}{\emph{Ghost Break} }
+
 % starwars dice
 \newcommand{\df}{\DifficultyDie }
 \newcommand{\stb}{\SetbackDie }
@@ -41,22 +43,26 @@
 }
 
 \title{Weird War: Ghost Break}
-\author{DVB}
+\author{By: DVB}
+\date{A GeneSys Adventure Module}
 
 \begin{document}
 \maketitle
 
 \begin{multicols}{2}
+
+\gb is an adventure module using the GeneSys RPG system and dice.  It is set in a variant of the \emph{Weird War} setting, an alternative history World War 2 universe with occult elements.
+
+Four pregenerated characters are provided, as well as four secret backgrounds and four secret goals.  After players have chosen their characters, randomly distribute one background and one goal to each player.  They should not directly share this information with other players, but it may come out narratively during gameplay.
+
 \section{Intro}
 (North Africa, 1942)\\
 
-    PCs are allied 2nd stringers (33rd Lowland Division), worn out from weeks of fighting Rommel in the desert.  Things were finally looking up as Montgomery's Eighth Army clawed back some territory from the Axis.  But Rommel has been desperate, meddling with dark forces and tombs long covered by the sand.  Worse than breaking into such a reliquary is breaking out...
+    The PCs are allied 2nd stringers (33rd Lowland Division), worn out from weeks of fighting Rommel in the desert.  Things were finally looking up as Montgomery's Eighth Army clawed back some territory from the Axis.  But Rommel has been desperate, meddling with dark forces and tombs long covered by the sand.  Worse than breaking into such a reliquary is breaking out...
 
-Stuff around the camp, maybe someone telling ghost stories
+    Sergeant Slattery brooks no nonsense and has authority over PCs (even officers).  He orders them on latrine duty as ``light work''.
 
-    Sergeant Slattery, total hardass.  Has authority over PCs (even officers).  Puts them on latrine duty as ``light work''.
-
-All-American Super Squad just leaving, mocking PCs saying they just ``left a deposit'' for the party to clean up.
+    The All-American Super Squad (AASS) is just leaving, mocking PCs saying they just ``left a deposit'' for the party to clean up.  They chest bump, high five, and set out for a night of unsanctioned partying in the encampment. 
 
 \subsection{Adventure Limitations}
 
@@ -65,16 +71,14 @@ All-American Super Squad just leaving, mocking PCs saying they just ``left a dep
     During this adventure, PCs face the following global modifiers:
 
     \begin{itemize}
-        \item Rationed supplies, \Threat\Threat is enough to run out of ammo or other limited use items (med kits, flares, etc).  Scrounging may recover additional ammo or supplies
+        \item Rationed Supplies, \Threat\Threat is enough to run out of ammo or other limited use items (med kits, flares, etc).  Scrounging may recover additional ammo or supplies
         \item Low Morale, \Despair causes all \emph{other} party members to suffer one strain in addition to normal effects
-        \item Turning point, Aid Another maneuver adds an extra \Advantage\Advantage in addition to normal benefits
+        \item Turning Point, Aid Another maneuver adds an extra \Advantage\Advantage in addition to normal benefits
     \end{itemize}
 
 \section{Benign Transposition}
 
-    Ghost - ancient spirit, now a Tortured Soul, summoned by Rommel's occult detachment (GeisterTruppen).  Unbound since axis retreated, but desperately needs to escape the warded tomb, or PCs will share their fate.
-
-Ghost spends last bit of vigor weirdly teleporting PCs from surface to within tomb.  To get out themselves, PCs need to get Ghost out safely.
+As the PCs head toward the latrine, they suddenly feel a twisting motion.  Everything goes black.
 
 \ch\df Resilience to avoid retching at sudden motion
     \begin{itemize}
@@ -84,16 +88,42 @@ Ghost spends last bit of vigor weirdly teleporting PCs from surface to within to
         \item \Despair Some \emph{part} of you is still in the ether.  Upgrade difficulty of incorporeal check.
     \end{itemize}
 
+    Ghost - ancient spirit, now a Tortured Soul, summoned by Rommel's occult detachment (GeisterTruppen).  It is unbound since the Axis retreated, but it is unable to escape the warded tomb, or PCs will share their fate.  Ghost may choose to lie and claim to be a former human transformed by the Germans.  
 
-It is completely dark.  There are no sounds of the typical encampment.  A brief sobbing wail wanes nearby as the Ghost.
+Ghost spent last bit of vigor weirdly teleporting PCs from surface to within tomb.  It is stuck in a warded circle in this room.  Some kind of occult key could safely free it.  To get out of this tomb themselves, PCs need to get Ghost out safely or find their own way.
 
-Social interaction with Ghost can reveal info about nazi occult experiments and possibly dangers of the tomb, mix of ancient shrines and leftover Nazi occult experiments.
+\npc{Tortured Soul}{2}{2}{3}{3}{3}{1}{19}{1}
+\npccontinued{2}{2}{
+   Skills:
+   \begin{itemize}
+       \item Brawl 2
+       \item Ranged Light 2
+       \item Discipline 2
+       \item Deception 2
+       \item Lore 2
+       \item Negotiate 2
+       \item Coercion 2
+   \end{itemize}
+   Abilities:
+   \begin{itemize}
+       \item Adversary 1
+       \item Ghostly - halve incoming damage unless from magical/holy/etc source
+       \item Spectral Claw - brawl, 2 dmg,  crit 2
+       \item Wail - ranged light, 2 dmg, blast (short), disorient 2
+   \end{itemize}}
 
-    Ghost brought PCs here as they can help it escape by breaking the ward.  Then Ghost will help them escape the tomb itself.  Possible \textbf{Negotiate}.
 
-    Occult check may reveal nature of Ghost (summoned spirit, not some long-serving guardian).  Powerful but slowly recharging abilities
+It is completely dark.  There are no sounds of the typical encampment.  A brief sobbing wail wanes nearby.
 
-\ch\df Discipline to maintain corporeal existence
+Social interaction with Ghost can reveal info about Nazi occult experiments and possibly dangers of the tomb: a mix of ancient shrines and leftover experiments.
+
+    Ghost brought the PCs here as they can help it escape by breaking the ward.  Then Ghost calls out to them, will to help them escape the tomb itself if they break him out of the ward.  Possible \textbf{Negotiate}.
+
+    \df\df Lore check may reveal nature of Ghost (summoned spirit, not some long-serving guardian).  It is powerful but has slowly recharging abilities.
+
+    Once PCs have spent some amount of time after the transposition, their materiality hopefully stabilizes, possibly violently.  The transposition may not have been so benign.
+
+\ch\df Discipline to stabilize corporeal existence
     \begin{itemize}
         \item \Failure Lose full connection to material reality.  +\stb for next encounter as slowly rematerialize completely.
         \item \Advantage See something interesting while phasing.  +\bbb to Perception (may be occult aligned)
@@ -101,7 +131,7 @@ Social interaction with Ghost can reveal info about nazi occult experiments and 
         \item \Despair Still phasing in and out.  May phase out at an inopportune time chosen by the GM, lasting for 1 round of structured time
     \end{itemize}
 
-Ghost is bound to this room by occult wards, and will only help PCs out if they let him out.
+Ghost is bound to this room by occult wards, and will only help PCs out if they undo the wards.
 
     \df\df Knowledge (Lore) to ascertain nature of occult wards
     \begin{itemize}
@@ -142,7 +172,7 @@ A stone staircase leads up to a larger chamber, dry from thousands of years of d
        \item Venomous Bite - If Scarab Swarm successfully hits a character, that character must make at \df\df Resilience check or be disoriented (+\stb) for 2 rounds.
    \end{itemize}}
 
-Two apparent ways out, tunnel up and tunnel ``east'' (if you have a compass).  Westward tunnel is collapsed in.
+There are two apparent ways out, tunnel up and tunnel ``east'' (if you have a compass).  A westward tunnel is collapsed in, but may be cleared with effort.
 
 \df\df Vigilance to listen for faint yelling or hear German radio static from tunnel
 \begin{itemize}
@@ -160,15 +190,15 @@ Ghost can only speculate on the nature of the scarabs.  ``Creatures of hunger, m
 
 \section{Prisoners}
 
-In tunnel up, several Germans locked up, looking somewhat haggard with torn uniforms.  They plea to be let out.  \df\df Streetwise to understand unless your character narratively speaks German.
+In the tunnel up, several Germans are locked up, looking somewhat haggard with torn uniforms.  They plea to be let out.  \df\df Streetwise to understand their meaning unless your character narratively speaks German.
 
 Johann, Frederick, Carsten will only volunteer that they're soldiers in the German army.  But they insist they're innocent, just a misunderstanding (if you can understand German).
 
-They are actually the experiments of this tomb.  Occult fusions of human and jackal.  Essentially a werewolf.  These people don't really know that, only bad nitemares.  But they're hardly turning traitor, more interested in getting out alive.  Given the chance, they'll flee.  If PCs turn on them, they may transform (due to rage)
+They are actually the experiments of this tomb.  Occult fusions of human and jackal, essentially a werewolf.  These people don't really know that, only that they have bad nightmares.  But they're hardly turning traitor, being more interested in getting out alive.  Given the chance, they'll flee.  If PCs turn on them, they may transform (due to rage).
 
-Do PCs even trust these people?  Rommel is known for laying traps; this could be yet another one?
+Do PCs even trust these people?  Rommel is known for laying traps; could this be yet another one?
 
-Ghost not a fan of them because Germans imprisoned it.
+Ghost is not a fan of the Germans, making no distinction between prisoners and captors.
 
 \df\df\stb\stb Medicine to inspect the prisoners
     \begin{itemize}
@@ -177,42 +207,45 @@ Ghost not a fan of them because Germans imprisoned it.
         \item \Triumph Extra hair, extended canines, sharp claws, these people will transform under the light of a full moon, or stressful situations.
     \end{itemize}
 
-One prisoner has the occult key (especially if threats on medicine).
+One prisoner has the occult key (especially if threats on the Medicine check).
 
 \section{Ruined Shrine}
 
-Ruined anubis/jackal statues/sarchophagi
+In the eastern tunnel, there is a ruined shrine.  It has several jackal statues and sarchophagi.
 
-Germans uneasy, may panic.  Can store/spend threats/dark side points to have them (or one of them) transform (or partial transform?  smells like a wet dog?).
+If the Germans are with the PCs, they are uneasy and may panic.  The GM can store/spend threats/dark side points to have them (or one of them) transform and attack.  Panic tends to spread...
 
-Place has been looted of all valuables (\ch\df\stb\stb Perception to look anyway).  But occult key may be found here with success if not found already.
+This shrine has been looted of all valuables (\ch\df\stb\stb Perception to look anyway).  But the occult key may be found here with success if not found already.
 
-Ghost wistful.  This place was once opulent.  If PCs can extract info from them, learn that it was a shrine to Anubis.  Now desecrated by Germans.  If PCs scrounge too much (\Threat\Threat\Threat or \Despair), Ghost may attack upon discovery.
+Ghost, if present, is wistful.  This place was once opulent.  If PCs can extract info from them, they learn that it was a shrine to Anubis, now desecrated by Germans.  If PCs scrounge too much (\Threat\Threat\Threat or \Despair), Ghost may attack upon discovery.
 
 
 \section{Collapsed Tunnel}
 
-If engineer an opening, can see mostly clear tunnel heading west.  More recent construction.  Flickering lights.
+If the PCs can engineer an opening, they will see a mostly clear tunnel heading west.  This is more modern construction with flickering lights.
 
-\df\df Perception to recover useful piece of equipment.
+\df\df Perception to recover useful Wehrmacht orders in the rubble.
 
-German army planning to pop up a battalion behind Allied lines using this tunnel.  Maybe find note of orders (for retreat and subsequent return 2 days later...i.e. in 4 hours).  They will have almost certainly too much firepower for PCs to withstand, need to warn command.
+The German army is planning to pop up a battalion behind Allied lines using this tunnel.  PC may find Wehrmacht orders (for retreat and subsequent return 2 days later...i.e. in 4 hours).  The Germans will have almost certainly too much firepower for the PCs to withstand; they need to warn command.  With \Advantage\Advantage, PCs can also recover a useful piece of equipment (choose randomly or appropriate to the character).
 
-If haven't found occult key, could be here (with multiple \Advantage).
+If they haven't found the occult key, it could be here (with multiple \Advantage).
 
-\df\df\df Atheletics to clear the tunnel.  Find a dead German trooper along the way.  
-
-On other side, worked tunnels, clearly more modern.
+\df\df\df Athletics to clear the tunnel.  Find a dead German trooper along the way.  
+If the prisoners or Ghost are with the PCs, they each reduce the difficulty of clearing the tunnel by one.
 
 \df\df Perception to hear GeisterTruppen moving about, carrying equipment.
 
-Come to an intersection.  One way leads to hatch to surface (where trooper is carrying things).  Another leads deeper into German territory.  The last leads to equipment room with more GeisterTruppen stuff.
+The tunnel opens to an intersection.  One way leads to a hatch to the surface (where trooper is carrying things).  Another leads deeper into German territory.  The last leads to an equipment room with GeisterTruppen occult materiel.
+
+\df\df Stealth to sneak (to hatch or equipment room)
+
+In the equipment room, \df\df Lore or \df\df\stb Education to assess what the Germans are storing here.  It is spirit binding (and releasing) tools.  With success, you can recover a Ghostbusters-style portable containment unit (complete with foot pedal).  Deploy at your own risk.
 
 \section{Surface}
 
-Full moon is out.  Depending how PCs worked with Germans, the former prisoners might transform (and attack).  Otherwise they just make a break for it.
+A full moon is out.  Depending on how the PCs worked with Germans, the former prisoners might transform (and attack).  Otherwise they just make a break for it.
 
-All combat/visual checks by humans suffer \stb due to darkness.
+All combat/visual checks by humans suffer \stb due to darkness.  Shifting sand provides small pieces of ruined cover.
 
 \npc{Weakened WereJackal Minions}{3}{3}{1}{3}{2}{2}{6}{4}
 \npccontinued{0}{0}{
@@ -230,9 +263,7 @@ All combat/visual checks by humans suffer \stb due to darkness.
        \item \Advantage\Advantage\Advantage or \Triumph On a successful Brawl check, target must make a \df\df\df Discipline check.  Failure begins the transformation into a were-jackal.
    \end{itemize}}
 
-Shifting sand provides small pieces of ruined cover.
-
-Depending where emerge, may also find GeisterTruppen setting up some ghost release/possession equipment behind Allied lines.  
+Depending where they emerge, the PCs may also find a squad of GeisterTruppen setting up some occult equipment behind Allied lines.  They look to be nearly done!
 
 \npc{GeisterTruppen}{2}{3}{2}{3}{3}{2}{14}{3}
 \npccontinued{1}{1}{
@@ -252,27 +283,9 @@ Depending where emerge, may also find GeisterTruppen setting up some ghost relea
 
 
 \vskip1cm
-Ghost may help, hinder, or ignore, depending on what PCs did.
+Ghost, if present, may help, hinder, or ignore, depending on what PCs did.
 
-\npc{Ghost}{2}{2}{3}{3}{3}{1}{19}{1}
-\npccontinued{2}{2}{
-   Skills:
-   \begin{itemize}
-       \item Brawl 2
-       \item Ranged Light 2
-       \item Discipline 2
-       \item Deception 2
-       \item Lore 2
-       \item Negotiate 2
-       \item Coercion 2
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Adversary 1
-       \item Ghostly - halve incoming damage unless from magical/holy/other source
-       \item Spectral Claw - brawl, 2 dmg,  crit 2
-       \item Wail - ranged light, 2 dmg, blast (short), disorient 2
-   \end{itemize}}
+If the PCs manage to stop the GeisterTruppen, the Allied lines are safe.  If, however, the equipment itself became too far damaged, vengeful spirits may escape and possess Allied soldiers, like the AASS.
 
 \newpage
 
@@ -320,7 +333,7 @@ Start with a satchel (+2 Encumbrance threshold) and rope.
 
 \subsection{Take Revenge}
 
-The Wehrmacht has taken so much from you, family, friends, or livelihood.  But the tide of war is finally turning.  It's time to make the Germans pay for what they did.
+The Wehrmacht has taken so much from you: family, friends, or livelihood.  But the tide of war is finally turning.  It's time to make the Nazis pay for what they did.
 
 One of your weapons gains Vicious 2 (+20 to crit results).
 

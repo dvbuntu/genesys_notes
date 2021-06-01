@@ -32,7 +32,7 @@
 
 
 \newcommand{\npc}[9]{
-    \emph{#1} \\ %name
+    \begin{GenesysTable}{l} {\Large #1 } \end{GenesysTable} \\ %name
     \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
     \Derived{Wounds}{#8}
     \Derived{Soak}{#9}
@@ -42,7 +42,18 @@
     #3 %description, abilities, etc
 }
 
-\title{Weird War: Ghost Break}
+\newcommand{\nemesis}[9]{
+    \begin{GenesysTable}{l} {\Large #1 [Nemesis] } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \Derived{Wounds}{#8}\hskip-.1em
+    \Derived{Strain}{#9}\hskip-.1em
+}
+\newcommand{\nemesiscontinued}[4]{
+    \Derived{Soak}{#1}\hskip-.1em
+    \DerivedSplit{Defense}{#2}{#3}{Melee}{Ranged}\\ % defense
+    #4 %description, abilities, etc
+}
+\title{Weird War: Secrets Beneath}
 \author{By: DVB}
 \date{A GeneSys Adventure Module}
 
@@ -92,25 +103,23 @@ As the PCs head toward the latrine, they suddenly feel a twisting motion.  Every
 
 Ghost spent last bit of vigor weirdly teleporting PCs from surface to within tomb.  It is stuck in a warded circle in this room.  Some kind of occult key could safely free it.  To get out of this tomb themselves, PCs need to get Ghost out safely or find their own way.
 
-\npc{Tortured Soul}{2}{2}{3}{3}{3}{1}{19}{1}
-\npccontinued{2}{2}{
-   Skills:
-   \begin{itemize}
-       \item Brawl 2
-       \item Ranged Light 2
-       \item Discipline 2
-       \item Deception 2
-       \item Lore 2
-       \item Negotiate 2
-       \item Coercion 2
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Adversary 1
-       \item Ghostly - halve incoming damage unless from magical/holy/etc source
-       \item Spectral Claw - brawl, 2 dmg,  crit 2
-       \item Wail - ranged light, 2 dmg, blast (short), disorient 2
-   \end{itemize}}
+\nemesis{Tortured Soul}{2}{2}{3}{3}{3}{1}{17}{14}
+\nemesiscontinued{1}{2}{2}{
+\begin{GenesysTable}{ll}
+    Skills & \\
+ Brawl 2            & Lore 2        \\
+ Ranged Light 2     & Negotiate 2   \\
+ Discipline 2       & Coercion 2    \\
+ Deception 2        &
+\end{GenesysTable}\\
+\begin{GenesysTable}{l}
+    Abilities \\
+    Adversary 1 \\
+Ghostly - halve incoming damage unless from magical/holy/etc source\\
+Spectral Claw - brawl, 2 dmg,  crit 2\\
+Wail - ranged light, 2 dmg, blast (short), disorient 2\\
+\end{GenesysTable}\\
+   }
 
 
 It is completely dark.  There are no sounds of the typical encampment.  A brief sobbing wail wanes nearby.
@@ -158,19 +167,23 @@ A stone staircase leads up to a larger chamber, dry from thousands of years of d
         \item \Threat\Threat disturb a Scarab Swarm (see below)
     \end{itemize}
 
-\npc{Scarab Swarm}{1}{4}{1}{1}{1}{1}{20}{1}
+\npc{Scarab Swarm [Rival]}{1}{4}{1}{1}{1}{1}{20}{1}
 \npccontinued{0}{0}{
-   Skills:
-   \begin{itemize}
-       \item Brawl 2
-       \item Coordination 2
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Sharp mandibles - +2 brawl damage
-       \item Swarm - Unless blast or burn, halve damage before applying soak
-       \item Venomous Bite - If Scarab Swarm successfully hits a character, that character must make at \df\df Resilience check or be disoriented (+\stb) for 2 rounds.
-   \end{itemize}}
+\begin{GenesysTable}{ll}
+    Skills & \\
+       Brawl 2 &
+       Coordination 2
+\end{GenesysTable}
+\begin{GenesysTable}{ll}
+    Abilities & \\
+       Sharp mandibles & +2 brawl damage \\
+       Swarm & Unless blast or burn, halve damage before\\
+       & applying soak\\
+       Venomous Bite & If Scarab Swarm successfully hits a target, \\
+       &        the target must make at \df\df Resilience \\
+       &        check or be disoriented (+\stb) for 2 rounds.\\
+\end{GenesysTable}
+   }
 
 There are two apparent ways out, tunnel up and tunnel ``east'' (if you have a compass).  A westward tunnel is collapsed in, but may be cleared with effort.
 
@@ -247,39 +260,38 @@ A full moon is out.  Depending on how the PCs worked with Germans, the former pr
 
 All combat/visual checks by humans suffer \stb due to darkness.  Shifting sand provides small pieces of ruined cover.
 
-\npc{Weakened WereJackal Minions}{3}{3}{1}{3}{2}{2}{6}{4}
+\npc{Weakened WereJackal [Minion]}{3}{3}{1}{3}{2}{2}{6}{4}
 \npccontinued{0}{0}{
-   Skills:
-   \begin{itemize}
-       \item Brawl
-       \item Coordination
-       \item Athletics
-       \item Perception
-       \item Vigilance
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Sharp claws - +1 brawl damage
-       \item \Advantage\Advantage\Advantage or \Triumph On a successful Brawl check, target must make a \df\df\df Discipline check.  Failure begins the transformation into a were-jackal.
-   \end{itemize}}
+\begin{GenesysTable}{ll}
+    Skills &Athletics \\
+    Brawl &Perception \\
+    Coordination &Vigilance
+\end{GenesysTable}
+\begin{GenesysTable}{ll}
+    Abilities &\\
+    Sharp claws & +1 brawl damage \\
+    \Advantage\Advantage\Advantage or \Triumph & On a successful Brawl check,\\
+    &target must make a \df\df\df Discipline check.\\
+    &Failure begins the transformation into a were-jackal.\\
+\end{GenesysTable}
+   }
 
 Depending where they emerge, the PCs may also find a squad of GeisterTruppen setting up some occult equipment behind Allied lines.  They look to be nearly done!
 
 \npc{GeisterTruppen}{2}{3}{2}{3}{3}{2}{14}{3}
 \npccontinued{1}{1}{
-   Skills:
-   \begin{itemize}
-       \item Melee 2
-       \item Ranged Light 2
-       \item Discipline 2
-       \item Lore 1
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Adversary 1
-       \item Big Pistol (6 dmg, acc 1, med range, crit 3)
-       \item Knife (+1 dmg, crit 3)
-   \end{itemize}}
+\begin{GenesysTable}{ll}
+    Skills & \\
+       Melee 2          & Discipline 2 \\
+       Ranged Light 2   &Lore 1 \\
+\end{GenesysTable}
+\begin{GenesysTable}{l}
+   Abilities \\
+       Adversary 1 \\
+       Big Pistol (6 dmg, acc 1, med range, crit 3)\\
+       Knife (+1 dmg, crit 3) \\
+\end{GenesysTable}
+   }
 
 
 \vskip1cm

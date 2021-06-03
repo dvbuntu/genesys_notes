@@ -11,6 +11,7 @@
 %\swrpgbackground
 
 \newcommand{\gb}{\emph{Secrets Beneath} }
+\newcommand{\spa}{\hskip 0.3em }
 
 % starwars dice
 \newcommand{\df}{\DifficultyDie }
@@ -34,35 +35,39 @@
 \newcommand{\npc}[9]{
     \begin{GenesysTable}{l} {\Large #1 } \end{GenesysTable} \\ %name
     \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
     \Derived{Wounds}{#8}
     \Derived{Soak}{#9}
 }
 \newcommand{\npccontinued}[3]{
     \DerivedSplit{Defense}{#1}{#2}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
     #3 %description, abilities, etc
 }
 
 \newcommand{\nemesis}[9]{
     \begin{GenesysTable}{l} {\Large #1 [Nemesis] } \end{GenesysTable} \\ %name
     \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
     \Derived{Wounds}{#8}\hskip-.1em
     \Derived{Strain}{#9}\hskip-.1em
 }
 \newcommand{\nemesiscontinued}[4]{
     \Derived{Soak}{#1}\hskip-.1em
     \DerivedSplit{Defense}{#2}{#3}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
     #4 %description, abilities, etc
 }
 \title{Weird War: Secrets Beneath}
 \author{By: DVB}
-\date{A GeneSys Adventure Module}
+\date{A DiceyStories.com Genesys Adventure}
 
 \begin{document}
 \maketitle
 
 \begin{multicols}{2}
 
-\gb is an adventure module using the Genesys RPG system and dice.  It is set in a variant of the \emph{Weird War} setting, an alternative history World War 2 universe with occult elements.
+\gb is an adventure module using the Genesys RPG system and dice.  It is set in a variant of the \emph{Weird War} setting, an alternative history World War II universe with occult elements.
 
 Four pregenerated characters are provided, as well as four secret backgrounds and four secret goals.  After players have chosen their characters, randomly distribute one background and one goal to each player.  They should not directly share this information with other players, but it may come out narratively during gameplay.
 
@@ -71,35 +76,37 @@ This adventure has an estimated play time of 4-6 hours.  It can be played in one
 \section{Intro}
 (North Africa, 1942)\\
 
-    The PCs are low ranking soldiers in the Allied Eighth Army (XIII Corps), worn out from weeks of fighting Rommel in North Africa.  Things were finally looking up as the Allies clawed back some territory from the Axis.  But Rommel has been desperate, meddling with dark forces and tombs long covered by the sand.  Worse than breaking into such a reliquary is breaking out...
+    The PCs are low ranking soldiers in the Allied Eighth Army (XIII Corps), worn out from weeks of fighting Rommel in the desert.  Things were finally looking up as the Allies clawed back some territory from the Axis.  But Rommel has been desperate, meddling with dark forces and tombs long covered by the sand.  Worse than breaking into such a reliquary is breaking out...
 
     Sergeant Slattery brooks no nonsense and has authority over PCs (even officers).  Since the PCs are down a member of their squad, he orders them on latrine duty as light work.
 
-    The All-American Super Squad (AASS) is just leaving, mocking PCs saying they just ``left a deposit'' for the party to clean up.  The AASS chest bump, high five, and set out for a night of unsanctioned partying in the encampment, leaving the PCs to the smelly work.
+    The All-American Super Squad (AASS) is just leaving, mocking PCs saying they just ``left a deposit'' for the party to clean up.  The AASS chest bump, high five, and set out for a night of unsanctioned partying in the encampment, leaving the PCs to the smelly work by moonlight.
 
 \subsection{Adventure Limitations}
 
-    War has been straining the 8th Army beyond the breaking point.  Few supplies are available, morale is nearly rock-bottom, and the campaign drags on.  But, they have tasted their first crucial victory and are battled tested veterans.
+    War has been straining the Eighth Army beyond the breaking point.  Few supplies are available, morale is nearly rock-bottom, and the campaign drags on.  But, they have tasted their first crucial victory and are battled tested veterans.
     
     During this adventure, PCs face the following global modifiers:
 
     \begin{itemize}
-        \item Rationed Supplies, (\Threat\Threat) is enough to run out of ammo or other limited use items (med kits, flares, etc).  Scrounging may recover additional ammo or supplies.
-        \item Heavy Burdens, encumbrance is part of the challenge of this adventure.  No characters start with backpacks.
-        \item Low Morale, (\Despair) causes all \emph{other} party members to suffer one strain in addition to normal effects.
-        \item Turning Point, Aid Another maneuver adds an extra (\Advantage\Advantage) in addition to normal benefitsi (+\bbb).
+        \item Rationed Supplies: \Threat\Threat\spa is enough to run out of ammo or other limited use items (med kits, flares, etc).  Scrounging may recover additional ammo or supplies.
+        \item Heavy Burdens:  Encumbrance is part of the challenge of this adventure.  No characters start with backpacks.  Reminder: being overencumbered adds +\stb (per overencumbrance) to Agility and Brawn based checks.
+        \item Low Morale: \Despair\spa causes all \emph{other} party members to suffer one strain in addition to normal effects.
+        \item Turning Point: Aid Another maneuver adds an extra \Advantage\Advantage\spa in addition to normal benefits (+\bbb).
     \end{itemize}
 
 \section{Benign Transposition}
 
 As the PCs head toward the latrine, they suddenly feel a twisting motion.  Everything goes black.  There are no sounds of the typical encampment.  A brief sobbing wail rises but trails off.
 
-\ch\df Resilience to avoid retching at sudden motion
+The PCs must immediately make a check against the jarring physical effects of the motion and shortly thereafter a separate check against the mystical threat of losing ones corporeal connection to the material world.
+
+\ch\df Resilience to avoid retching at sudden motion.
     \begin{itemize}
         \item \Failure: Suffer wounds equal to number of failures (min 2 wounds)
-        \item \Advantage: +\bbb to resist the incorporeal check (can only take once)
+        \item \Advantage: +\bbb to resist the upcoming incorporeal check (can only take once)
         \item \Triumph: While shifting, either manage to bring useful piece of special equipment with you, or stumble upon something useulf (possibly ancient/occult)
-        \item \Despair: Some \emph{part} of you is still in the ether.  Upgrade difficulty of incorporeal check.
+        \item \Despair: Some \emph{part} of you is still in the ether.  Upgrade difficulty of upcoming incorporeal check.
     \end{itemize}
 
     Ghost - an ancient spirit, now a Tortured Soul, summoned by Rommel's occult detachment (GeisterTruppen).  It was forced to serve the Germans but was left behind in their recent retreat.  It is still, however, stuck within a warded circle in this room.  Ghost spent its last bit of vigor weirdly teleporting the PCs from the surface to within the tomb.  Some kind of occult key could safely free it.  To get out of this tomb themselves, PCs need to get Ghost out safely or find their own way.
@@ -109,18 +116,18 @@ As the PCs head toward the latrine, they suddenly feel a twisting motion.  Every
 \begin{GenesysTable}{ll}
     Skills & \\
  Brawl 2            & Lore 2        \\
- Ranged Light 2     & Negotiate 2   \\
+ Ranged-Light 2     & Negotiate 2   \\
  Discipline 2       & Coercion 2    \\
  Deception 2        &
 \end{GenesysTable}\\
 \begin{GenesysTable}{ll}
     Abilities &\\
     Adversary 1 &\\
-    Ghostly & (Halve incoming damage unless \\
-    &from magical/holy/etc source)\\
-    Spectral Claw &(2 dmg, Brawl, Engaged, Crit 2)\\
-    Wail &(2 dmg, Ranged-Light, Medium Range,\\
-    &Crit 4, Blast (Short), Disorient 2)\\
+    Ghostly & Halve incoming damage unless \\
+    &from magical/holy/etc source\\
+    Spectral Claw &3 dmg, Brawl, Engaged, Crit 2\\
+    Wail &2 dmg, Ranged-Light, Medium Range,\\
+    &Crit 4, Blast (Short), Disorient 2\\
 \end{GenesysTable}\\
    }
 
@@ -132,9 +139,9 @@ Social interaction with Ghost can reveal info about Nazi occult experiments and 
 
     Once PCs have spent some amount of time after the transposition, their materiality hopefully stabilizes, possibly violently.  The transposition may not have been so benign.
 
-\ch\df Discipline to stabilize corporeal existence
+\ch\df Discipline to stabilize corporeal existence.
     \begin{itemize}
-        \item \Failure: Lose full connection to material reality.  +\stb for next encounter as slowly rematerialize completely.
+        \item \Failure: Lose full connection to material reality.  +\stb for next encounter as they slowly rematerialize completely.
         \item \Advantage: See something interesting while phasing.  +\bbb to Perception (may be occult aligned).
         \item \Triumph: Limited control of phasing between planes with \df\df\df Discipline check action once per encounter.
         \item \Despair: Still phasing in and out.  May phase out at an inopportune time chosen by the GM, lasting for 1 round of structured time.  When phasing, halve incoming and outgoing damage.  There may be additional narrative effects.
@@ -142,13 +149,13 @@ Social interaction with Ghost can reveal info about Nazi occult experiments and 
 
 Ghost is bound to this room by occult wards and will only help PCs if they undo the wards.
 
-    \df\df Knowledge (Lore) to ascertain nature of occult wards
+    \df\df Knowledge (Lore) to ascertain nature of occult wards.
     \begin{itemize}
         \item \Success: Clearly German design, ideally one would use an occult key to safely remove the warding.
-        \item \Advantage: Key likely to be in higher level of tomb, where PCs can freely go
+        \item \Advantage: Key likely to be in higher level of tomb, where PCs can freely goabut Ghost cannot.
     \end{itemize}
 
-\df\df\stb\stb Skulduggery to safely break the ward with a key.  Without a key, upgrade the difficulty twice
+\df\df\stb\stb Skulduggery to safely break the ward with a key.  Without a key, upgrade the difficulty twice.
     \begin{itemize}
         \item \Advantage: Able to repurpose some occult component.
         \item \Failure: Suffer 5 wounds as occult energy zaps you.  Soak does not apply.
@@ -159,16 +166,17 @@ Ghost is bound to this room by occult wards and will only help PCs if they undo 
 
 A stone staircase leads up to a larger chamber, dry from thousands of years of desert.  Sand is everywhere, mixed with more recent German equipment.  Curiously, the retreating forces still left a few lights on.
 
-There are two apparent ways out: a tunnel up and a tunnel east (i.e. toward Allied lines, discoverable with a compass or Survival).  A westward tunnel is collapsed in, but may be cleared with effort.
+There are two apparent ways out: a tunnel up and a tunnel east (i.e. toward Allied lines).  A westward tunnel is collapsed in, but may be cleared with effort.
 
 \df\df\stb Perception to search the room for clues
     \begin{itemize}
-        \item \Success: Find various electronics (perhaps a staticy broken radio) and occult equipment (but no key) buried in sand.
+        \item \Success: Find various electronics (perhaps a staticky broken radio) and occult equipment (but no key) buried in sand.
         \item \Advantage: Unusual number of dog treats, canine pictograms, or other objects suggesting the werejackals to come.
         \item \Advantage: Westward tunnel was collapsed on purpose, signs of explosives.  And occult residue.
         \item \Threat\Threat: Disturb a Scarab Swarm (see below)
     \end{itemize}
 
+\columnbreak
 \npc{Scarab Swarm [Rival]}{1}{4}{1}{1}{1}{1}{20}{1}
 \npccontinued{0}{0}{
 \begin{GenesysTable}{ll}
@@ -178,7 +186,7 @@ There are two apparent ways out: a tunnel up and a tunnel east (i.e. toward Alli
 \end{GenesysTable}
 \begin{GenesysTable}{ll}
     Abilities & \\
-       Sharp mandibles & (3 dmg, Brawl, Engaged, Crit 3) \\
+       Sharp mandibles & 3 dmg, Brawl, Engaged, Crit 3 \\
        Swarm & Unless Blast or Burn, halve damage before\\
        & applying soak\\
        Venomous Bite & If Scarab Swarm successfully hits a target, \\
@@ -190,12 +198,12 @@ There are two apparent ways out: a tunnel up and a tunnel east (i.e. toward Alli
 
 \df\df Vigilance to listen for faint yelling or hear German radio static from tunnel
 \begin{itemize}
-    \item \Advantage: It sounds more like howling
+    \item \Advantage: It sounds more like howling.
 \end{itemize}
 
 Ghost can only speculate on the nature of the scarabs, suggesting, ``Creatures of hunger, much like men.''
 
-\df\df Lore check to sort out what the heck they're about.
+\df\df Lore check to discern the nature of the scarabs.
     \begin{itemize}
         \item \Success: Corpse cleaning scarabs do exist, but these seem to hunger for living flesh.
         \item \Advantage: Large for a bug, but too small to easily hit with a gun, punch, or similar.  An explosion or fire, however, might be more effective.
@@ -208,7 +216,9 @@ In the tunnel up, several Germans are locked up, looking somewhat haggard with t
 
 Johann, Frederick, and Carsten will only volunteer that they're soldiers in the German army.  But they insist they're innocent, just a misunderstanding (if you can understand German).
 
-They are actually the experiments of this tomb.  Occult fusions of human and jackal, essentially a werewolf.  These people don't really know that, only that they have bad nightmares.  But they're hardly turning traitor; they're more interested in getting out alive.  Given the chance, they'll flee.  If the PCs turn on them, they may transform (due to rage).
+They are actually the experiments of this tomb.  Occult fusions of human and jackal, essentially werewolves.  These people don't really know that, only that they have bad nightmares.  But they're hardly turning traitor; they're more interested in getting out alive.  Given the chance, they'll flee.  If the PCs turn on them, they may transform (due to rage).
+
+One prisoner may have the occult key hidden on them.  They're willing to trade it for being let out. 
 
 Do PCs even trust these people?  Rommel is known for laying traps; could this be yet another one?
 
@@ -222,7 +232,6 @@ Ghost is not a fan of the Germans, making no distinction between prisoners and c
         \item \Despair: The stress of a medical examination is too much for one of the werejackals.  They transform and attack.
     \end{itemize}
 
-One prisoner may have the occult key hidden on them.  They're willing to trade it for being let out. 
 
 \npc{Weakened WereJackal [Minion]}{3}{3}{1}{3}{2}{2}{6}{4}
 \npccontinued{0}{0}{
@@ -233,11 +242,14 @@ One prisoner may have the occult key hidden on them.  They're willing to trade i
 \end{GenesysTable}
 \begin{GenesysTable}{ll}
     Abilities &\\
-    Sharp claws & +1 brawl damage \\
-    \Advantage\Advantage\Advantage or \Triumph & On a successful Brawl check,\\
-    &target must make a \df\df\df Discipline check.\\
-    &Failure begins the transformation into a were-jackal.\\
+    Sharp claws & 4 dmg, Brawl, Engaged, Crit 3\\
+    Infectious Curse &   On a successful Brawl check, may spend\\
+    &\Advantage\Advantage\Advantage\spa or \Triumph\spa to force target to make a\\\
+    &\df\df\df Discipline check.\\
+    &\Failure: Target becomes cursed\\
 \end{GenesysTable}
+
+The curse of the were-jackal develops over time.  In the course of this adventure, a newly afflicted PC may develop a heightened sense of hearing, hunger for raw meat, and longer hair.  They won't fully transform in the short time this module spans.
    }
 
 \section{Ruined Shrine}
@@ -248,17 +260,17 @@ If the Germans are with the PCs, they are uneasy and may panic.  The GM can stor
 
 This shrine has been looted of all valuables (\ch\df\stb\stb Perception to look anyway).  But the occult key may be found here with success if not found already.
 
-Ghost, if present, is wistful.  This place was once opulent.  If PCs can extract info from Ghost, they learn that this was a shrine to Anubis, now desecrated by Germans.  If PCs scrounge too much (\Threat\Threat\Threat or \Despair), Ghost may attack when it discovers the desecration.
+Ghost, if present, is wistful.  Though not of this place, as a spirit, it appreciated the previous opulence.  If PCs can extract info from Ghost, they learn that this was a shrine to Anubis, now desecrated by Germans.  If the PCs scrounge too much (\Threat\Threat\Threat\spa or \Despair), Ghost may attack when it discovers the desecration.
 
 \section{Collapsed Tunnel}
 
-If the PCs can engineer an opening, they will see a mostly clear tunnel heading west.  This is more modern construction with flickering lights.
+If the PCs can engineer an opening, they will see a mostly clear tunnel heading west.  This is more recent construction with flickering lights.
 
 \df\df Perception to recover useful Wehrmacht orders in the rubble.
 
-The German army is planning to pop up a battalion behind Allied lines using this tunnel.  PC may find Wehrmacht orders (for retreat and subsequent return two days later...i.e. in four hours).  The Germans will have almost certainly too much firepower for the PCs to withstand; they need to warn command.  With \Advantage\Advantage, PCs can also recover a useful piece of equipment (choose randomly or appropriate to the character).
+The German army is planning to pop up a battalion behind Allied lines using this tunnel.  PC may find Wehrmacht orders (for retreat and subsequent return two days later...i.e. in four hours).  The Germans will have almost certainly too much firepower for the PCs to withstand; they need to warn command.  With \Advantage\Advantage, PCs can also recover a useful piece of equipment (choose randomly from the suggested equipment at the end of the module or appropriate to the character).
 
-If they haven't found the occult key, it could be here (with multiple \Advantage).
+If the PCs haven't found the occult key yet, it could be here (with multiple \Advantage).
 
 \df\df\df Athletics to clear the tunnel.  Find a dead German trooper along the way.  
 If the prisoners or Ghost are with the PCs, they each reduce the difficulty of clearing the tunnel by one.
@@ -267,7 +279,7 @@ If the prisoners or Ghost are with the PCs, they each reduce the difficulty of c
 
 The tunnel opens to an intersection.  One way leads to a hatch to the surface (where trooper is carrying things).  Another leads deeper into German territory.  The last leads to an equipment room with GeisterTruppen occult materiel.
 
-\df\df Stealth to sneak (to hatch or equipment room)
+\df\df Stealth to sneak (to hatch or equipment room).
 
 In the equipment room, \df\df Lore or \df\df\stb Education to assess what the Germans are storing here.  It is spirit binding (and releasing) tools.  With success, you can recover a Ghostbusters-style portable containment unit (complete with foot pedal).  Deploy at your own risk.
 
@@ -275,30 +287,31 @@ In the equipment room, \df\df Lore or \df\df\stb Education to assess what the Ge
 
 A full moon is out.  Depending on how the PCs worked with Germans, the former prisoners might transform (and attack).  Otherwise they just make a break for it.
 
-All combat/visual checks by humans suffer \stb due to darkness.  Shifting sand provides small pieces of ruined cover.
+All combat/visual checks by humans suffer +\stb due to darkness.  Shifting sand provides small pieces of ruined cover.
 
-Depending where they emerge, the PCs may also find a squad of GeisterTruppen setting up some occult equipment behind Allied lines.  They look to be nearly done!
+Depending where they emerge, the PCs may also find a squad (start with one soldier for every 2 PCs, and add more with story points or multiple PC threats) of GeisterTruppen setting up some occult equipment behind Allied lines.  They look to be nearly done!
 
 \npc{GeisterTruppen [Rival]}{2}{3}{2}{3}{3}{2}{14}{3}
 \npccontinued{1}{1}{
 \begin{GenesysTable}{ll}
     Skills & \\
        Melee 2          & Discipline 2 \\
-       Ranged Light 2   &Lore 1 \\
+       Ranged-Light 2   &Lore 1 \\
 \end{GenesysTable}
-\begin{GenesysTable}{l}
-   Abilities \\
-       Adversary 1 \\
-       Big Pistol (6 dmg, acc 1, med range, crit 3)\\
-       Knife (+1 dmg, crit 3) \\
+\begin{GenesysTable}{ll}
+    Abilities &\\
+       Adversary 1 &\\
+       Big Pistol &6 dmg, Ranged-Light, Accurate 1, Medium Range, Crit 3\\
+       Knife & 3 dmg, Melee, Engaged, Crit 3 \\
 \end{GenesysTable}
    }
+   \vskip -2em
 
 
 \vskip1cm
 Ghost, if present, may help, hinder, or ignore, depending on what the PCs did earlier.
 
-If the PCs manage to stop the GeisterTruppen, the Allied lines are safe.  If, however, the equipment itself became too far damaged, vengeful spirits may escape and possess Allied soldiers, like the AASS.
+If the PCs manage to stop the GeisterTruppen, the Allied lines are safe.  If, however, the equipment itself became too far damaged (from battle or threats/despair), vengeful spirits may escape and possess Allied soldiers, like the AASS.
 
 \newpage
 

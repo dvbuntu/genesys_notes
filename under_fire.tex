@@ -25,24 +25,42 @@
 \charPart{PRESENCE}{#6}%
 \hfill\null}
 
-
 \newcommand{\npc}[9]{
-    \textbf{#1} \\ %name
+    \begin{GenesysTable}{l} {\Large #1 } \end{GenesysTable} \\ %name
     \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
     \Derived{Wounds}{#8}
     \Derived{Soak}{#9}
 }
 \newcommand{\npccontinued}[3]{
     \DerivedSplit{Defense}{#1}{#2}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
     #3 %description, abilities, etc
 }
 
-\title{
-UNDER FIRE \\
-an adventure for the Star Wars Roleplaying Game by Fantasy Flight Games\\
-Edge of the Empire - Age of Rebellion - Force and Destiny \\
+\newcommand{\nemesis}[9]{
+    \begin{GenesysTable}{l} {\Large #1 [Nemesis] } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
+    \Derived{Wounds}{#8}\hskip-.1em
+    \Derived{Strain}{#9}\hskip-.1em
 }
-\author{jendefer}
+\newcommand{\nemesiscontinued}[4]{
+    \Derived{Soak}{#1}\hskip-.1em
+    \DerivedSplit{Defense}{#2}{#3}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
+    #4 %description, abilities, etc
+}
+
+\title{
+Star Wars: Under Fire \\
+A DiceyStories.com SWRPG Adventure\\
+}
+\author{Author: jendefer\\
+        Layout: DVB\\
+        Based On: "First Flight" by Shannon Phillips \\\url{https://archiveofourown.org/works/7030051}}
+\date{\today}
+
 
 \begin{document}
 \maketitle
@@ -68,7 +86,7 @@ As they follow jobs across the galaxy, a ragtag crew has been delivering boxes o
 \section{Adventure Overview }
 
 \emph{Goal}: Deliver transponders to Aadlan Myder of the Cobalt Laborers’ Reformation Front in Pinyumb.\\
-The Player Characters are on Sullust to deliver a small crate of emergency beacons. The Cobalt Front is not formally a member of the Rebellion; the materials are a gesture of good will to woo them into closer affiliation. If this particular item does not fit with your groups interests, feel free to replace it with an appropriate substitute (weapons, medicines, other tech, etc.).
+The Player Characters are on Sullust to deliver a small crate of Rebellion emergency beacons. The Cobalt Front is not formally a member of the Rebellion; the materials are a gesture of good will to woo them into closer affiliation. If this particular item does not fit with your groups interests, feel free to replace it with an appropriate substitute (weapons, medicines, other tech, etc.).
 
 The Player Characters could be Rebel operatives in an Age of Rebellion game, smugglers from an Edge of the Empire Game, or symapthetic Force fugitives from a Force and Destiny game, whatever works for your group. Similarly, this adventure can be set before the Battle of Yavin (as is the short story on which it was based) or during the Rebel activities of the original Star Wars trilogy.
 \emph{Challenge}: Aadlan Myder must be rescued from a mining accident.
@@ -90,11 +108,11 @@ Description:\\
 The ship comes out of hyperspace and approaches Sullust. Half the planet’s surface is covered with belches of ash and toxic gases from its ever-active volcanos; the enormous factories below can be glimpsed through swirls of smoky atmosphere as twinkling lights nestled between traceries of magma.
 
 Check:\\
-    To gain information about Sullust, players may make Average [\df\df] \textbf{Knowledge (Outer Rim)}. Could also do Average [\df\df] \textbf{Knowledge (Xenology)} for information about Sullustans. Extra information can be given for advantages, misinformation for disadvantages. Success provides information in first few bullets.\\
+    To gain information about Sullust, players may make Average [\df\df] \textbf{Knowledge (Outer Rim)}. Could also do Average [\df\df] \textbf{Knowledge (Xenology)} for information about Sullustans. Extra information can be given for advantages, misinformation for disadvantages. Success provides information in the first few bullets.\\
 \begin{itemize}
-    \item Volcanic world on inner edge of Outer Rim
-    \item Breath masks needed on surface when volcanoes active
-    \item The noxious surface of ash, lava, and toxic gases make the Sullust surface dangerous; the native Sullustans evolved in an underground ecosystem.
+    \item Volcanic world on inner edge of Outer Rim with a noxious surface of ash, lava, and toxic gases.  
+    \item Breath masks needed on surface when volcanoes active.
+    \item Native Sullustans evolved in an underground ecosystem.
     \item \advantage Descended from rodents, Sullustans have a natural sense of direction, which serves them well in the dark caverns and twisting tunnels they call home.
     \item \advantage  Sullustan engineering has tamed their hostile environment somewhat. Their cities have shunts that redirect lava to the surface after collecting geothermal energy from it.
    \item \advantage SoroSuub Corporation, one of the largest companies in the galaxy, is based on Sullust. It does galactic exports but also has a monopoly on the manufacture and sale of consumer goods on Sullust. It employs ninety percent of Sullust’s workforce. It is a vertical monopoly; it mines, designs, manufactures, transports, and runs stores. It also has lucrative Imperial contracts.
@@ -263,18 +281,22 @@ As they travel underground, the planet shifts and groans around them. The distan
 
 Green Bug Swarm from Beyond the Rim 44.  One in front and one behind.
 
-\npc{Drutash Scarab Swarm Rival}{1}{4}{1}{1}{1}{1}{20}{1}
+\npc{Drutash Scarab Swarm [Rival]}{1}{4}{1}{1}{1}{1}{20}{1}
 \npccontinued{0}{0}{
-   Skills:
-   \begin{itemize}
-       \item Brawl 2
-       \item Coordination 2
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Swarm - Unless an attack has the Blast or Burn quality (regardless of if it is activated), halve the damage before applying soak
-       \item Venomous Pincers - If Swarm successfully hits a PC for enough damage to get through Soak, that PC must make at Average [\df\df] \textbf{Resilience} check or be disoriented (+\setback) for 3 rounds.
-   \end{itemize}}
+\begin{GenesysTable}{ll}
+    Skills & \\
+       Brawl 2 &  Coordination 2
+\end{GenesysTable}\\
+\begin{GenesysTable}{ll}
+    Abilities & \\
+       Swarm & Unless attacked with a Blast or Burn quality\\
+       & (regardless of if it is activated), halve damage \\
+       & before applying soak\\
+       Venomous Bite & If Swarm successfully hits a target, they \\
+       &        must make an Average [\df\df] \textbf{Resilience} \\
+       &        check or be disoriented (+\stb) for 3 rounds.\\
+\end{GenesysTable}\\
+}
 
 After the crack, the passage is wider and tends uphill.
 
@@ -286,13 +308,14 @@ Average [\df\df] \textbf{Perception} or Hard [\df\df\df] \textbf{Vigilance} to s
 
 \npc{Aadlan Myder}{2}{2}{2}{2}{3}{3}{12}{3}
 \npccontinued{0}{0}{
-   Skills:
-   \begin{itemize}
-        \item Cool 1
-        \item Leadership 1
-       \item Mechanics 2
-       \item Netogiation 2
-   \end{itemize}}
+\begin{GenesysTable}{ll}
+    Skills & \\
+        Cool 1 & 
+        Leadership 1\\
+       Mechanics 2 &
+       Netogiation 2
+\end{GenesysTable}\\
+}
 
 
 Miners will be suspicious.
@@ -332,16 +355,15 @@ Hard [\df\df\df] \textbf{Knowledge (Xenology)}: Rockrender isn’t the danger, t
 \npc{Rockrender}{6}{3}{1}{2}{1}{1}{60}{15}
 \npccontinued{0}{0}{
    Rockrender is really just passing through and will not attack anyone unless provoked.\\
-   Skills:
-   \begin{itemize}
-       \item Brawl 1
-       \item Coordination 2
-   \end{itemize}
-   Abilities:
-   \begin{itemize}
-       \item Burrow - Average [\df\df] \textbf{Coordination} to dig into the rock to escape
-       \item Sharp claws - +2 brawl damage
-   \end{itemize}
+\begin{GenesysTable}{ll}
+    Skills & \\
+       Brawl 2 & Coordination 2
+\end{GenesysTable}
+\begin{GenesysTable}{ll}
+    Abilities & \\
+        Burrow & Average [\df\df] \textbf{Coordination} to dig into the rock to escape \\
+       Sharp claws & +2 brawl damage \\
+\end{GenesysTable}
 \url{https://starwars.fandom.com/wiki/Rockrender}
 }
 

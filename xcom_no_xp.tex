@@ -1,0 +1,144 @@
+\documentclass{book}
+
+\usepackage[dvipsnames, table]{xcolor}
+\usepackage{swrpg}
+\usepackage{genesys}
+\usepackage{hyperref}
+%\geometry{paperheight=13in}
+\usepackage{multicol}
+\usepackage[noorphans,font=itshape,indentfirst=false,rightmargin=0pt]{quoting}
+
+%\swrpgbackground
+
+% starwars dice
+\newcommand{\df}{\difficulty}
+\newcommand{\stb}{\setback}
+\newcommand{\ch}{\challenge}
+
+\renewcommand\Characteristics[6]{
+\noindent\hfill
+\charPart{BRAWN}{#1}\kern-.1em
+\charPart{AGILITY}{#2}\kern-.1em
+\charPart{INTELLECT}{#3}\kern-.1em
+\charPart{CUNNING}{#4}\kern-.1em
+\charPart{WILLPOWER}{#5}\kern-.1em
+\charPart{PRESENCE}{#6}%
+\hfill\null}
+
+\newcommand{\npc}[9]{
+    \begin{GenesysTable}{l} {\Large #1 } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
+    \Derived{Wounds}{#8}
+    \Derived{Soak}{#9}
+}
+\newcommand{\npccontinued}[3]{
+    \DerivedSplit{Defense}{#1}{#2}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
+    #3 %description, abilities, etc
+}
+
+\newcommand{\nemesis}[9]{
+    \begin{GenesysTable}{l} {\Large #1 [Nemesis] } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
+    \Derived{Wounds}{#8}\hskip-.1em
+    \Derived{Strain}{#9}\hskip-.1em
+}
+\newcommand{\nemesiscontinued}[4]{
+    \Derived{Soak}{#1}\hskip-.1em
+    \DerivedSplit{Defense}{#2}{#3}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
+    #4 %description, abilities, etc
+}
+
+\title{
+    XCOM: No eXperience Required \\
+A DiceyStories.com Genesys Adventure\\
+}
+\author{Author: Dan Van Boxel (vanboxel)}
+\date{\today}
+
+\newcommand{\prof}{
+    {\color{orange} Prof allen}
+}
+
+\begin{document}
+\maketitle
+
+
+\begin{multicols*}{2}
+\section{Opening Crawl}
+
+Hello, Commander.  The year is 1974, and aliens are starting to secretly infiltrate our society.  XCOM has not been fully activated; we need to identify capable recruits, preferably those some experience dealing with aliens.  Please review the below After Action Report to determine if the student group from Ares University should be inducted into an XCOM cell.
+
+\section{Adventure Overview }
+
+    The Player Characters (PCs) are graduate students in the same research group supervised by \prof.  They are all going together to a research conference in West Berlin.  While there, however, \prof asks that they recover critical research equipment from allegedly Nazi scientists.  The PCs may find, however, that the equipment, scientists, and even \prof are not entirely what they seem.
+
+    The Player Characters (PCs) are on Sullust to deliver a small crate of Rebellion emergency beacons. The Cobalt Front is not formally a member of the Rebellion; the materials are a gesture of good will to woo them into closer affiliation. If this particular item does not fit with your groups interests, feel free to replace it with an appropriate substitute (weapons, medicines, other tech, etc.).
+
+\emph{Goal}: Recover critical research equipment so it does not fall into the ``wrong'' hands.\\
+\emph{Challenge}: (spoiler) \prof is actually an alien infiltrator.  She is using the PCs to steal equipment as her alien form would be detected.\\
+
+\subsection{Encounter List}
+\begin{enumerate}
+    \item Dead Student (information)
+    \item Conference Arrival (social)
+    \item Biokinetic Waveform Analyzer (social/information)
+    \item Crossing The Border (social/stealth)
+    \item Facility Infiltration (stealth/combat)
+    \item Entity Extraction (stealth/chase)
+    \item Oral Defense (social/combat)
+    \item Aftermath
+\end{enumerate}
+
+\section{Dead Student}
+
+Start the session by noting that one member of \prof's research group recently died on campus without explanation, supposedly due to a sudden medical condition.  If one of the characters was not chosen by the players, make it that one.  Otherwise, ask the players each one detail about the now deceased student.
+
+This encounter is primarily for the characters to establish Ares University and become more comfortable in the Cold War setting.  Each PC has one opportunity to use one skill to learn a little about what happened to their colleague.  If they're unsure what to try, here are some possibilities you can suggest:
+
+\begin{GenesysTable}{ll}
+    Approach & Information to learn\\
+    \df\df \textbf{Charm} the Nurses Group & Paramedics who declared \\
+    & student dead were not the usual crew\\
+    \df\df \textbf{Streetwise} at Hades Club & Rumor is that student \\
+    &was poisoned\\
+    \df\df \textbf{Stealth} to check & Student had meeting with \\
+    \hskip1em \prof's Office &   \prof just before death\\
+    \df\df \textbf{Knowledge (Lore)} & ``Conspiracy Board'' suggests \\
+    \hskip1em in Student's Room &   Student found out some secret about \\
+    % \prof (not written here) \\
+\end{GenesysTable}
+
+If the PCs ask \prof directly, she demurs, ``I understand this is hard on all of us.  But they would have wanted us to honor their memory by furthering our research.  Are you all set to travel to Berlin?''.
+
+\nemesis{\prof [Nemesis]}{2}{4}{3}{3}{3}{2}{15}{15}
+\nemesiscontinued{3}{1}{1}{
+\begin{GenesysTable}{ll}
+    Skills & \\
+       Athletics 1 & Cool 1 \\
+       Coordination 2 & Discipline 1 \\
+       Perception 2 & Resilience 1 \\
+       Stealth 1 & Vigilance 1 \\
+       Brawl 3 & Ranged (Light) 1 \\
+       Coercion 2 & Deception 3 \\
+       Knowledge (Geography) 2 & Knowledge (Lore) 2 \\
+       Knowledge (Science) 2 & \\
+\end{GenesysTable}\\
+\begin{GenesysTable}{ll}
+    Abilities & \\
+       Adversary 1 & Upgrade checks made against this character \\
+       Acid Spit & 4 dmg, Ranged (Light), Medium, \\
+                 & Blast, Poison, Crit 4\\
+       Tongue Pull/Bind & 4 dmg, Brawl, Short, entangle \\
+                 & Yank (\df\df\df Athletics/Coord to resist \\
+                & being pulled to Engaged) \\
+\end{GenesysTable}\\
+}
+
+Recommended XP: 5 per major encounter, so probably 25-35 depending on how much time the party spent on various aspects of the adventure.  If running as a one-shot (as during a convention), consider awarding XP at the end of each encounter to be spent right away.  This can give players a sense of progression even within a single adventure.
+
+\end{multicols*}
+\end{document}

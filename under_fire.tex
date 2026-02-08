@@ -1,19 +1,26 @@
 \documentclass{book}
+%\documentclass[background]{book}
 
 \usepackage[dvipsnames, table]{xcolor}
-\usepackage{swrpg}
+%\usepackage{swrpg}
 \usepackage{genesys}
 \usepackage{hyperref}
 %\geometry{paperheight=13in}
 \usepackage{multicol}
 \usepackage[noorphans,font=itshape,indentfirst=false,rightmargin=0pt]{quoting}
 
-\swrpgbackground
+%\swrpgbackground
 
 % starwars dice
-\newcommand{\df}{\difficulty}
-\newcommand{\stb}{\setback}
-\newcommand{\ch}{\challenge}
+\newcommand{\df}{\DifficultyDie }
+\newcommand{\stb}{\SetbackDie }
+\newcommand{\ch}{\ChallengeDie }
+\newcommand{\Challenge}{\ChallengeDie }
+\newcommand{\abd}{\AbilityDie }
+\newcommand{\bbb}{\BoostDie }
+\newcommand{\Boost}{\BoostDie }
+\newcommand{\pd}{\ProficiencyDie }
+
 
 \renewcommand\Characteristics[6]{
 \noindent\hfill
@@ -57,9 +64,9 @@ Star Wars: Under Fire \\
 A DiceyStories.com SWRPG Adventure\\
 }
 \author{Author: Jennifer Van Boxel (jendefer)\\
-        Layout: Dan Van Boxel\\
+        Layout: Danielle Van Boxel\\
         Adapted from the short story: ``First Flight'' by Shannon Phillips \\\url{https://archiveofourown.org/works/7030051}}
-\date{\today}
+\date{August 1, 2021}
 
 
 \begin{document}
@@ -117,15 +124,15 @@ On success:
     \item Volcanic world on inner edge of Outer Rim with a noxious surface of ash, lava, and toxic gases.  Breath masks are needed on surface when volcanoes active.
     \item Native Sullustans evolved from rodents in an underground ecosystem and have a natural sense of direction that helps them navigate the tunnels.
 %    \item \advantage Descended from rodents, Sullustans have a natural sense of direction, which serves them well in the dark caverns and twisting tunnels they call home.
-    \item \advantage  Sullustan engineering has tamed their hostile environment somewhat. Their cities have shunts that redirect lava to the surface after collecting geothermal energy from it.
-   \item \advantage SoroSuub Corporation, one of the largest companies in the galaxy, is based on Sullust. It does galactic exports but also dominates the local economy as manufacturers, suppliers, and employers.  It has lucrative Imperial contracts.%has a monopoly on the manufacture and sale of consumer goods on Sullust. It employs ninety percent of Sullust’s workforce. It is a vertical monopoly; it mines, designs, manufactures, transports, and runs stores. It also has lucrative Imperial contracts.
-	\item \advantage SoroSuub disbanded the Sullustan Council in 2 BBY via corporate takeover.
-    \item \advantage Sullust is a source of fuel for the Imperial military and essential mining and manufacturing center for the Empire.  Sullustans, however, don't count as Imperial citizens due to their planet's vassal status.  It was on the side of the Confederacy of Independent Systems during the Clone Wars.
+    \item \Advantage  Sullustan engineering has tamed their hostile environment somewhat. Their cities have shunts that redirect lava to the surface after collecting geothermal energy from it.
+   \item \Advantage SoroSuub Corporation, one of the largest companies in the galaxy, is based on Sullust. It does galactic exports but also dominates the local economy as manufacturers, suppliers, and employers.  It has lucrative Imperial contracts.%has a monopoly on the manufacture and sale of consumer goods on Sullust. It employs ninety percent of Sullust’s workforce. It is a vertical monopoly; it mines, designs, manufactures, transports, and runs stores. It also has lucrative Imperial contracts.
+	\item \Advantage SoroSuub disbanded the Sullustan Council in 2 BBY via corporate takeover.
+    \item \Advantage Sullust is a source of fuel for the Imperial military and essential mining and manufacturing center for the Empire.  Sullustans, however, don't count as Imperial citizens due to their planet's vassal status.  It was on the side of the Confederacy of Independent Systems during the Clone Wars.
 %    \item \advantage Was on the side of the Confederacy of Independent Systems during the Clone Wars. Reduced to vassal status after the Clone Wars and a source of fuel for the Imperial Military, Sullust became an essential mining and manufacturing center for the Empire. Sullustans don’t even count as citizens in the Empire.
-    \item \advantage For years, Sullust remained relatively peaceful as workers accepted the stability offered under the Empire's reign. However, the Cobalt Laborers' Reformation Front steadily began to increase in numbers, sending letters to the Imperial governor demanding better working conditions and increased local autonomy. In response, the Empire detained roughly eighty percent of those in the organization and those it deemed most radical.
-    \item \triumph Stan Tevv, former Galactic Senator, became SoroSuub CEO following the Battle of Yavin.  He has a secret agreement with the Rebel Alliance but officially claims neutrality.
-    \item \threat Alter a minor detail in one of the above extra facts
-    \item \despair Alter a major detail (like Sullustans planning to betray the Rebels)
+    \item \Advantage For years, Sullust remained relatively peaceful as workers accepted the stability offered under the Empire's reign. However, the Cobalt Laborers' Reformation Front steadily began to increase in numbers, sending letters to the Imperial governor demanding better working conditions and increased local autonomy. In response, the Empire detained roughly eighty percent of those in the organization and those it deemed most radical.
+    \item \Triumph Stan Tevv, former Galactic Senator, became SoroSuub CEO following the Battle of Yavin.  He has a secret agreement with the Rebel Alliance but officially claims neutrality.
+    \item \Threat Alter a minor detail in one of the above extra facts
+    \item \Despair Alter a major detail (like Sullustans planning to betray the Rebels)
 \end{itemize}
 
     \subsection{Landing on Sullust}
@@ -148,9 +155,9 @@ The black swirling face of Sullust takes up more and more of the view as your cr
 Check:\\
 Average [\df\df] \textbf{Perception} to assess the security/threat level when the airlock opens.
 \begin{itemize}
-    \item \success It’s just crews loading and unloading, no one paying any special attention to the PCs. The few guards standing around near the exits are wearing corporate uniforms, not stormtrooper armor. If there’s an Imperial presence here, it is light.
-    \item \failure PCs think they have attracted attention of local security
-    \item \threat A detail that suggests heavier Imperial presence
+    \item \Success It’s just crews loading and unloading, no one paying any special attention to the PCs. The few guards standing around near the exits are wearing corporate uniforms, not stormtrooper armor. If there’s an Imperial presence here, it is light.
+    \item \Failure PCs think they have attracted attention of local security
+    \item \Threat A detail that suggests heavier Imperial presence
 \end{itemize}
 
 \subsection{Turbolift down to Pinyumb}
@@ -168,9 +175,9 @@ A Sullustan woman (Nuev) answers at the apartment. There is a milky film over he
 \subsection{Talking with Zien}
 Zien claims the Cobalt Front is indirectly responsible for this emergency. SoroSuub is calling it an accident, but there is a saying on Sullust, ``Accidents can happen to anyone, but they always happen to troublemakers.''  There are those who think her father fits that description.\\
 Check:\\
-Social checks to interact with Zien are Average [\df\df]. If PCs try \textbf{Coercion}, add a \setback, as she does not like being bossed around. If they attempt \textbf{Negotiation} in order to get payment for the rescue, that will earn a cinematic punch to the nose from her. 
+Social checks to interact with Zien are Average [\df\df]. If PCs try \textbf{Coercion}, add a \stb, as she does not like being bossed around. If they attempt \textbf{Negotiation} in order to get payment for the rescue, that will earn a cinematic punch to the nose from her. 
 
-On \success or \failure, Zien will provide information, but her demeanor and helpfulness will be affected by the result. With \success, she will also provide supplies. She does not want to get her mother's hopes up, though, so she keeps the conversation quiet. 
+On \Success or \Failure, Zien will provide information, but her demeanor and helpfulness will be affected by the result. With \Success, she will also provide supplies. She does not want to get her mother's hopes up, though, so she keeps the conversation quiet. 
 
 What is the current sitation?
 \begin{quoting}
@@ -199,9 +206,9 @@ Zien can provide climbing gear and target coordinates if PCs agree to mount the 
 
 Reaching the coordinates from Zien requires weaving through gouts of flaming rock and threading in and out of black clouds of ash. But as the ship nears their target, the atmosphere grows denser. Before making the \textbf{Piloting} check to reach the coordinates, other PCs can aid the pilot.\\
 Check: Plot path with sensors\\
-Hard [\df\df\df] +\setback  \textbf{Perception}
+Hard [\df\df\df] +\stb  \textbf{Perception}
 \begin{itemize}
-    \item \success Each uncanceled \success removes a \setback for difficult terrain in the upcoming \textbf{Piloting} check.
+    \item \Success Each uncanceled \Success removes a \stb for difficult terrain in the upcoming \textbf{Piloting} check.
 \end{itemize}
 Check: Plot path with the Force\\
 A Force-sensitive PC could try Foresee to help with lava spouts. As they extend their feelings, starting nearby, there is the glow around each of their organic companions, something positive about each shining with a brilliant light. Potentially have that player identify what that is for each of the other characters (e.g. compassion, courage, determination, or a drive to protect).\\
@@ -210,55 +217,55 @@ Stretching out from there:
 Around and under you, Sullust is a complicated presence. The planet is in pain. Not so much from its ceaseless volcanic activity—there’s a kind of balance in that ever-changing instability, a rhythm to the chaos. But the factories that riddle its surface and the mines that bore into its depth are upsetting its own fragile harmony-in-motion, and the people—the people are exhausted, overworked, impoverished, and afraid. The Force here is not in balance.
 \end{quoting}
 
-A successful check removes the \setback\setback\setback for difficult terrain from the \textbf{Piloting} check.
+A successful check removes the \stb\stb\stb for difficult terrain from the \textbf{Piloting} check.
 
 Note: This same experience can be inserted elsewhere in the adventure the first time a PC tries to use the Force.\\
 Check: Reach coordinates\\
-\difficulty per Silhouette + \stb\stb\stb + Handling \textbf{Piloting}
+\df per Silhouette + \stb\stb\stb + Handling \textbf{Piloting}
 
 \begin{itemize}
-    \item \advantage Gain familiarity with the timing of lava eruptions.  +\boost on next \textbf{Piloting} check or social interaction with a Sullustan.
-    \item \failure Landing spot gets blown up by column of surging magma. To find an alternate landing spot, make an additional \textbf{Piloting} check with upgraded difficulty.
-	\item \threat \threat A lava eruption strikes the ship.  Suffer 2 system strain.
-	\item \despair Lava briefly engulfs the ship, causing a vehicle critical hit.
+    \item \Advantage Gain familiarity with the timing of lava eruptions.  +\Boost on next \textbf{Piloting} check or social interaction with a Sullustan.
+    \item \Failure Landing spot gets blown up by column of surging magma. To find an alternate landing spot, make an additional \textbf{Piloting} check with upgraded difficulty.
+	\item \Threat \Threat A lava eruption strikes the ship.  Suffer 2 system strain.
+	\item \Despair Lava briefly engulfs the ship, causing a vehicle critical hit.
 \end{itemize}
 Check: Land\\
 Once at the coordinates, another \textbf{Piloting} check is required to land without damaging the ship.
-\difficulty per Silhouette + \stb\stb + Handling \textbf{Piloting}
+\df per Silhouette + \stb\stb + Handling \textbf{Piloting}
 \begin{itemize}
-    \item \failure Hull trama
-    \item \threat System strain
-	\item \despair Vehicle critical hit
+    \item \Failure Hull trama
+    \item \Threat System strain
+	\item \Despair Vehicle critical hit
 \end{itemize}
 Check: Leads\\
-Hard [\df\df\df] \textbf{Perception} or \textbf{Computers} +\setback to use the ships sensors to look for life signs (or use the Force). Doing this now will grant +\boost on the \textbf{Survival} check to come.
+Hard [\df\df\df] \textbf{Perception} or \textbf{Computers} +\stb to use the ships sensors to look for life signs (or use the Force). Doing this now will grant +\Boost on the \textbf{Survival} check to come.
 
 \section{Underground Travel}
 
-The PCs exit the ship into hot, sulfurous air, with ash and smoke blackening it. All PCs without a relevant Species Ability (like Twi'leks) or Talent (like Outdoorsman) add \setback due to the inhospitable environment.  If they lack filter masks, each PC suffers one wound ``per round'' (in structured play, else as narratively appropriate).\\
+The PCs exit the ship into hot, sulfurous air, with ash and smoke blackening it. All PCs without a relevant Species Ability (like Twi'leks) or Talent (like Outdoorsman) add \stb due to the inhospitable environment.  If they lack filter masks, each PC suffers one wound ``per round'' (in structured play, else as narratively appropriate).\\
 Check: Climb below the surface\\
-Hard [\df\df\df] \textbf{Athletics} +\boost for climbing gear
+Hard [\df\df\df] \textbf{Athletics} +\Boost for climbing gear
 \begin{itemize}
-  \item \threat\threat Accidentally unhook filter mask, suffering 1 wound that ignores soak
-  \item \despair Slip and suffer a Short Fall (10 W/10 S) onto hard rock.  Average [\df\df] \textbf{Coordination} or \textbf{Athletics} to mitigate, as per \emph{Edge of the Empire}, page 215.
+  \item \Threat\Threat Accidentally unhook filter mask, suffering 1 wound that ignores soak
+  \item \Despair Slip and suffer a Short Fall (10 W/10 S) onto hard rock.  Average [\df\df] \textbf{Coordination} or \textbf{Athletics} to mitigate, as per \emph{Edge of the Empire}, page 215.
 \end{itemize}
 Check: Environment wearing you down?\\
-If two or more PCs failed their \textbf{Athletics} check for climbing, the party has taken too long to make it down the shaft and the excessive heat wears on them further. Every PC must make Easy [\df] \textbf{Resilience}. On a \failure that PC now suffers Heat Exhaustion.  This is a critical injury that adds \setback on rolls until back in the cool confines of the ship. This condition can be removed with an Easy [\df] \textbf{Medicine} check.
+If two or more PCs failed their \textbf{Athletics} check for climbing, the party has taken too long to make it down the shaft and the excessive heat wears on them further. Every PC must make Easy [\df] \textbf{Resilience}. On a \Failure that PC now suffers Heat Exhaustion.  This is a critical injury that adds \stb on rolls until back in the cool confines of the ship. This condition can be removed with an Easy [\df] \textbf{Medicine} check.
 
 After the climb, the party is now underground and can search for the missing Sullustans.\\
 Check: Plot a course\\
-Average [\df\df] \textbf{Survival} +\boost for sensor aid if available.\\
+Average [\df\df] \textbf{Survival} +\Boost for sensor aid if available.\\
 If this \textbf{Survival} check fails, it costs the party more time. Every PC must make an Easy [\df] \textbf{Resilience} check or suffer Heat Exhaustion as per above.
 
 As the PCs travel underground, the planet shifts and groans around them. The distant, arrhythmic hiss of venting steam never entirely ceases. Even through the masks, the air smells terrible. Eventually, they come upon a narrow crack that they must squeeze through.\\
 Check:\\
-Average [\df\df] \textbf{Coordination} to squeeze through a crack to get into a side passage. \boost for narratively small PCs (all Silhouette 0 characters, humans with a slighter frame, for example), \setback for larger PCs (all Silhouette 2+ characters, Wookies, brawny humans, etc).
+Average [\df\df] \textbf{Coordination} to squeeze through a crack to get into a side passage. \Boost for narratively small PCs (all Silhouette 0 characters, humans with a slighter frame, for example), \stb for larger PCs (all Silhouette 2+ characters, Wookies, brawny humans, etc).
 
 Drutash scarabs attack when the PCs are in the crack!  Depending on the number of PCs, there may be one in front and one behind.  Or possibly they wait to attack until some PCs are out but others are still in the crack.\\
 Check:\\
 Hard [\df\df\df] \textbf{Xenology} to recognize Drutash Scarabs.  They are dangerous but also considered tasty delicacies.\\
 Check:\\
-Average [\df\df] \textbf{Survival} to harvest scarabs while avoiding poison sacs.  Success earns 100 credits + 10 per \advantage when selling them back in Pinyumb.
+Average [\df\df] \textbf{Survival} to harvest scarabs while avoiding poison sacs.  Success earns 100 credits + 10 per \Advantage when selling them back in Pinyumb.
 
 \newpage
 \npc{Drutash Scarab Swarm [Rival]}{1}{4}{1}{1}{1}{1}{20}{1}
@@ -298,18 +305,18 @@ Average [\df\df] \textbf{Perception} or Hard [\df\df\df] \textbf{Vigilance} to s
 
 The miners are Aadlan Myder and four other Sullustans (Cars Mun, Truvv Nryll, Fri Anb, Omo Riirs).  They will be suspicious of the PCs.  Any interaction is first met with the question, ``Are you from SoroSuub?''\\
 Check: Reassure miners\\
-Hard [\challenge\df\df\stb\stb] \textbf{Charm} to convince Aadlan Myder of the PCs' good intentions. 
+Hard [\Challenge\df\df\stb\stb] \textbf{Charm} to convince Aadlan Myder of the PCs' good intentions. 
 \begin{itemize}
-	\item +\boost if PC making check is Sullustan.
-	\item  +\boost if PC mentions they were sent by Zien Myder.
-	\item  +\boost if PC mentions the Rebellion or Cobalt Front.
-	\item  +\boost if PC sends down rehydration or similar supplies.
+	\item +\Boost if PC making check is Sullustan.
+	\item  +\Boost if PC mentions they were sent by Zien Myder.
+	\item  +\Boost if PC mentions the Rebellion or Cobalt Front.
+	\item  +\Boost if PC sends down rehydration or similar supplies.
 \end{itemize}
 \begin{itemize}
-	\item \advantage The miners have some useful equipment that combined with the PCs' gear, can help escape.
-	\item \threat The miners are especially weakened and have to be carried out.
-	\item \threat\threat The miners need immediate medical attention.
-	\item \despair A minion group of miners is hallucinating from dehydration and thinks the PCs are attacking them.
+	\item \Advantage The miners have some useful equipment that combined with the PCs' gear, can help escape.
+	\item \Threat The miners are especially weakened and have to be carried out.
+	\item \Threat\Threat The miners need immediate medical attention.
+	\item \Despair A minion group of miners is hallucinating from dehydration and thinks the PCs are attacking them.
 \end{itemize}
 
 \npc{Sullustan Miner [Minion]}{2}{3}{2}{1}{2}{2}{5}{2}
@@ -323,7 +330,7 @@ Hard [\challenge\df\df\stb\stb] \textbf{Charm} to convince Aadlan Myder of the P
 \begin{GenesysTable}{ll}
     Abilities & \\
        Tools & +2 dmg, Melee, Engaged, Crit 5\\
-        & Improvised (+\threat), Inferior (+\setback) \\
+        & Improvised (+\Threat), Inferior (+\stb) \\
 \end{GenesysTable}\\
 }
 
@@ -389,7 +396,7 @@ The PCs may be content to just leave at that point. However, if they are looking
 \end{GenesysTable}
 \begin{GenesysTable}{ll}
     Abilities & \\
-       Plausible Deniability 1 & Remove \setback from all \\
+       Plausible Deniability 1 & Remove \stb from all \\
        & Coercion and Deception checks. \\
        Nobody's Fool 2 & Upgrade difficulty of \textbf{Charm}, \textbf{Coercion},\\
        & and \textbf{Deception} checks made against\\

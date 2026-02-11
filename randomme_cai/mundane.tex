@@ -1,0 +1,202 @@
+\documentclass{article}
+\usepackage{calc}
+\usepackage{genesys}
+\geometry{margin=0.5in}
+
+\setmainfont[Scale=0.9]{Crimson}
+%\setsansfont[Scale=0.9]{Crimson}
+\setsansfont[Scale=0.9]{Bebas Neue}
+
+\newcommand{\Bra}{3}
+\newcommand{\Agi}{2}
+\newcommand{\Int}{2}
+\newcommand{\Cun}{3}
+\newcommand{\Wil}{2}
+\newcommand{\Pre}{3}
+
+\newcommand{\df}{\DifficultyDie}
+\newcommand{\stb}{\SetbackDie}
+\newcommand{\ch}{\ChallengeDie}
+\newcommand{\abd}{\AbilityDie}
+\newcommand{\bbb}{\BoostDie}
+\newcommand{\pd}{\ProficiencyDie}
+
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\begin{minipage}{0.6\linewidth}
+{\Huge Mundane Human }
+
+{\large Average Human / Business Person}
+
+\vspace{1.5em}
+
+\end{minipage}\hfill%
+\\
+
+%\begin{minipage}{0.33\linewidth}
+\vspace{0em}\raggedright
+%\begin{multicols}{2}
+%\includegraphics[width=.3\linewidth]{Occultist2}
+
+%\columnbreak
+
+An ordinary human surrounded by extraordinary friends.  Is being mundane enough?
+%\end{multicols}
+%\end{minipage}
+
+
+\begin{center}
+\Characteristics{\Bra}{\Agi}{\Int}{\Cun}{\Wil}{\Pre}
+
+\noindent\null\hfill\Derived{Soak}{4}\quad
+\DerivedSplit{Wounds}{}{13}{Cur}{Max}\null\quad
+\DerivedSplit{Strain}{}{12}{Cur}{Max}\quad
+\DerivedSplit{Defense}{0}{0}{Melee}{Ranged}\hfill\null
+%\Derived{Encumbrance Thresh}{7}\quad
+\end{center}
+
+%{\centering
+%\tikz \node[signal, draw, minimum width=0.3\linewidth, fill=black, text=white, signal to=east and west]{\bfseries\sffamily CHARACTERISTICS};\\[0.5em]}
+
+\vspace{-0.5em}
+
+\CharSect{SKILLS}
+
+
+\vspace{-3em}
+
+\begin{multicols}{2}
+{\sffamily
+    \begin{GenesysTableOld}{l X[l] X[c]}
+    \textbf{General Skills} & Dice Pool & Rank \\
+Alchemy (Int) & \skilldice{\Int}{0}   & \skill[0] \\
+Athletics (Br) & \skilldice{\Bra}{2}   & \skill[2] \\
+Computers (Int) & \skilldice{\Int}{0}   & \skill[0] \\
+Cool (Pr) & \skilldice{\Pre}{0}   & \skill[0] \\
+Coordination (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Discipline (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Driving (Agi) & \skilldice{\Agi}{0}   & \skill[0]\\
+Mechanics (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Medicine (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Perception (Cun) & \skilldice{\Cun}{1}   & \skill[1]\\
+Resilience (Br) & \skilldice{\Bra}{1}   & \skill[1]\\
+Skulduggery (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Stealth (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+Streetwise (Cun) & \skilldice{\Cun}{1}   & \skill[1]\\
+Survival (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Vigilance (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+\end{GenesysTableOld}
+    \vspace*{\fill}\columnbreak
+\begin{GenesysTableOld}{l X[l] X[c]}
+\textbf{Magic Skills} & Dice Pool & Rank \\ 
+Arcana (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+\end{GenesysTableOld}
+\begin{GenesysTableOld}{l X[l] X[c]}
+    \textbf{Combat Skills} &  & \\ 
+Melee (Br) & \skilldice{\Bra}{1}   & \skill[1]\\
+Ranged (Ag) & \skilldice{\Agi}{0}   & \skill[0]\\
+\end{GenesysTableOld}
+    \begin{GenesysTableOld}{l X[l] X[c]}
+    \textbf{Social Skills} & & \\ 
+Charm (Pr) & \skilldice{\Pre}{2}   & \skill[2]\\
+Coercion (Will) & \skilldice{\Wil}{0}   & \skill[0]\\
+Deception (Cun) & \skilldice{\Cun}{0}   & \skill[0]\\
+Leadership (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+Negotiation (Pr) & \skilldice{\Pre}{1}   & \skill[1]\\
+\end{GenesysTableOld}
+    \begin{GenesysTableOld}{l X[l] X[c]}
+    \textbf{Knowledge Skills} & & \\ 
+Forbidden (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+Mundane (Int) & \skilldice{\Int}{2}   & \skill[2]\\
+Science (Int) & \skilldice{\Int}{0}   & \skill[0]\\
+\end{GenesysTableOld}}
+\end{multicols}
+
+
+\CharSect{ABILITIES/TALENTS}
+
+\begin{itemize}[noitemsep]
+    \item\textbf{Ready for Anything:} Once per session, flip a story point from the GM side to the Player side.
+    \item\textbf{Find a Friend:} Once per session, introduce/declare a (possibly new) NPC to a scene who knows your character. Their disposition toward you may be determined randomly.
+\end{itemize}
+
+
+\CharSect{WEAPONS \& GEAR}
+\vspace{-2.5em}
+\null\hfill\fbox{\begin{minipage}[t][0.06\textheight][t]{0.55\textwidth}
+\vspace{-1.0em}
+{\small\sffamily
+\begin{GenesysTableOld}{l l c c c X[l]}
+\textbf{Weapon} & \textbf{Skill} & \textbf{Damage} & \textbf{Crit} & \textbf{Range} & \textbf{Special}\\
+    Fire Axe & Melee \skilldice{\Bra}{1}  & 6 & 3 & Engaged & Vicious 1 \\
+\end{GenesysTableOld}
+}\\
+\end{minipage}}\hfill\fbox{\begin{minipage}[t][0.06\textheight][t]{0.40\textwidth}
+\vspace{-1.0em}
+{\small\sffamily
+\begin{GenesysTableOld}{l c X[l]}
+\textbf{Item} & \textbf{Quantity} & \textbf{Effect}\\
+    Heavy Jacket & 1  & +1 Soak (included)  \\
+    Flashlight & 1  &   \\
+    Painkiller & 1  & Recover 4 Wounds  \\
+\end{GenesysTableOld}
+}\\
+\end{minipage}}\hfill\null
+
+\vspace{0.5em}
+
+\CharSect{Reference}
+\setsansfont[Scale=0.9]{Crimson}
+\fbox{
+\begin{minipage}[t][0.20\textheight][t]{0.35\textwidth}
+{\small\sffamily
+\begin{GenesysTableOld}{l X[l]}
+\textbf{Maneuvers} & \textbf{Effect} \\
+    Aim   & +\BoostDie  \\
+    Aim (Called Shot)   & {+\stb\stb, Target specific item}  \\
+    Assist   & +\BoostDie to Ally \\
+    Draw/Holster   & Ready/Put away weapon or item\\
+    Interact   & Open doors, take cover (+1 Ranged Def), etc  \\
+    Move   & Change range band (2 maneuvers for Med-Long or Long-Extreme)\\
+    Prepare   & Required for some actions (e.g. crossbow)  \\
+\end{GenesysTableOld}
+}\\
+\end{minipage}}\fbox{
+\begin{minipage}[t][0.2\textheight][t]{0.37\textwidth}
+{\small\sffamily
+\begin{GenesysTableOld}{l X[l]}
+\textbf{Structured Encounter} & \textbf{Example} \\
+    1 Action   & Attack with readied weapon \\
+       & Attempt skill check (e.g. Charm an NPC) \\
+       & Take a Maneuver (max 2 per turn) \\\hline
+    1 Free Maneuver   & See table at left \\\hline
+    1 Extra Maneuver   & Suffer 2 strain \\
+       & Max 2 total maneuvers per turn\\\hline
+    Incidentals   & Talking, Dropping an item, etc \\
+    & Also certain abilities \\
+\end{GenesysTableOld}
+}\\
+\end{minipage}}\fbox{
+\begin{minipage}[t][0.2\textheight][t]{0.25\textwidth}
+{\small\sffamily
+\begin{GenesysTableOld}{l X[l]}
+\textbf{Spending \Advantage} & \textbf{Effect} \\
+    \Advantage   & +\BoostDie to next Ally \\
+       & Recover 1 Strain \\\hline
+    \Advantage\Advantage   & +\BoostDie to specific character \\
+       & +\stb to your target\\
+       & Extra Maneuver \\\hline
+    \Advantage\Advantage\Advantage & Force target to drop item \\
+       & Ignore enviro hazard \\
+       & Negate target's gear \\
+\end{GenesysTableOld}
+}\\
+\end{minipage}}
+
+\vfill
+\pagebreak
+
+\end{document}

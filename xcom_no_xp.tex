@@ -102,7 +102,7 @@ Start the session by noting that one member of \prof's research group recently d
 
     This encounter is primarily for the characters to establish Ares University and become more comfortable in the Cold War setting.  Each PC has an opportunity to use one skill to learn a little about what happened to their colleague before the conference Encounter starts.  If they're unsure what to try, here are some possibilities you can suggest:
 
-    \begin{GenesysTable}{p{1.5in}p{2in}}
+\begin{GenesysTable}{p{1.5in}p{2in}}
     Approach & \\
     \df\df \textbf{Charm} the Nurses Group & Paramedics who declared
     student dead were not the usual crew\\
@@ -196,14 +196,16 @@ The PCs need to find a way across the Berlin Wall (and back).  Border guards are
 
 The warehouse holding the device is patrolled by several lookouts.  \df\df\stb Perception will reveal that these are low-level local hires, not the militant BWA ``research team'' members.  PCs might take a variety of approaches to get past them and inside.  Here are a few possibilities:
 
-    \begin{GenesysTable}{p{1.5in}p{2in}}
+    \begin{GenesysTable}{p{1.9in}p{1.5in}}
     Approach & \\
         \ch\df \textbf{Stealth} + \df\df\df \textbf{Athletics} to scale unseen part of wall. & Leads to roof or window entrance with easier Perceptions checks inside.\\
         \ch\df \textbf{Stealth} + \df\df\stb \textbf{Skulduggery} to sneakto side door and lockpick. & Leads to side entrance with better cover. \\
         \df\df\df Social (any reasonable) to lie/buy/bully way past guards. & PCs get in but be seen by scientists/BWA militants. \\
 \end{GenesysTable}
 
-If the PCs gain entry without being observed (i.e. \textbf{Stealth}y approaches without \Threat\Threat on the second check), they can observe and hear parts of a private conversation.  A scientist is arguing with the militant \textbf{Viktor Roman}, an untrusting German, about the device.  Despite the risks, Viktor insists that ``sacrifices have to be made'' to ``stamp out the snakes''.  In addition to Viktor, there are 2 minion groups of field scientists (2-3 each) and 1/2 additional military-style personal (use Viktor's stat block with all skills reduced to 1 rank and special abilities).  Distractions set by the PCs earlier may call some of these forces away, but Viktor and at least one scientist group will always be present.
+If the PCs gain entry without being observed (i.e. successful \textbf{Stealth}y approaches), they can observe and hear parts of a private conversation.  A scientist is arguing with the militant \textbf{Viktor Roman}, an untrusting German, about the device.  Despite the risks, Viktor insists that ``sacrifices have to be made'' to ``stamp out the snakes''.  In addition to Viktor, there are 2 minion groups of field scientists (2-3 each) and 1/2 additional military-style personal (use Viktor's stat block with all skills reduced to 1 rank and special abilities).  Distractions set by the PCs earlier may call some of these forces away, but Viktor and at least one scientist group will always be present.
+
+Viktor and the scientists \emph{are} the remnants of the German group which first made contact with aliens as \prof alleged, but they are not ideologically aligned.   They have developed a working BWA, a coffin-sized device capable of detecting space aliens.  And they are not keen on giving the BWA up, as they are preparing to deploy it in Moscow.  To fulfill \prof's request, however, the PCs need to acquire the BWA and bring it back across the border.  This is the last chance before it moves irrevocably beyond the Iron Curtain.
 
 \npc{Viktor Roman [Rival]}{3}{3}{2}{3}{3}{3}{16}{4}
 \npccontinued{1}{1}{
@@ -214,7 +216,7 @@ If the PCs gain entry without being observed (i.e. \textbf{Stealth}y approaches 
        Brawl 2     & Coordination 2&Perception 1 & Vigilance 1\\
        Coercion 2  & Discipline 2  &Ranged-L 2 & \\
 \end{GenesysTable}
-\begin{GenesysTable}{ll}
+\begin{GenesysTable}{lp{2in}}
     Abilities & \\
        Adversary 1 & Upgrade all combat checks against this NPC once.\\
        Field Cmdr 1 & \df\df \textbf{Leadership} to give 3 allies
@@ -231,20 +233,62 @@ If the PCs gain entry without being observed (i.e. \textbf{Stealth}y approaches 
        Computers 1 & Knowledge (Lore) 1 & Ranged-L 1 \\
        Knowledge (Science) 2 & Mechanics 2 & \\
 \end{GenesysTable}
-\begin{GenesysTable}{ll}
+\begin{GenesysTable}{lp{2in}}
     Abilities & \\
        Expert Instruction & Assist maneuver upgrades the ability of the check once instead of adding \bbb.\\
        Pistol & 6 dmg, Ranged-L, Medium, Crit 3\\
 \end{GenesysTable}
    }
 
-
-
-
+Viktor and his security detail are willing to fight over the BWA and they are resolute in their mission to take it to Moscow.  The scientists, however, may waver and could be suspectible to social combat (or a single check if time is limited).  If the security detail goes down, they will surrender.
 
 \section{Entity Extraction}
 
+What the PCs don't know and that Viktor is loathe to reveal, is that the \emph{BWA contains a psychically active human being}, Edith.  Her capabilities circumvent the computational limitations as hinted at in the academic lecture.  She is in apparent stasis within the device, clearly visible once PCs are standing next to it.  She is connected to a variety of IVs and electrodes; it does not look pleasant.
+
+A quick \df\df\df\bbb \textbf{Coercion} or \df\df\df\bbb \textbf{Leadership} against a scientist will reveal that Edith is being used against her will.  She was originally a volunteer, but Viktor took things too far.  He even sent the only key to the device ahead to Moscow already, so it can only be legitimately opened there.
+
+To free Edith, the PCs will have to safely pick the high security lock on the BWA or otherwise smash the device and risk hurting her.  Scientists, if cowed, will use \textbf{Expert Instruction} to assist by upgrading up to 2 PC checks.
+
+Two separate successful checks are required to extract Edith without injury:
+
+\df\df\df\stb \textbf{Skulduggery} or \df\df\df\df \textbf{Mechanics} to physically open the BWA:
+    \begin{itemize}
+        \item \Failure: PCs will have to try another method.  The medical extraction check is upgraded once for failed check beyond the first.
+        \item \Advantage\Advantage: The PCs recover data of recent readings showing alien activity at the conference.
+        \item \Threat\Threat: Add \stb to the medical extraction check as there are more IVs than previously seen tethering Edith to the BWA.
+        \item \Despair: Electrical current arcs across the device, jolting the PC and making them suffer a Critical Injury.
+    \end{itemize}
+
+\df\df\stb \textbf{Medicine} to safely unplug Edith from a dizzying array of tubes:
+    \begin{itemize}
+        \item \Failure: Edith is nearly implanted into the device.  They can forcibly cut her out, but she will suffer 2 Critical Injuries.
+        \item \Advantage: Edith becomes alert and recognizes the PCs are trying to free her.
+        \item \Threat\Threat: Edith becomes alert and miscontrues the PCs as further binding her.  She will resist.
+        \item \Despair:  Edith's psychic abilities suddenly attack the PCs.  Each PC in short range must make \df\df\df \textbf{Vigilance} or \ch\df\df \textbf{Resilience} to avoid a Critical Injury.
+    \end{itemize}
+
+Once out and calm, Edith is generally disposed to help the PCs.  She will freely travel with them to connect with \prof.  She despises the scientists, even if they helped the PCs.  They could have freed her earlier but did not; so she will not travel with them.  The party will have to sneak back into West Berlin, but this can be handled more succinctly than the earlier crossing.
+
+\nemesis{Edith}{2}{2}{2}{4}{2}{2}{12}{13}
+\nemesiscontinued{2}{0}{0}{
+\begin{GenesysTable}{ll}
+    Skills & \\
+    Psionics 1 & \\
+    Knowledge (Science) 1 & \\
+\end{GenesysTable}\\
+    \begin{GenesysTable}{lp{2in}}
+    Abilities & \\
+        Psionic Attack &\\
+        Detect Aliens &\\
+\end{GenesysTable}\\
+}
+
+
+
 \section{Oral Defense}
+
+Edith (or devince pinging) alerts alien nature of \prof.  Showdown.  
 
 \section{Aftermath}
 

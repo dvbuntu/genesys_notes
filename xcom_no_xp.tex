@@ -89,9 +89,9 @@ Hello, Commander.  The year is 1974, and aliens are starting to secretly infiltr
     \item Dead Student (information)
     \item Conference Arrival (social)
     \item Biokinetic Waveform Analyzer (social/information)
-    \item Crossing The Border (social/stealth)
-    \item Facility Infiltration (stealth/combat)
-    \item Entity Extraction (stealth/chase)
+    \item Crossing The Border (social/stealth/physical)
+    \item Facility Infiltration (social/stealth)
+    \item Entity Extraction (stealth/combat)
     \item Oral Defense (social/combat)
     \item Aftermath
 \end{enumerate}
@@ -116,7 +116,7 @@ The PCs might talk to \prof.  She is an older woman, possibly in her seventies w
 
 If the PCs ask \prof about the death directly, she demurs, ``I understand this is hard on all of us.  But they would have wanted us to honor their memory by furthering our research.  Are you all set to travel to Berlin?''.
 
-\nemesis{Professor allen}{2}{4}{3}{3}{3}{2}{15}{15}
+\nemesis{Professor allen}{2}{4}{3}{3}{3}{2}{17}{15}
 \nemesiscontinued{3}{1}{1}{
 \begin{GenesysTable}{ll}
     Skills & \\
@@ -194,7 +194,7 @@ The PCs need to find a way across the Berlin Wall (and back).  Border guards are
 
 PCs may want to gather information about approaches to safely traversing the border.  Here are a few options they might consider, condensed into groups of skill checks that are likely to flow together.
 
-\df\df\stb \textbf{Perception} and \df\df \textbf{Stealth} to find smuggling tunnels and maybe meet a Fluchthelfer who maintains one:
+\df\df\stb \textbf{Perception} and \df\df \textbf{Stealth} to find smuggling tunnels and maybe meet a ``Fluchthelfer'' who maintains one:
     \begin{itemize}
         \item \Advantage\Advantage: A contact in East Germany is willing to help the PCs if they take them back with them on the westward journey.
         \item \Triumph: The tunnel is untested, and possibly unwatched.  No \textbf{Stealth} check required on the other side.
@@ -246,22 +246,22 @@ Viktor and the scientists \emph{are} the remnants of the German group which firs
 \end{GenesysTable}
    }
 
-\npc{Field Scientists [Minion]}{2}{2}{4}{2}{3}{2}{12}{3}
+\npc{Field Scientists [Minion]}{2}{2}{4}{2}{3}{2}{6}{3}
 \npccontinued{0}{0}{
     \vspace{0.2em}
 \begin{GenesysTable}{lll}
     Skills & & \\
-       Computers 1 & Knowledge (Lore) 1 & Ranged-L 1 \\
-       Knowledge (Science) 2 & Mechanics 2 & \\
+       Computers  & Knowledge (Lore)  & Ranged-L  \\
+       Knowledge (Science)  & Mechanics  & \\
 \end{GenesysTable}
-\begin{GenesysTable}{lp{2in}}
+\begin{GenesysTable}{lp{2.2in}}
     Abilities & \\
        Expert Instruction & Assist maneuver upgrades the ability of the check once instead of adding \bbb.\\
        Pistol & 6 dmg, Ranged-L, Medium, Crit 3\\
 \end{GenesysTable}
    }
 
-Viktor and his security detail are willing to fight over the BWA and they are resolute in their mission to take it to Moscow.  The scientists, however, may waver and could be suspectible to social combat (or a single check if time is limited).  If the security detail goes down, they will surrender.
+Viktor and his security detail are willing to fight over the BWA and they are resolute in their mission to take it to Moscow.  The scientists, however, may waver and could be susceptible to social combat (or a single check if time is limited).  If the security detail goes down, they will surrender.
 
 \section{Entity Extraction}
 
@@ -285,32 +285,51 @@ Two separate successful checks are required to extract Edith without injury:
     \begin{itemize}
         \item \Failure: Edith is deeply implanted into the device.  They can forcibly cut her out, but she will suffer 2 Critical Injuries.
         \item \Advantage: Edith becomes alert and recognizes the PCs are trying to free her.
-        \item \Threat\Threat: Edith becomes alert and miscontrues the PCs as further binding her.  She will resist.
+        \item \Threat\Threat: Edith becomes alert and misconstrues the PCs as further binding her.  She will resist.
         \item \Despair:  Edith's psychic abilities suddenly attack the PCs.  Each PC in short range must make \df\df\df \textbf{Vigilance} or \ch\df\df \textbf{Resilience} to avoid a Critical Injury.
     \end{itemize}
 
-Once out and calm, Edith is generally disposed to help the PCs.  She will freely travel with them to connect with \prof.  She despises the scientists, even if they helped the PCs.  They could have freed her earlier but did not; so she will not travel with them.  The party will have to sneak back into West Berlin, but this can be handled more succinctly than the earlier crossing.
+Once out and calm, Edith is generally disposed to help the PCs.  She will freely travel with them to connect with \prof.  She despises the scientists, even if they helped the PCs.  They could have freed her earlier but did not; so she will not travel with them.  She is also somewhat mentally unbalanced by psychic conditioning, aggressively asking, ``Where are the snakes?'' when she comes to.
 
 \nemesis{Edith}{2}{2}{3}{2}{4}{2}{12}{13}
 \nemesiscontinued{2}{0}{0}{
+\vspace{0.2em}
 \begin{GenesysTable}{lll}
-    Skills & \\
+    Skills & & \\
     Charm 1 &           Knowledge (Science) 1&Psionics 1 \\
     Coercion 1 &        Medicine 2           &Survival 1 \\
     Knowledge (Lore) 1 &Perception 2         &Vigilance 1\\
 \end{GenesysTable}\\
     \begin{GenesysTable}{lp{2in}}
     Abilities & \\
-        Psionic Assault & 4 dmg, Psionics, Short, Spell \\
         Detect Aliens & \df\df, Medium, Spell\\
+        Psionic Assault & 4 dmg, Psionics, Short, Spell \\
+        Stupefy & \df\df\df, Psionics, Short, Spell, stagger target \\
 \end{GenesysTable}\\
 }
 
+The party will have to sneak back into West Berlin, but this can be handled more succinctly than the earlier crossing.  If they had used official papers, it may be a problem to have an extra person.  Edith, however, can deploy her abilities should the need arise.
+
 \section{Oral Defense}
 
-Edith (or devince pinging) alerts alien nature of \prof.  Showdown.  
+If Edith is awake when the PCs return to \prof, she will have a severe reaction when within Medium range of the professor.  For narrative emphasis, this can be on the other side of a hotel room door, or with some other divider obscuring \prof as the immediate source of the reaction.
+
+If the PCs accuse \prof of being an alien, she will become hostile.  She gets two turns in a round (one in her initiative slot and one at the end).  These turns should do different things, like one spent spitting and one spent binding.  Also note that she is immune to her own acid.
+
+Even if the PCs hand over Edith (who will resist herself if out of the device and alert), \prof may still distrust them as knowing too much.  They must pass a \ch\df\df\stb \textbf{Cool} or \textbf{Deception} check to play dumb.  Upgrade the difficulty if they rescued Edith but did not bring her to \prof:
+    \begin{itemize}
+        \item \Failure: \prof decides the PCs know too much and attack.
+        \item \Advantage\Advantage: \prof is momentarily distracted and will take \stb on the initiative check.
+        \item \Triumph: Edith or one of the PCs get a surprise attack on \prof
+        \item \Threat\Threat: \prof also has an Alien Pistol (7 dmg, Medium, Crit 4, Burn 1).  It will not fire for humans if captured.
+        \item \Despair:  Edith loses control and cannot tell friend from foe during the combat.
+    \end{itemize}
+
+If the PCs succeed in fooling \prof, they may choose to set a trap or string her along for more information in the long run.  Edith will urge the PCs to capture \prof so they can interrogate her and learn more.
 
 \section{Aftermath}
+
+Before the PCs can fly home, they are suddenly woken up.  Extremely bright lights allow them only to see the dark silhouettes of a number of soldiers on the other side of the lights.  The one nearest to the PCs flatly states, ``I understand you've seen some things not of this Earth.  We could use skills and resilience like yours...''.  The XCOM operative will ask the PCs to keep an eye on \prof if she is still trusting, or take her into custody if she has been subdued.  This could be the opening of a longer campaign uncovering and dealing with alien threats at Ares University before formal induction as an XCOM cell.
 
 Recommended XP: 10 XP for reaching the BWA/Edith.  10 XP for freeing her and confronting \prof.  Bonus 5 XP each if they befriend a BWA scientist or \emph{capture} \prof.
 

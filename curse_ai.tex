@@ -1,0 +1,109 @@
+\documentclass{book}
+
+\usepackage[dvipsnames, table]{xcolor}
+%\usepackage{swrpg}
+\usepackage{genesys}
+\usepackage{hyperref}
+%\geometry{paperheight=13in}
+\usepackage{multicol}
+\usepackage[noorphans,font=itshape,indentfirst=false,rightmargin=0pt]{quoting}
+
+%\swrpgbackground
+\newcommand{\spa}{\hskip 0.3em }
+
+% dice
+\newcommand{\df}{\DifficultyDie }
+\newcommand{\stb}{\SetbackDie }
+\newcommand{\ch}{\ChallengeDie }
+\newcommand{\abd}{\AbilityDie }
+\newcommand{\bbb}{\BoostDie }
+\newcommand{\pd}{\ProficiencyDie }
+
+\renewcommand\Characteristics[6]{
+\noindent\hfill
+\charPart{BRAWN}{#1}\kern-.1em
+\charPart{AGILITY}{#2}\kern-.1em
+\charPart{INTELLECT}{#3}\kern-.1em
+\charPart{CUNNING}{#4}\kern-.1em
+\charPart{WILLPOWER}{#5}\kern-.1em
+\charPart{PRESENCE}{#6}%
+\hfill\null}
+
+\newcommand{\npc}[9]{
+    \begin{GenesysTable}{l} {\Large #1 } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
+    \Derived{Wounds}{#8}
+    \Derived{Soak}{#9}
+}
+\newcommand{\npccontinued}[3]{
+    \DerivedSplit{Defense}{#1}{#2}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
+    #3 %description, abilities, etc
+}
+
+\newcommand{\nemesis}[9]{
+    \begin{GenesysTable}{l} {\Large #1 [Nemesis] } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
+    \Derived{Wounds}{#8}\hskip-.1em
+    \Derived{Strain}{#9}\hskip-.1em
+}
+\newcommand{\nemesiscontinued}[4]{
+    \Derived{Soak}{#1}\hskip-.1em
+    \DerivedSplit{Defense}{#2}{#3}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
+    #4 %description, abilities, etc
+}
+
+\newcommand{\ai}{
+    {\color{blue}Artificial Indigo}
+}
+
+\newcommand{\prof}{
+    {\color{brown} Prof allen}
+}
+
+
+\title{
+    The Curse of \ai \\
+A DiceyStories.com Genesys Adventure\\
+}
+\author{Author: Danielle Van Boxel}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{multicols*}{2}
+\section{Gemini Mountains}
+
+\emph{Present Day, 1991, the small town of Gemini Mountains.  Can a struggling company of paranormal investigators locate a lost lover while evading corporately-cursed clothing?  Tune in to find out!  Thursdays 8PM Eastern/7PM Central on ABC.  PG-13.}\\
+
+    The Curse of \ai is a Genesys adventure for 3-5 Player Characters (PCs) with a typical playtime of 3 hours.  Inspired by 1990s supernatural television like \emph{Twin Peaks}, \emph{Buffy The Vampire Slayer}, \emph{The X-Files}, and others, the setting is mundane except the PCs and select adversaries are familiar with supernatural forces that lurk beneath public awareness.
+
+\section{Adventure Overview}
+
+    The PCs are a band of paranomal investigators/exterminators hired by Andre to search for his missing boyfriend, Breaux.  In doing so, they uncover Breaux's connection to Advanced Biotech Corporation (ABC) and the heavily marketed \ai clothing product line.  The PCs will find that deploying \ai has some serious consequences for everyone involved.
+
+\emph{Goal}: Discover what happened to Breaux and uncover the Curse of \ai.\\
+    \emph{Challenge}: (spoiler) \ai is a supernatural product that requires skill ``donations'' to grant those skills to others.  Breaux fell into debt using their products unsuccessfully, so ABC has ``repossessed'' him to work that off.\\
+
+\subsection{Encounter List}
+\begin{enumerate}
+    \setlength\itemsep{-.8em}
+    \item Title Sequence (narrative/character intro)
+    \item Working For Andre (social)
+    \item Asking Around Town (information/investigation)
+    \item Haunted Workshop (combat/investigation)
+    \item Entering ABC Facility (social/stealth)
+    \item Hallway Interdiction (combat/stealth)
+    \item Breaux's Sacrifice (combat/social)
+    \item Aftermath
+\end{enumerate}
+
+
+\end{multicols*}
+\end{document}

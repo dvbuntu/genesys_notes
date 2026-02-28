@@ -3,6 +3,7 @@
 \usepackage[dvipsnames, table]{xcolor}
 %\usepackage{swrpg}
 \usepackage{genesys}
+\usepackage{xspace} % fix space issues after text macro
 \usepackage{hyperref}
 %\geometry{paperheight=13in}
 \usepackage{multicol}
@@ -56,13 +57,8 @@
     #4 %description, abilities, etc
 }
 
-\newcommand{\ai}{
-    {\color{blue}Artificial Indigo}
-}
+\newcommand{\ai}{{\color{cyan}Artificial Indigo}\xspace}
 
-\newcommand{\prof}{
-    {\color{brown} Prof allen}
-}
 
 
 \title{
@@ -91,12 +87,14 @@ A DiceyStories.com Genesys Adventure\\
 \emph{Goal}: Discover what happened to Breaux and uncover the Curse of \ai.\\
 \\
 \emph{Challenge}: (spoiler) \ai is a supernatural product that requires skill ``donations'' to grant those skills to others.  Breaux fell into debt using their products unsuccessfully, so ABC has ``repossessed'' him to work that off.\\
+\\
+\emph{Narrative Reminder}: (spoiler) \ai adversaries show a degree of autonomy and malice, but not \emph{sentience}.  They display no pain when damaged nor joy when successful.  Play them similarly to modern artificial intelligence models, which can act chaotically and without regard for logic.
 
 \subsection{Encounter List}
 \begin{enumerate}
     \setlength\itemsep{-.5em}
     \item Title Sequence (narrative/character intro)
-    \item Working For Andre (social)
+    \item Investigators For Hire (social)
     \item Asking Around Town (information/investigation)
     \item Haunted Workshop (combat/investigation)
     \item Entering ABC Facility (social/stealth)
@@ -107,17 +105,26 @@ A DiceyStories.com Genesys Adventure\\
 
 \section{Title Sequence}
 
-To help players visualize the setting and get into character, start with an almost literal title sequence of a news piece about/ABC ad for \ai.  Read the below text:
+To help players visualize the setting and get into character, start with an almost literal title sequence of a news piece about/ABC ad for \ai.  Read the italicized text:
 
-\emph{The camera zooms in on a reporter interviewing the winner of the local Gemini Mountains marathon, an unfamiliar woman wearing bright blue leggings.  She is frenetic, unable to stand still as she explains, ``  ''.  An awkward smile crosses her face as she stutters a goodbye and starts a victory lap, seemingly unable to stop her legs from running.
-The camera briefly pans over to another marathoner, exhausted and drained, leaning against a wall.  You recognize her as the previous three-time marathon winner in town.  Smash cut to the character intro sequences.}
+\emph{The camera zooms in on a reporter interviewing the winner of the local Gemini Mountains marathon, an unfamiliar woman wearing bright blue leggings.  She is frenetic, unable to stand still as she explains, ``A week ago I could barely run a 5k, but now I'm a champion runner.  Thanks \ai!''  An awkward smile crosses her face as she stutters a goodbye and starts a victory lap, seemingly unable to stop her legs from running.}
 
-Ask one of the PCs to briefly describe their introductory sequence as though it were television show.  This should be a brief shot of the character doing something key to their concept, without dialogue, and unrelated to the current adventure.  After they describe their character, ask the next player and so on.
+\emph{The camera briefly pans over to another marathoner, exhausted and drained, leaning against a wall.  You recognize her as the previous three-time marathon winner in town.  Smash cut to the character intro sequences.}
 
-\emph{Example Introduction 1}: Candra the witch is sitting cross-legged in a pentagram.  Five candles sit unlit at each point of the star.  One suddenly flickers to life as we see it reflected in Candra's eyes.
+Ask one of the PCs to briefly describe their introductory sequence as though it were television show.  This should be a brief shot of the character doing something key to their concept, without dialogue, and unrelated to any specific adventure.  After they describe their character, ask the next player and so on.
+
+\emph{Example Introduction 1}: Candra the witch is sitting cross-legged in a pentagram.  Five candles sit unlit at each point of the star.  Reflected in Candra's eyes, we see a candle suddenly flicker to life.
 \emph{Example Introduction 2}: Sebastian the engineer is typing furiously at a bulky 1990s laptop computer.  The camera rotates around the scene to show ``Ghost Program Activated'' on the screen as Sebastian grins.
 
-After all characters have introduced themselves, the show title appears, displaying,``The Curse of \ai''.
+After all characters have introduced themselves, the show title appears, displaying,``The Curse of \ai''.  You may optionally ``cut to a commercial break'' here to further immerse players in the television aesthetic.
+
+\section{Investigators For Hire}
+
+\section{Aftermath}
+
+    This is a narrative epilogue for the ``viewers'' of the television program, with the PCs remaining unaware of these details (until a possible future adventure).  If a Trenchcoat escaped from the final combat, the camera follows it fleeing to an administrative ABC building.  Otherwise, a fresh Trenchcoat fills a similar role.  In a dimly-lit executive office, the Trenchcoat pantomimes the PCs' rescue of Breaux to the back of an expensive high-backed office chair.
+
+    The chair slowly rotates, revealing a stern woman in business-casual attire (notably, \emph{not} bright blue like \ai products).  Showing little emotion, she calmly snaps her fingers.  The trenchcoat bursts into flame, continuing to flail even as it quickly turns to ash.  The camera zooms out and the viewers see a wall of supernatural artifacts.  As it pulls beyond the office door, her name placard becomes visible, identifying the executive as, ``Cillarma Tepes, Chief Arcane Officer.''
 
 \end{multicols*}
 \end{document}

@@ -8,6 +8,7 @@
 %\geometry{paperheight=13in}
 \usepackage{multicol}
 \usepackage[noorphans,font=itshape,indentfirst=false,rightmargin=0pt]{quoting}
+\usepackage{cancel}
 
 %\swrpgbackground
 \newcommand{\spa}{\hskip 0.3em }
@@ -187,10 +188,10 @@ PCs might want to snoop on Andre at his work or apartment.  He's a busy lawyer, 
 \vspace{1em}
 \begin{GenesysTable}{p{1.4in}p{2in}}
     Approach & \\
-    \df\df \textbf{Alchemy} to understand creation process & \ai requires a huge arcane facility and enormous amount of raw materials to create.\\
+    \df\df \textbf{Alchemy} to understand creation process & Creating \ai requires a huge arcane facility and enormous amount of raw materials.\\
     \df\df\df \textbf{Arcana} to purge magic & Cast spell and remove magic from a single glove for a specific scene (NB: on \ai adversaries, this can, at most, Stagger them a round).\\
-    \df\df\stb \textbf{Science} & \ai gloves are manufactured by ABC, have a limited lifespan, and are susceptible to damage.\\
-    \df\df\stb \textbf{Supernatural}  &  \ai gloves are supernatural relics enchanted with specific skills and semi-autonomous.\\
+    \df\df\stb \textbf{Science} & The gloves are manufactured by ABC, have a limited lifespan, and are susceptible to damage.\\
+    \df\df\stb \textbf{Supernatural}  &  The gloves are supernatural relics enchanted with specific skills and semi-autonomous.\\
 \end{GenesysTable}
 
 With some \Advantage\Advantage advantages (or maybe even a \Despair Despair), the PCs might see the glove move on its own.  It may attempt to get into a PC's hand.  If it succeeds, it grants 2 ranks in \textbf{Mechanics} (limited to woodworking) but does not want to come off.  If left on, it will interfere with PC actions at inconvenient times.
@@ -207,7 +208,7 @@ Up a windy mountain road, the PCs can find Breaux's workshop.  The lights are ou
     \item \Triumph: The PCs find a torn piece of an \ai Trenchcoat.  Roll a Critical Injury that the Trenchcoat starts combat with.
 \end{itemize}
 
-As the workshop is locked, the PCs will have to find some way inside.  They can try picking a lock, climbing through a tight window, forcing a door, or something more creative.  Once one PC succeeds, they can let the others in without issue.  You can spend \Advantage and \Triumph similar to in the earlier \textbf{Perception} check if they haven't already learned that information.  They could also turn on the lights or other workshop tools.  \Threat\Threat could impede searching inside the workshop or the initiative check for when the \AI adversaries attack.  Depending on the approach taken, offer an extra bonus as shown below.
+As the workshop is locked, the PCs will have to find some way inside.  They can try picking a lock, climbing through a tight window, forcing a door, or something more creative.  Once one PC succeeds, they can let the others in without issue.  You can spend \Advantage and \Triumph similar to in the earlier \textbf{Perception} check if they haven't already learned that information.  They could also turn on the lights or other workshop tools.  \Threat\Threat could impede searching inside the workshop or the initiative check for when the \ai adversaries attack.  Depending on the approach taken, offer an extra bonus as shown below.
 
 \vspace{1em}
 \begin{GenesysTable}{p{1.5in}p{2in}}
@@ -215,16 +216,40 @@ As the workshop is locked, the PCs will have to find some way inside.  They can 
     \df\df\df \textbf{Athletics} to force the front door & Gain entry and a wooden stake (+1 dmg, Melee, Engaged, Crit 3, Vicious 1).\\
     \df\df\df \textbf{Coordination} to squeeze through a small window & Gain entry and easy access to power tools.\\
     \df\df\stb \textbf{Skulduggery} to pick a door lock & Gain entry and a set of keys to Breaux's car. \\
+\end{GenesysTable}\\
+
+If the PCs fail all these checks, still let them in, but with no bonus.  Also add +\stb to all subsequent checks as it darkens further.  The town clocktower strikes an hour later.
+
+Once inside, the PCs can look for clues to Breaux's whereabouts or the supposed hauntings.  Even without looking, they can see things typical to a workshop or art studio.  A beautiful landscape painting is nearly complete in one corner.  Scrap lumber is in a pile in another.  Various power tools like a table saw and drill press sit idle.  Cabinets and closets sit half-closed along the wall.  The area is well-used, but not in disarray.  The whole space is the size of a large apartment; it is \textbf{Medium} range from one end to the other.  Some things they might find:
+
+\vspace{1em}
+\begin{GenesysTable}{p{1.5in}p{2in}}
+    Approach & \\
+    \df\df \textbf{Perception} to see what does not belong. & Signs of struggle near the far closet.  No blood, but discarded tools and an ABC pamphlet in an otherwise orderly workshop.\\
+    \df\df \textbf{Supernatural} to scan for haunting & No spirits are hanuting this workshop, but there are multiple relics nearby.\\
+    \df\df \textbf{Mundane} to understand Breaux's art project & Dozens of slightly-off wooden picture frames.  Each one chiseled with ``Mr. \& \cancel{Mrs.}'', the striking out done primitively but with intention.\\
+\end{GenesysTable}\\
+
+With \Advantage\Advantage on any roll, the PCs can catch a glimpse of an \ai Glove Swarm (see below table).  If they brought an \ai glove with them, it will try to escape to join this swarm (add 1 more to its Wound Threshold if it succeeds).  The swarm is generally hiding in the scrap pile, though you may adjust this if the PCs are focusing elsewhere in the shop.  There should 1 \ai Glove Swarm for every 2 PCs present at the workshop (rounded up).  Any \Despair or enough \Threat can also add another swarm.
+
+\npc{\ai Glove Swarm [Rival]}{1}{3}{1}{1}{1}{1}{10}{1}
+\npccontinued{1}{1}{
+    \vspace{0.7em}
+Gloves animated by \ai.  They can leap up to punch enemies and generally climb over obstacles.
+\begin{GenesysTable}{lp{2in}}
+    Attacks \& Abilities & \\
+       Mechanical & Immune to social checks, poison, and similar effects (but not supernatural Fear checks).\\
+       Hundred Punches & 3 dmg, \abd\abd\abd Brawl, Engaged\\
+       Swarm & Halve all incoming damage after applying Soak unless the attack has the Blast or Burn property.
 \end{GenesysTable}
+   }
 
-If the PCs fail all these checks, still let them in, but with no bonus.  Also add +\stb to all subsequent checks as it darkens further.  The town clocktower strikes an hour later than anyone thought as the sky darkens.
-
-Once inside, 
-
+If the PCs have any \Triumph, you can also reveal that another \ai clothing relic is hiding in the far closet.  This is the \ai Trenchcoat, and it has orders to abduct anyone coming to this workshop.  The PC who rolled the \Triumph may take a surprise action against the Trenchcoat (e.g. attacking it, trapping it in the closet, readying a power tool).
 
 \npc{\ai Trenchcoat [Rival]}{1}{4}{1}{1}{1}{1}{14}{1}
 \npccontinued{2}{2}{
-    \vspace{0.2em}
+    \vspace{0.7em}
+Trenchcoat animated by \ai.  It is very agile and adept at entangling enemies in its sleeves like a straightjacket.
 \begin{GenesysTable}{lp{2in}}
     Attacks \& Abilities & \\
        Adversary 1 & Upgrade all combat checks against this NPC once.\\
@@ -232,21 +257,19 @@ Once inside,
        Mechanical & Immune to social checks, poison, and similar effects (but not supernatural Fear checks).\\
        Sleeve Slap & 3 dmg, \abd\abd\abd\abd Brawl, Engaged, Crit 5, Entangle
 \end{GenesysTable}
-Trenchcoat animated by \ai.  It is very agile and adept at entangling enemies in its sleeves like a straightjacket.
-   }
+}
 
-\npc{\ai Glove Swarm [Rival]}{1}{3}{1}{1}{1}{1}{10}{1}
-\npccontinued{1}{1}{
-    \vspace{0.2em}
-\begin{GenesysTable}{lp{2in}}
-    Attacks \& Abilities & \\
-       Mechanical & Immune to social checks, poison, and similar effects (but not supernatural Fear checks).\\
-       Hundred Punches & 3 dmg, \abd\abd\abd Brawl, Engaged\\
-       Swarm & Halve all incoming damage after applying Soak unless the attack has the Blast or Burn property.
-\end{GenesysTable}
-Gloves animated by \ai.  They can leap up to punch enemies and generally climb over obstacles.
-   }
+Regardless of being discovered or not, the \ai adversaries will attack after the search rolls resolve.  Roll initiative start fighting.  Gloves will mostly punch or otherwise hinder the PCs, while the Trenchcoat's goal is to entangle PCs and drag them to the car outside.  Should the PCs lose the fight, they will wake up in the ABC facility without their gear (have them attempt to breakout, recover their gear, and pick up with the Hallway Interdiction scene).
 
+If the PCs prevail, they can find additional clues in the remains of the \ai Trenchcoat.  Within an outer pocket is a short letter addressed to Breaux:
+\\
+\\
+\emph{Dear Sir:\\
+\\
+ABC thanks you for being an ongoing customer of \ai products.  As your account is overdrawn, however, we are activating contract clause 3.15.  You are to report to the ABC \ai Skill Donation Facility at 324810 Lynch Way for immediate processing.  Failure to appear will not be tolerated.\\
+\\
+V/R,\\
+C. Tepes, CAO}
 
 \section{Entering ABC Facility}
 
@@ -260,7 +283,7 @@ Gloves animated by \ai.  They can leap up to punch enemies and generally climb o
 
     The chair slowly rotates, revealing a stern woman in business-casual attire (notably, \emph{not} bright blue like \ai products).  Showing little emotion, she calmly snaps her fingers.  The trenchcoat bursts into flame, continuing to flail even as it turns to ash.  The camera zooms out and the viewers see a wall of supernatural artifacts.  As it pulls beyond the office door, the executive's name placard becomes visible, identifying her as, ``Cillarma Tepes, Chief Arcane Officer.''
 
-If you continue in this campaign setting, Cillarma can be a long-term adversary, wielding both mundane corporate and supernatural abilities against the PCs and their allies.  ``Cillarma'' anagrams to ``Carmilla'', one of the earliest vampires popularized in English fiction.  Adapt her background (and name) as needed to your campaign.
+If you continue in this campaign setting, Cillarma can be a long-term adversary, wielding both mundane corporate resources and supernatural abilities against the PCs and their allies.  ``Cillarma'' anagrams to ``Carmilla'', one of the earliest vampires popularized in English fiction.  Adapt her background (and name) as needed to your campaign.
 
 \end{multicols*}
 \end{document}

@@ -89,7 +89,8 @@ A DiceyStories.com Genesys Adventure\\
 \\
 \emph{Challenge}: (spoiler) \ai is a supernatural clothing product that requires skill ``donations'' to grant those skills to the wearer.  Breaux fell into debt using their products unsuccessfully, so ABC has ``repossessed'' him to work that off.  \ai clothes also tend to go haywire and operate without a wearer.\\
 \\
-\emph{Narrative Reminder}: (spoiler) \ai adversaries show a degree of autonomy and malice, but not \emph{sentience}.  They display no pain when damaged nor joy when successful.  Play them similarly to modern artificial intelligence models, which can act chaotically and without regard for logic.
+\emph{Narrative Reminder}: (spoiler) \ai adversaries show a degree of autonomy and malice, but not \emph{sentience}.  They display no pain when damaged nor joy when successful.  Play them similarly to modern artificial intelligence models, which can act chaotically and without regard for logic.\\
+\emph{Author's Note}: While \ai is directly inspired by modern artificial intellgence models, this adventure is entirely human written and edited.  
 
 \subsection{Encounter List}
 \begin{enumerate}
@@ -259,7 +260,7 @@ Trenchcoat animated by \ai.  It is very agile and adept at entangling enemies in
 \end{GenesysTable}
 }
 
-Regardless of being discovered or not, the \ai adversaries will attack after the search rolls resolve.  Roll initiative start fighting.  Gloves will mostly punch or otherwise hinder the PCs, while the Trenchcoat's goal is to entangle PCs and drag them to the car outside.  Should the PCs lose the fight, they will wake up in the ABC facility without their gear (have them attempt to breakout, recover their gear, and pick up with the Hallway Interdiction scene).
+Regardless of being discovered or not, the \ai adversaries will attack after the search rolls resolve.  Roll initiative and start fighting.  Gloves will mostly punch or otherwise hinder the PCs, while the Trenchcoat's goal is to entangle PCs and drag them to the car outside.  Should the PCs lose the fight, they will wake up in the ABC facility without their gear (have them attempt to breakout, recover their gear, and pick up with the Hallway Interdiction scene).
 
 If the PCs prevail, they can find additional clues in the remains of the \ai Trenchcoat.  Within an outer pocket is a short letter addressed to Breaux:
 \\
@@ -273,11 +274,62 @@ C. Tepes, CAO}
 
 \section{Entering ABC Facility}
 
-The letter was postmarked only yesterday, so the ABC facility is the latest lead on where Breaux is.  
+The letter was postmarked only yesterday, so the ABC facility is the latest lead on where Breaux is.  It's back in town in a plain industrial park, but fenced off.  They first need to gain access to the grounds; the sleepy security guard staffing the gate is one option, but be open to PC creativity (e.g. posing as legitimate employees or complaining customers).
 
-\section{Hallway Interdiction (optional)}
+\vspace{1em}
+\begin{GenesysTable}{p{1.5in}p{2in}}
+    Approach & \\
+    \df\df\stb \textbf{Charm/Negotiate} to ask the guard to let them in & Gain legitimate entry, but interior guards aware of PCs presence.\\
+    \ch\df\bbb \textbf{Stealth} to sneak by the guard & Gain entry without alerting ABC.\\
+    \df\df\stb \textbf{Coordination} to climb fence & Gain entry but leave obvious mud tracks. \\
+\end{GenesysTable}\\
+
+The ABC \ai Skill Donation Facility is a three story office and lab building with a front space devoted to retail.  A few lights are on, and the front door is actually unlocked (\ai Trenchcoats need to be able to drag uncooperative volunteers through easily).  Other doors require \df\df\stb\stb \textbf{Skulduggery} check to open and will enter directly to the hallway where Breaux is.
+
+The front retail area where PCs are likely to enter is currently unstaffed.  Dim lights illuminate a variety of \ai products like gloves, leggings, and sunglasses, but no trenchcoats.  There are also some informational brochures and building layout information.  This is a good chance for PCs to learn more about the technology behind \ai as well as at least the ``skill donation'' hallway Breaux is likely to be in.  Natural choices for learning this info is a \df\df \textbf{Science} or \df\df \textbf{Mundane} check.  Other PCs might want to assist by using \df\df \textbf{Perception} to look for relevant materials.  Things they can learn are:
+
+\begin{itemize}
+    \setlength\itemsep{-.5em}
+    \item \Success: Breaux is likely to be in hallway B on the second floor.
+    \item \Success: \ai requires humans to ``donate'' skills in a supernatural ritual, leaving them drained of those skills for some time.
+    \item \Advantage\Advantage: Two \ai Trenchcoats and a human security guard are listed as on-duty for this building.
+    \item \Threat\Threat: PCs catch a momentary glimpse of an \ai Glove skittering under the door to the stairs they need to take.  They each suffer 1 Strain.
+    \item \Triumph: \ai products wear out quickly by design to encourage subscription.  PCs learn their weaknesses and deal +1 damage to all \ai adversaries.
+\end{itemize}
+
+\subsection{Hallway Interdiction (optional)}
+
+As they come out of the stairwell into the hallway where Breaux is, the PCs see a struggle further down the hall.  One of the human guards in a bright blue, no doubt \ai, uniform is hauling a woman into one of the side rooms.  She is screaming that ``this is too much, it wasn't part of the contract.''  A quick \df\df \textbf{Perception} check identifies her as the marathoner seen loser in the title sequence.
+
+The guard is completely focused on their captive and does not see the PCs at all.  The PCs can choose to ignore this situation; if so, the guard drags the marathoner into a side room for later skill draining.  If they intervene, however, they will have a social or physical encounter with the guard.  Emphasize that it is their choice, and there is no mechanical effect of ignoring the situation, but their characters motivations may influence their decisions.
+
+\npc{\ai-enhanced Guard [Rival]}{3}{3}{2}{2}{3}{2}{13}{1}
+\npccontinued{0}{0}{
+    \vspace{0.7em}
+Human enhanced by \ai jacket.  They are supernaturally adept at combat but can be outflanked.
+\begin{GenesysTable}{ll}
+    Skills & \\
+       Athletics 2 &  Melee 2\\
+       Coercion 2 &Perception 2\\
+       Coordination 2 &Resilience 1 \\
+       Discipline 2 & Vigilance 1 \\
+\end{GenesysTable}\\
+\begin{GenesysTable}{lp{2in}}
+    Attacks \& Abilities & \\
+       Baton & 5 dmg, \pd\pd\abd Brawl, Engaged, Crit 5, Stun
+       Adversary 1 & Upgrade all combat checks against this NPC once.\\
+       Flying & Immune to bad terrain, falling, and similar effects.\\
+       Mechanical & Immune to social checks, poison, and similar effects (but not supernatural Fear checks).\\
+\end{GenesysTable}
+}
+
+If the PCs rescue the woman, she is grateful and wants revenge on ABC.  She seethes, invecting that there's ``cult maniac wearing all kinds of \ai gear'' draining skills from people against their will.  A \ch\df \textbf{Leadership} or other appropriate social skill can convince her to stay to help the PCs free Breaux as well.
 
 \section{Breaux's Sacrifice}
+
+A system of adjustable flags above doors indicates which rooms are currently in use for skill draining.  Besides the marathoner's, only one other is active.  That is Breaux's room.
+
+The PCs don't know it, but Breaux is the ``cult maniac'', though against his will as well.  The marathoner, if present, will try to attack Breaux, not realizing or caring about the distinction.  Otherwise, she can add +\bbb to one PCs roll each round of combat.
 
 \section{Aftermath}
 

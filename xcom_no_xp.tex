@@ -218,25 +218,27 @@ Accumulating {\Threat\Threat\Threat } on these checks tips off Stasi informants 
 
 \section{Facility Infiltration}
 
-The warehouse holding the device is patrolled by several lookouts.  \df\df\stb Perception will reveal that these are low-level local hires, not the militant BWA ``research team'' members.  PCs might take a variety of approaches to get past them and inside.  Here are a few possibilities:
+Multiple lookouts patrol the warehouse holding the device.  A \df\df\stb \textbf{Perception} check reveals that these are low-level local hires, not the militant BWA personnel seen at the conference.  They won't fight PCs, but they will raise an alarm if the PCs fail to find a way through:
 
     \begin{GenesysTable}{p{1.9in}p{1.5in}}
     Approach & \\
-        \df\df \textbf{Stealth} + \df\df\df \textbf{Athletics} to scale unseen part of wall. & Leads to roof or window entrance with easier Perception checks inside.\\
-        \df\df \textbf{Stealth} + \df\df\stb \textbf{Skulduggery} to sneakto side door and lockpick. & Leads to side entrance with better cover. \\
-        \df\df\df Social (any reasonable) to lie/buy/bully way past guards. & PCs get in but are seen by scientists/BWA militants. \\
+        \df\df\stb \textbf{Stealth} + \df\df\textbf{Athletics} to scale an unwatched part of wall. & Leads to roof or window entrance.  +\bbb \textbf{Perception} inside.\\
+        \df\df \textbf{Stealth} + \df\df\stb \textbf{Skulduggery} to sneakto side door and lockpick. & Leads to side entrance. +1 Ranged defense first round of combat.\\
+        \df\df\df \textbf{Social} to lie/buy/bully way past guards. & Main entry and no chance to ambush/surveil BWA personnel. \\
 \end{GenesysTable}
 
-If the PCs gain entry without being observed (i.e. successful \textbf{Stealth}y approaches), they can observe and hear parts of a private conversation.  A scientist is arguing with the militant \textbf{Viktor Roman}, an untrusting German, about the device.  Despite the risks, Viktor insists that ``sacrifices have to be made'' to ``stamp out the snakes''.  In addition to Viktor, there are 2 minion groups of field scientists (2-3 each) and 1/2 additional military-style personal (use Viktor's stat block with all skills reduced to 1 rank and no special abilities).  Distractions set by the PCs earlier may call some of these forces away, but Viktor and at least one scientist group will always be present.
+If the PCs gain entry without being seen, they observe parts of a private conversation.  A scientist is arguing with the militant \textbf{Viktor Roman}, an untrusting German, about the device.  Despite the risks, Viktor insists that ``sacrifices must be made to stamp out the snakes''.  In addition to Viktor, there are 2 minion groups of field scientists (2-3 each) and 1 to 2 additional military-style guards (use Viktor's stat block with all skills reduced to 1 rank and no special abilities).  Successful distractions set by the PCs earlier call some of these forces away, but Viktor and at least one scientist group are always in the warehouse.
 
-Viktor and the scientists \emph{are} the remnants of the German group which first made contact with aliens as \prof alleged, but they are not ideologically aligned.   They have developed a working BWA, a coffin-sized device capable of detecting space aliens.  And they are not keen on giving the BWA up, as they are preparing to deploy it in Moscow.  To fulfill \prof's request, however, the PCs need to acquire the BWA and bring it back across the border.  This is the last chance before it moves irrevocably beyond the Iron Curtain.
+Viktor and the scientists are remnants of the German group which first made contact with aliens as \prof alleged, but they cut all ties with ideological regimes.  They have a working BWA, a coffin-sized device capable of detecting space aliens.  And they are not keen on giving the BWA up, as they are preparing to deploy it in Moscow.  To fulfill \prof's request, however, the PCs must acquire the BWA and bring it back across the border.  This is the last chance before it moves irrevocably beyond the Iron Curtain.
 
-\vspace{1.0em} %  put npc at top of next column
+(some classic XCOM art or 1970s berlin photo here)?
+
+\newcolumn % TODO: verify needed
 \npc{Viktor Roman [Rival]}{3}{3}{2}{3}{3}{3}{16}{4}
 \npccontinued{1}{1}{
     \vspace{0.7em}
 Leader of secretive anti-alien group developing the BWA.  He is willing to talk but will not give up his mission of deploying the BWA to Moscow.
-\begin{GenesysTable}{ll}
+\begin{GenesysTable}{rr}
     Skills &  \\
     Brawl 2 \pd\pd\abd &    Leadership 1 \pd\abd\abd\\
     Coercion 2 \pd\pd\abd & Ranged (Light) 2 \pd\pd\abd\\
@@ -254,7 +256,7 @@ Leader of secretive anti-alien group developing the BWA.  He is willing to talk 
 \npc{Field Scientists [Minion]}{2}{2}{4}{2}{3}{2}{6}{3}
 \npccontinued{0}{0}{
     \vspace{0.2em}
-\begin{GenesysTable}{ll}
+\begin{GenesysTable}{rr}
     Skills & \\
        Computers  & Knowledge (Lore)   \\
        Knowledge (Science)  & Mechanics  \\
@@ -266,7 +268,7 @@ Leader of secretive anti-alien group developing the BWA.  He is willing to talk 
 \end{GenesysTable}
    }
 
-Viktor and his security detail are willing to fight over the BWA and they are resolute in their mission to take it to Moscow.  The scientists, however, may waver and could be susceptible to social combat (or a single check if time is limited).  If the security detail goes down, all remaining scientists surrender.
+Viktor and his security detail are resolute in their mission to take the BWA to Moscow and are willing to fight for it.  They do not attack on sight, but they are not swayable with social combat.  \Threat\Threat\Threat on checks in this scene triggers them to attack the PCs as the soldiers mark the PCs as a security risk.  The scientists care about preserving the BWA, not where it gets deployed.  They mostly assist and take cover during violence.  If Viktor and his soldiers fall in combat, all remaining scientists surrender.
 
 \section{Entity Extraction}
 
@@ -301,7 +303,7 @@ When she first comes to, she aggressively demands, ``Where are the snakes?'' eyi
 \nemesis{Edith}{2}{2}{3}{2}{4}{2}{12}{13}
 \nemesiscontinued{2}{0}{0}{
 \vspace{0.2em}
-\begin{GenesysTable}{ll}
+\begin{GenesysTable}{rr}
     Skills & \\
     Coercion 1 \pd\abd\abd\abd & Psionics 2 \pd\pd\abd\abd\\
     Knowledge (Lore) 1 \pd\abd\abd & Vigilance 1 \pd\abd\abd\abd\\

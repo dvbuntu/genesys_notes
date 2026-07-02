@@ -123,8 +123,8 @@ If the PCs ask \prof about the student's death directly, she demurs and changes 
 
 \nemesis{Professor allen}{2}{4}{3}{3}{3}{2}{17}{15}
 \nemesiscontinued{3}{1}{1}{
-    \vspace{0.7em}
-Reptilian alien masquerading as a frail professor.  Despite apperances, she is very swift and deadly.  In combat, she alternately spits acid and tongue yanks opponents.
+    \vspace{0.8em}
+Reptilian alien masquerading as a frail professor.  Despite appearances, she is very swift and deadly.  In combat, she alternately spits acid and tongue yanks opponents.
 \begin{GenesysTable}{rr}
     Skills &  \\
     Brawl 3 \pd\pd\abd   & Deception 3 \pd\pd\pd \\
@@ -137,7 +137,7 @@ Reptilian alien masquerading as a frail professor.  Despite apperances, she is v
         Acid Spit & 4 dmg, \textbf{Ranged (Light)} \pd\abd\abd\abd, Medium,
                 Crit 4, Blast, Poison\\
         Tongue Pull/Bind & 4 dmg, \textbf{Brawl} \pd\pd\abd, Short, Entangle,
-                 Yank (\df\df\df Athletics/Coord to resist 
+                 Yank (\df\df\df \textbf{Athletics/Coord} to resist 
                 being pulled to Engaged) \\
 \end{GenesysTable}\\
 }
@@ -159,7 +159,7 @@ After settling into their rooms (\df\df Social check if a PC wants to share a ro
 If the PCs ask questions, have them make a \df\df social check (e.g. \textbf{Charm}).  Even though this is against \prof, don't upgrade this check as she is expecting them to want a few more details.  She responds:
 
 \begin{itemize}
-    \setlength\itemsep{-.8em}
+    %\setlength\itemsep{-.5em}
     \item \Success ``The researchers experimenting with this technology are some of my...former colleagues during the war.  But they were true believers; the bastards will use it to raise a Fourth Reich!''
     \item \Advantage ``I represent an extranational organization, EXCALIBUR, dedicated to stopping threats worldwide.''
     \item \Triumph \prof advises that the Nazis scientists likely have a captive connected to their research.
@@ -168,6 +168,7 @@ If the PCs ask questions, have them make a \df\df social check (e.g. \textbf{Cha
 
 If not already mentioned, \prof thanks the PCs,
 
+\vspace{-1em}
 \begin{quoting}
     I appreciate your initiative in this matter.  I hate to have to involve you, but they know me well, and I'm not as spry as I once was.  You might start at the presentation tomorrow morning.  Your efforts will ensure the future of the planet.
 \end{quoting}
@@ -176,7 +177,8 @@ If not already mentioned, \prof thanks the PCs,
 
 As the conference proper begins, the PCs should try to learn more about the biokinetic waveform analyzer (BWA).  While attending the technical lecture is an obvious idea, there are several possible ways to learn more:
 
-    \begin{GenesysTable}{p{1.5in}p{2in}}
+\newcolumn
+\begin{GenesysTable}{p{1.5in}p{2in}}
     Approach & \\
         \ch\df \textbf{Knowledge (Science)} to understand talk & BWA can detect lifeforms and basic information about them.\\
     \df\df\df \textbf{Charm} to schmooze with academics & BWA has extreme computational cost, far beyond current capabilities. \\
@@ -272,18 +274,18 @@ Viktor and his security detail are resolute in their mission to take the BWA to 
 
 \section{Entity Extraction}
 
-What the PCs don't know, and what Viktor is loathe to reveal, is that the \emph{BWA contains a psychically active human being}, Edith.  Her capabilities circumvent the computational limitations  hinted at in the academic lecture.  She is in apparent stasis within the device, clearly visible once PCs are standing next to it.  She is connected to a variety of IVs and electrodes; it does not look pleasant.
+What Viktor is loathe to reveal to the PCs is that \emph{the BWA contains a psychically active human being}, Edith.  Her capabilities circumvent the computational limitations  hinted at in the academic lecture.  She is in stasis within the device and clearly visible through a glass pane once PCs are standing next to the BWA.  She is connected to a variety of IVs and electrodes; it looks painful.
 
-A quick \df\df\df\bbb \textbf{Coercion} or \df\df\df\bbb \textbf{Leadership} against a scientist will reveal that Edith is being used against her will.  She was originally a volunteer, but Viktor took things too far.  He even sent the only key to the device ahead to Moscow already, so it can only be legitimately opened there.
+A quick \df\df\df\bbb \textbf{Coercion} or \df\df\df\bbb \textbf{Leadership} against a scientist will reveal that Edith is being used against her will.  She was originally a volunteer but never agreed to statis.  Viktor sent the only key to the device ahead to Moscow already, so opening it requires an alternative approach.
 
-To free Edith, the PCs will have to safely pick the high security lock on the BWA or otherwise smash the device and risk hurting her.  Scientists, if cowed, will use \textbf{Expert Instruction} to assist by upgrading up to 2 PC checks.
+To free Edith, the PCs have to defeat the high security lock on the BWA, or they can smash the device and risk hurting her.  Scientists, if cowed, use \textbf{Expert Instruction} to assist by upgrading up to 2 PC checks.
 
 Two separate successful checks are required to extract Edith without injury:
 
 \df\df\df\stb \textbf{Skulduggery} or \df\df\df\df \textbf{Mechanics} to physically open the BWA:
     \begin{itemize}
     \setlength\itemsep{-.5em}
-        \item \Failure: PCs will have to try another method.  The medical extraction check is upgraded once for failed check beyond the first.  After 3 total failures, they may simply smash open the device and accept the upgraded difficulty.
+    \item \Failure: PCs have to try another method.  The medical extraction check is upgraded once for each failed check to open the BWA.  After 3 total failures, the device opens with a jolt of psionic energy, causing a Critical Injury to all PCs present.
         \item \Advantage\Advantage: The PCs recover data of recent readings showing alien activity at the conference.
         \item \Threat\Threat: Add \stb to the medical extraction check as there are more IVs than previously seen tethering Edith to the BWA.
         \item \Despair: Electrical current arcs across the device, jolting the PC and making them suffer a Critical Injury.
@@ -292,14 +294,16 @@ Two separate successful checks are required to extract Edith without injury:
 \df\df\stb \textbf{Medicine} to safely unplug Edith from an array of tubes:
     \begin{itemize}
     \setlength\itemsep{-.5em}
-        \item \Failure: Edith is deeply implanted into the device.  They can forcibly cut her out, but she will suffer 2 Critical Injuries.
-        \item \Advantage: Edith becomes alert and recognizes the PCs are trying to free her.  Add \bbb from her help.
-        \item \Threat\Threat: Edith becomes alert and misconstrues the PCs as further binding her.  Add \stb from her resistance.
+        \item \Failure: Edith is deeply implanted into the device.  Forcibly cutting her out is possible, but she will suffer 2 Critical Injuries.
+        \item \Advantage: Edith becomes alert and recognizes the PCs are trying to free her.
+        \item \Threat\Threat: Edith becomes alert and misconstrues the PCs as further binding her.  \df\df\stb \textbf{Social} check to calm her.
         \item \Despair:  Edith's psychic abilities suddenly attack the PCs.  Each PC in short range must make \df\df\df \textbf{Vigilance} or \ch\df\df \textbf{Resilience} to avoid a Critical Injury.
     \end{itemize}
 
-When she first comes to, she aggressively demands, ``Where are the snakes?'' eying the PCs with suspicion.  Once out of the BWA and calm, however, Edith is generally disposed to help the PCs.  She will freely travel with them to connect with \prof.  She despises the scientists, even if they helped the PCs.  They could have freed her earlier but did not; so she refuses to travel with them.  She is also somewhat mentally unbalanced by psionic conditioning.
+When Edith first comes to, she aggressively demands, ``Where are the snakes?'' as she eyes the PCs with suspicion.  Once out of the BWA and calm, however, Edith is generally disposed to help the PCs.  She freely travels with them to connect with \prof if asked.  The scientists, however, she despises, even if they helped the PCs.  They could have freed her earlier but did not; so she refuses to travel with them.  She is also somewhat mentally unbalanced by psionic conditioning.  She is more paranoid and aggressive than a typical soldier or spy.
 
+(more cool art here?)
+\newcolumn
 \nemesis{Edith}{2}{2}{3}{2}{4}{2}{12}{13}
 \nemesiscontinued{2}{0}{0}{
 \vspace{0.2em}
@@ -317,29 +321,29 @@ When she first comes to, she aggressively demands, ``Where are the snakes?'' eyi
 \end{GenesysTable}\\
 }
 
-The party will have to sneak back into West Berlin, but this can be handled more succinctly than the earlier crossing.  If they had used official papers, it may be a problem to have an extra person.  Edith, however, can deploy her abilities should the need arise.
+The party has to sneak back into West Berlin, but this can be handled more succinctly than the earlier crossing.  If they had used official papers, they need to account for having an extra person (or the large BWA if she is still stuck inside).  If needed, Edith deploys her abilities to assist the return trip.
 
 \section{Research Defense}
 
-If Edith is awake when the PCs return to \prof, she will have a severe reaction when within Medium range of the professor.  For narrative emphasis, this can be on the other side of a hotel room door, or with some other divider obscuring \prof as the immediate source of the reaction.  Being in such close proximity, Edith is unable to function clearly.  The PCs must act.
+If Edith is awake when the PCs return to \prof, she has a severe reaction when within Medium range of the professor.  She quickly escalates from sneering, ``I smell a snake.'' to frenetically opening doors and gazing with wild eyes.  For narrative emphasis, this occurs on the other side of a hotel room door or other divider obscuring \prof as the immediate source of the reaction.  Being in such close proximity, Edith is unable to function clearly.  The PCs must restrain her or else she attacks the professor on sight.
 
-If the PCs accuse \prof of being an alien, she will become hostile.  She gets two turns in a round (one in her initiative slot and one at the end).  These turns should do different things, like one spent spitting and one spent binding.  Also note that she is immune to her own acid.
+If the PCs accuse \prof of being an alien, she becomes immediately hostile.  She gets two turns in a round (one in her initiative slot and one at the end of the round).  She takes distinct actions each turn of a round, like one spitting acid and another tongue binding.  Note that she is immune to her own acid.
 
-Even if the PCs hand over Edith (who will resist if out of the device and alert), \prof may still distrust them as knowing too much.  They must pass a \ch\df\df\stb \textbf{Cool} or \textbf{Deception} check to play dumb.  Upgrade the difficulty if they rescued Edith but did not bring her to \prof:
+Even if the PCs hand over Edith (who will resist if out of the device and alert), \prof still distrusts them as knowing too much.  They must pass a \ch\df\df\stb \textbf{Cool} or \textbf{Deception} check to play dumb.  Upgrade the difficulty if they rescued Edith but did not bring her to \prof:
     \begin{itemize}
     \setlength\itemsep{-.5em}
         \item \Failure: \prof decides the PCs know too much and attacks.
-        \item \Advantage\Advantage: \prof is momentarily distracted and will take \stb on the initiative check.
+        \item \Advantage\Advantage: \prof is momentarily distracted and takes \stb on the initiative check.
         \item \Triumph: Edith or one of the PCs get a surprise attack on \prof
-        \item \Threat\Threat: \prof also has an Alien Pistol (7 dmg, Medium, Crit 4, Burn 1).  It will not fire for humans if captured.
+        \item \Threat\Threat: \prof also has an Alien Pistol (7 dmg, Medium, Crit 4, Burn 1).  It does not fire for humans if captured.
         \item \Despair:  Edith loses control and cannot tell friend from foe during the combat.
     \end{itemize}
 
-If the PCs succeed in fooling \prof, they may choose to set a trap or string her along for more information in the long run.  Edith will urge the PCs to capture \prof so they can interrogate her and learn more.
+If the PCs succeed in fooling \prof, they may choose to set a trap or string her along for more information.  Edith urges the PCs to capture \prof so they can interrogate her and learn more.
 
 \section{Aftermath}
 
-Before the PCs can fly home, they are suddenly woken up during the night.  Extremely bright lights allow them to see only dark silhouettes of a number of soldiers on the other side of the lights.  The one nearest to the PCs flatly states, ``I understand you've seen some things not of this Earth.  We could use skills and resilience like yours...''.  The XCOM operative will ask the PCs to keep an eye on \prof if she is still trusting, or take her into custody if she has been subdued.  This could be the opening of a longer campaign uncovering and dealing with alien threats at Ares University before formal induction as an XCOM cell.
+The night before the PCs fly home from Berlin, bright lights suddenly wake them. They see only dark silhouettes of a number of armed people on the other side of the lights.  The one nearest to the PCs flatly states, ``I understand you've seen some things not of this Earth.  We could use skills and resilience like yours...''.  The XCOM operative asks the PCs to keep an eye on \prof if she is still trusting, or take her into custody if she has been subdued.  This opens the adventure up into a longer campaign uncovering and dealing with alien threats at Ares University before formal induction as an XCOM cell.
 
 Recommended XP: 10 XP for reaching the BWA/Edith.  10 XP for freeing her and confronting \prof.  Bonus 5 XP each if they befriend a BWA scientist or \emph{capture} \prof.
 

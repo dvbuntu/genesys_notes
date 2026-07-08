@@ -1,0 +1,396 @@
+\documentclass{book}
+
+\usepackage[dvipsnames, table]{xcolor}
+%\usepackage{swrpg}
+\usepackage{genesys}
+\usepackage{xspace} % fix space issues after text macro
+\usepackage{hyperref}
+%\geometry{paperheight=13in}
+\usepackage{multicol}
+\usepackage[noorphans,font=itshape,indentfirst=false,rightmargin=0pt]{quoting}
+\usepackage{cancel}
+
+%\swrpgbackground
+\newcommand{\spa}{\hskip 0.3em }
+
+% dice
+\newcommand{\df}{\DifficultyDie }
+\newcommand{\stb}{\SetbackDie }
+\newcommand{\ch}{\ChallengeDie }
+\newcommand{\abd}{\AbilityDie }
+\newcommand{\bbb}{\BoostDie }
+\newcommand{\pd}{\ProficiencyDie }
+
+\renewcommand\Characteristics[6]{
+\noindent\hfill
+\charPart{BRAWN}{#1}\kern-.1em
+\charPart{AGILITY}{#2}\kern-.1em
+\charPart{INTELLECT}{#3}\kern-.1em
+\charPart{CUNNING}{#4}\kern-.1em
+\charPart{WILLPOWER}{#5}\kern-.1em
+\charPart{PRESENCE}{#6}%
+\hfill\null}
+
+\newcommand{\npc}[9]{
+    \begin{GenesysTable}{l} {\Large #1 } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
+    \Derived{Wounds}{#8}
+    \Derived{Soak}{#9}
+}
+\newcommand{\npccontinued}[3]{
+    \DerivedSplit{Defense}{#1}{#2}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
+    #3 %description, abilities, etc
+}
+
+\newcommand{\nemesis}[9]{
+    \begin{GenesysTable}{l} {\Large #1 [Nemesis] } \end{GenesysTable} \\ %name
+    \Characteristics{#2}{#3}{#4}{#5}{#6}{#7}\\
+    \vskip -1em
+    \Derived{Wounds}{#8}\hskip-.1em
+    \Derived{Strain}{#9}\hskip-.1em
+}
+\newcommand{\nemesiscontinued}[4]{
+    \Derived{Soak}{#1}\hskip-.1em
+    \DerivedSplit{Defense}{#2}{#3}{Melee}{Ranged}\\ % defense
+    \vskip -2.5em
+    #4 %description, abilities, etc
+}
+
+\newcommand{\rt}{{\color{magenta}Rogue Trader}\xspace}
+\newcommand{\ai}{{\color{cyan}Artificial Indigo}\xspace}
+
+
+
+\title{
+    Warhammer 40K \rt: Invasion of Nullia \\
+A DiceyStories.com Genesys Adventure\\
+}
+\author{Author: Danielle Van Boxel}
+\date{\today}
+
+
+\begin{document}
+\maketitle
+
+
+\begin{multicols*}{2}
+\section{Nullia}
+
+\emph{The planet Nullia has persisted for generations with little outside influence. Whispers of an ``Imperium of Man'' are just rumors. When an off-worlder styling herself as a ``Rogue Trader'' arrives, however, the chance to leave escape forget venture beyond Nullia presents itself. If you can meet her price in time, that is.}\\
+
+    Invasion of Nullia is a Genesys adventure for 3-5 Player Characters (Pcs) with a typical playtime of 4 hours.  It is set in Games Workshop's Warhammer 40,000 sci-fi universe, and it takes specific inspiration from Owlcat's Rogue Trader video game.
+
+    Due to the isolated nature of Nullia, neither players nor characters need familiarity with the setting before playing.  In fact, ``knowledge'' about the Imperium based on official canon may be completely wrong within this adventure.
+
+
+\section{Adventure Overview}
+
+    The PCs are low-level employees of a Nullian pharmaceutical company joined by a common desire to leave on the \rt's ship.
+
+    band of paranormal investigators/exterminators hired by Andre to search for his missing boyfriend, Breaux.  Along the way, they uncover Breaux's connection to Advanced Biotech Corporation (ABC) and the heavily marketed \ai clothing product line.  The PCs will find that deploying \ai has some serious consequences for everyone involved.\\
+\\
+\emph{Goal}: Discover what happened to Breaux and uncover the Curse of \ai.\\
+\\
+\emph{Challenge}: \ai is a supernatural clothing product that requires skill ``donations'' to grant those skills to the wearer.  Breaux fell into debt using their products unsuccessfully, so ABC has ``repossessed'' him to work that off.  \ai clothes also tend to go haywire and operate without a wearer.\\
+\\
+\emph{Narrative Guidance}: \ai adversaries show a degree of autonomy and malice, but not \emph{sentience}.  They display no pain when damaged nor joy when successful.  Play them similarly to modern artificial intelligence models, which can act chaotically and without regard for logic.\\
+\\
+\emph{Author's Note}: While \ai is directly inspired by modern artificial intelligence models, this adventure is entirely human written and edited.  
+
+\subsection{Encounter List}
+\begin{enumerate}
+    \setlength\itemsep{-.5em}
+    \item Title Sequence (narrative/character intro)
+    \item Investigators for hire (social)
+    \item Asking around town (information/investigation)
+    \item Haunted workshop (combat/investigation)
+    \item Entering the ABC facility (social/stealth)
+    \item Hallway interdiction (combat/stealth)
+    \item Breaux's sacrifice (combat/social)
+    \item Aftermath
+\end{enumerate}
+
+\section{Title Sequence}
+
+To help players visualize the setting and get into character, start with an almost literal title sequence of a pandering news piece about ABC and \ai.  Read the italicized text:
+
+\emph{The camera zooms in on a reporter interviewing the winner of the local Gemini Mountains marathon, an unfamiliar woman wearing bright blue leggings.  She is frenetic, unable to stand still as she explains, ``A week ago I could barely run a 5k, but now I'm a champion runner.  Thanks \ai!''  An awkward smile crosses her face as she stutters a goodbye and starts a victory lap, seemingly unable to stop her legs from running.}
+
+\emph{The camera briefly pans over to another marathoner, exhausted and drained, leaning against a wall.  You recognize her as the previous three-time marathon winner in town.  Smash cut to the character intro sequences.}
+
+One by one, ask each of the players to briefly describe their character's introductory sequence as though this were a television show.  This should be a brief shot of the character doing something key to their concept, without dialogue, and unrelated to any specific adventure.
+
+\emph{Sample Introduction 1}: Candra the witch is sitting cross-legged in a pentagram.  Five candles sit unlit at each point of the star.  The camera zooms in.  Reflected in Candra's eyes, we see a candle ignite.
+
+\emph{Sample Introduction 2}: Sebastian the engineer is typing furiously at a bulky 1990s laptop computer.  The camera revolves around to reveal ``Ghost Program Activated'' on the screen as Sebastian grins.
+
+After introductions, ask the players what the series name is that appears on screen.  Then the episode name,``The Curse of \ai'', fades in.  You may optionally ``cut to a commercial break'' to further immerse them in the television aesthetic.
+
+\section{Investigators For Hire}
+
+Andre, a well-dressed lawyer, enters the PCs' paranormal extermination office during his lunch break.  He is clearly distressed and in a hurry as he steps inside.
+
+    Andre wants to hire the PCs to find and bring back his missing ``roommate'' and ``friend'', Breaux (pronounced "bro").  He can pay a significant amount up front (the PCs desperately need the income, or if part of a long-running campaign, some other information/object/favor from Andre) and is looking to close a deal quickly.  Andre explains that he needs paranormal investigators because Breaux's workshop is haunted.  That is where Breaux was headed when Andre last saw him several days ago.  Andre is terrified of ghosts and refuses to go there.
+
+    PCs should first attempt to elicit more details from Andre before making a \textbf{Negotiation} check to close the deal.  Many different approaches are reasonable and offer different benefits (narrative or mechanical).  Here are few examples:
+
+\begin{GenesysTable}{p{1.5in}p{2in}}
+    Approach & \\
+    \df\df\stb \textbf{Knowledge (Mundane)} to understand Andre/Breaux's relationship & Andre's concern goes beyond roommates.  They are boyfriends.+\bbb to \textbf{Negotiation}\\
+    \df\df \textbf{Leadership} to ask for more details & Breaux has been working on an art project at the workshop and making many purchases at a local hardware store.\\
+    \df\df \textbf{Perception} to observe Andre & He keeps glancing at his watch and avoids looking at paranormal objects in the shop.  +\bbb to \textbf{Negotiation}\\
+\end{GenesysTable}
+
+Give each PC the opportunity for one such informational roll.  Then the group must make a single \ch\df\df\textbf{Negotiation} check to sign the investigation contract with Andre.  They're going to get the job either way, but the results can influence immediate (and if appropriate, campaign level) benefits/hindrances:
+
+\begin{itemize}
+    \setlength\itemsep{-.5em}
+        \item \Success: The PCs get out of immediate financial distress by taking this job.
+        \item \Failure: Andre signs the contract, but it's not enough to keep the business afloat long.  +\stb to all social interactions with townspeople for various debts still owed.
+        \item \Advantage\Advantage: Every two advantages constitute profit they can use for +\bbb on future social checks or longer term needs.
+        \item \Threat\Threat: Andre leaves in a hurry and forgets to give the PCs a picture of Breaux to assist the investigation.  They'll have to make do with a generic description of ``tall, short black hair, tan complexion, very good-looking.  I mean, umm, conventionally attractive.''
+        \item \Threat\Threat\Threat: Andre is concerned about secrecy and insists that the PCs avoid disclosing that they are searching for Breaux.
+        \item \Triumph: Andre gives the PCs one of Breaux work gloves. It is bright blue and shows the logo of ABC's \ai product line.
+        \item \Despair: Andre also hires a more traditional private investigator that will compete and interfere with the PCs' efforts.  If necessary, use stats similar to the PCs, except substitute more mundane skills for anything supernatural.
+    \end{itemize}
+
+After signing the contract, Andre leaves quickly to get back to work.  The PCs have a picture of Breaux and Andre together from a mall photobooth kiosk as well as the address for Breaux's haunted workshop.  While Andre cannot further help the PCs right now, if they find strong evidence that Breaux is at the ABC facility, he could accompany them there if pressed with a social check.  He does not have his own stat block but rather can upgrade PC social and \textbf{Knowledge (Mundane)} checks with his legal knowledge.
+
+\section{Asking Around Town (optional)}
+
+PCs may seek more information about Breaux's whereabouts from various townspeople or conduct other investigations.  Here are a few possibilities and details you can share if they are successful.  Adapt this information to players explore.  For example, Suzie might run a local diner instead of a bar, or Bob could be a librarian who also knows about Breaux's projects since he asked for reference materials.  If time is limited, you may wish to skip this encounter, folding these details into information Andre gives out.
+
+As the PCs move about town, you can add some additional flavor descriptions.  There's a billboard advertising a weightlifting jacket with the slogan, ``Maximize your deadlift with \ai!''  A radio spot plays a seemingly skilled, if disconnected, remix of classical music, closing with, ``Be better than Mozart with \ai!''
+
+Bob of Bob's Hardware Store knows Breaux as a customer.  Bob is a middle-aged man who is always interested in making a deal.  He will openly share that Breaux has been a reliable customer but recently started running up quite a tab.  \ch\df\stb \textbf{Negotiation} to agree to pay off Breaux's tab for more details.  Otherwise \df\df\stb\stb on any other social check for general information about Breaux.  Remove one \stb if the PCs avoid mentioning anything supernatural.
+
+\vspace{-1em}
+\begin{itemize}
+\setlength\itemsep{-.5em}
+    \item \Success: Breaux has been making picture frames.  Or practicing to at least.  He's in every other day to buy wood, but Bob hasn't seen him in two days (slightly more recently than Andre).
+    \item \Advantage\Advantage:  In the last week or so, Breaux starting wearing strange bright blue work gloves, claiming they were supposed to help.
+    \item \Threat\Threat: Bob is weirded out by the PCs' supernatural vibes and asks them to leave.  If they try to stay, he will threaten to call the police.  Add +\stb to their next roll because they see Bob on the phone as they leave the store.
+    \item \Triumph: Breaux accidentally left one of his bright blue gloves in the store last time.  Bob gives it to the PCs to assist with the investigation.
+    \item \Despair: Bob clarifies that the road to Breaux's workshop is closed, so the PCs will have to take a detour.  It will be dark by the time the PCs finally arrive there.
+\end{itemize}
+
+\vspace{-2em}
+Suzie runs the local dive bar, The Ar\^ete, where Breaux and Andre sometimes hang out.  She's a retired forest ranger who's a bit superstitious.  She states that Breaux hasn't been around recently, but the pair are regulars.  \ch\df\bbb \textbf{Charm} to appeal to Suzie's concern for the community.  Otherwise, \df\df\df on any other social check to see if she's willing to share anything else about Breaux.  Add \bbb if the PCs appeal to her superstitious nature.
+
+\vspace{-2em}
+\begin{itemize}
+\setlength\itemsep{-.5em}
+    \item \Success: Breaux has been ``working on something special'' for Andre.  It's supposed to be a secret, and it's taking longer than initially planned.
+    \item \Advantage\Advantage: Breaux is an accomplished painter but beginner woodworker.  He asked about using \ai to help with his project.
+    \item \Threat\Threat: Suzie senses a bad omen and cautions the PCs.  Add \stb to the next check.  
+    \item \Triumph:  Suzie made a delivery to the workshop once; the key is under the yard gnome.  The package was a multi-pack of \ai gloves.
+    \item \Despair:  A drink tap starts spurting sickly blue liquid.  The television briefly flashes a static indigo color before returning to normal.  A glass falls and breaks as the front door slams closed, but no one s there.  Each PC present makes a \df\df \textbf{Fear} check.
+\end{itemize}
+
+\vspace{-2em}
+The PCs might want to snoop on Andre at his work or apartment.  He's a busy lawyer, and there's not much to be found.  If they sneak into the apartment, they can quickly confirm that Andre and Breaux are indeed a couple.  They might also find an \ai glove similar to the one Bob could give the PCs.
+
+If the PCs acquire an \ai glove, they can study it for supernatural properties.  These are products of ABC, but they are also relics enchanted with specific abilities (woodworking in the case of these gloves).  At this stage, don't reveal too many details, but see the table below for some ideas:
+
+\vspace{-1em}%very fragile
+\begin{GenesysTable}{p{1.4in}p{2in}}
+    Approach & \\
+    \df\df \textbf{Alchemy}  & Creating \ai requires a huge arcane facility and enormous amount of raw materials.\\
+    \df\df \textbf{Arcana}  & Magic partially powers \ai.  Dispell can remove magic and depower a single piece of \ai for a specific scene.  On \ai adversaries, Dispell can, at most, Stagger them for one round.\\
+    \df\df\stb \textbf{Knowledge (Science)} & The gloves are manufactured by ABC, have a limited lifespan, and are resistant to many types of damage.\\
+    \df\df\stb \textbf{Knowledge (Supernatural)}  &  The gloves are supernatural relics enchanted with specific skills and a semi-autonomous nature.\\
+\end{GenesysTable}
+
+With \Advantage\Advantage, the PCs see the glove move on its own.  With \Despair, the glove attempts to get onto a PC's hand with an opposed \textbf{Coordination} check (see \ai Glove Swarm profile on page \pageref{ad:glove}).  If the glove succeeds, it grants 2 ranks in \textbf{Mechanics} but resists being taken off (\df\df\df \textbf{Athletics} check to remove it).  If left on, the glove will interfere with PC actions at inconvenient times.  When the spending story points against the glove-wearing PC, apply two upgrades instead of one.
+
+\section{Haunted Workshop}
+
+Breaux's workshop is up a windy mountain road.  The lights are out, the doors are locked, and a car is haphazardly parked in the dirt in front of the garage.  The PCs investigate the outside.  Many different skills are possible, but a \df\df \textbf{Perception} check is a good start.  Add +\stb if it's already dark.  Tailor the results to the specifics of what the PCs are interested in:
+
+\vspace{-1em}
+\begin{itemize}
+    \setlength\itemsep{-.5em}
+    \item \Success: The car was parked here within the last 24 hours, more recently than the last Breaux sighting.
+    \item \Advantage\Advantage: There are no signs of human footprints, but there are scurrying marks from an unidentifiable creature leading to the window.
+    \item \Threat\Threat: It is so cold that locks and doors are frozen.  Add \stb to checks to break into the workshop.
+    \item \Triumph: The PCs find a torn piece of an \ai Trenchcoat.  Roll a Critical Injury for the trenchcoat to already have when combat starts later.
+\end{itemize}
+\vspace{-1em}
+
+The PCs have to find some way inside the locked workshop.  They can try picking a lock, climbing through a tight window, forcing a door, or something more creative.  Once one PC succeeds, they can let the others in without issue.  You can spend \Advantage { }and \Triumph { }similar to in the earlier \textbf{Perception} check if they haven't already learned that information.  \Threat\Threat { }could impede searching inside the workshop or the initiative check for when the \ai adversaries attack.  Depending on the approach taken, offer a bonus:
+
+\vspace{-5em}%very fragile
+\begin{GenesysTable}{p{1.5in}p{2in}}
+    Approach & \\
+    \df\df\df \textbf{Athletics} to force the front door & Gain entry and a wooden stake (\textbf{Melee};+1 Dmg; Crit 3; Engaged; Vicious 1).\\
+    \df\df\df \textbf{Coordination} to squeeze through a small window & Gain entry and easy access to power tools.\\
+    \df\df\stb \textbf{Skulduggery} to pick a door lock & Gain entry and a set of keys to Breaux's car. \\
+\end{GenesysTable}\\
+
+If the PCs fail all these checks, an \ai glove the door opens with an eerie creak.  Each PC makes a PCs a \ch \textbf{Fear} check.  Also add +\stb to all subsequent checks as it darkens further.  The town clocktower strikes an hour later.
+
+Once inside, the PCs look for clues to Breaux's whereabouts or the supposed hauntings.  Even without looking, they see things typical to a carpentry workshop or art studio.  A beautiful landscape painting is nearly complete in one corner.  Scrap lumber is in a pile in another.  Various power tools like a table saw and drill press sit idle.  Cabinets and closets sit half-closed along the wall.  The area is well-used but not in disarray.  The whole space is the size of a large apartment; it is \textbf{Medium} range from one end to the other.  Some things the PCs can find with various skills:
+
+\begin{GenesysTable}{p{1.5in}p{2in}}
+    Approach & \\
+    \df\df \textbf{Perception} to see what does not belong & Signs of struggle near the far closet.  No blood, but discarded tools and an ABC pamphlet in an otherwise orderly workshop.\\
+    \df\df \textbf{Knowledge (Supernatural)} to scan for haunting & No spirits are haunting this workshop but readings suggest multiple relics nearby.\\
+    \df\df \textbf{Knowledge (Mundane)} to understand Breaux's art project & Dozens of slightly-off wooden picture frames.  Each one chiseled with ``Mr. \& \cancel{Mrs.}''.  The striking out is an unskilled gouge but done with intention.\\
+\end{GenesysTable}\\
+
+With \Advantage\Advantage { }on any roll, the PCs can catch a glimpse of an \ai Glove Swarm (see profile on page \pageref{ad:glove}).  If they brought an \ai glove with them, it will try to escape to join this swarm (add 1 more to the swarm's Wound Threshold if it succeeds).  By default, the swarm hides in the scrap pile, but adjust the location if the PCs focus elsewhere in the shop.  There should be one \ai Glove Swarm for every two PCs present at the workshop (rounded up).  A \Despair { }or \Threat\Threat\Threat { }can also add another swarm.
+
+If the PCs have any \Triumph, reveal that another \ai clothing relic is hiding in the far closet.  This is the \ai Trenchcoat, and it has orders to abduct anyone coming to this workshop.  The PC who rolled the \Triumph { }may take a surprise action against it (e.g. attacking it, trapping it in the closet, readying a power tool).
+
+% TODO: verify page needed
+\newpage
+\npc{\ai Glove Swarm [Rival]}{1}{3}{1}{1}{1}{1}{10}{1}\label{ad:glove}
+\npccontinued{1}{1}{
+    \vspace{0.7em}
+Gloves animated by \ai.  They can leap up to punch enemies and scamper over obstacles.
+\begin{GenesysTable}{lp{2.4in}}
+    Attacks \& Abilities & \\
+       Finesse & May use Agility for \textbf{Brawl} and \textbf{Melee} checks.\\
+       Mechanical & Immune to social checks, poison, and similar effects (but not supernatural Fear checks).\\
+       Hundred Punches & 3 dmg, \textbf{Brawl} \abd\abd\abd, Engaged\\
+       Swarm & Halve all incoming damage after applying Soak unless the attack has the Blast or Burn quality (regardless of if the quality triggers).
+\end{GenesysTable}
+}
+
+\npc{\ai Trenchcoat [Rival]}{1}{4}{1}{1}{1}{1}{14}{1}
+\npccontinued{2}{2}{
+    \vspace{0.7em}
+Trenchcoat animated by \ai that magically floats a foot above the ground.  It is very agile and adept at entangling enemies in its sleeves like a straitjacket.
+\begin{GenesysTable}{lp{2.4in}}
+    Attacks \& Abilities & \\
+       Adversary 1 & Upgrade all combat checks against this NPC once.\\
+       Finesse & May use Agility for \textbf{Brawl} and \textbf{Melle} checks.\\
+       Hovering & Immune to bad terrain and similar effects that extend at most Short range above the ground.\\
+       Mechanical & Immune to social checks, poison, and similar effects (but not supernatural Fear checks).\\
+       Sleeve Slap & 3 dmg, \textbf{Brawl} \abd\abd\abd\abd , Engaged, Crit 5, Ensnare 2
+\end{GenesysTable}
+}
+
+The \ai adversaries attack after the search rolls resolve even if they were not discovered.  Gloves will mostly punch or otherwise hinder the PCs, while the Trenchcoat's goal is to entangle PCs and drag them to the car outside.  If the PCs lose the fight, they wake up in the ABC facility without their gear.  Pick up with the Hallway Interdiction scene after they breakout and recover their gear.
+
+If the PCs prevail, they find additional clues in the remains of the \ai Trenchcoat.  Within an outer pocket is a short letter addressed to Breaux:
+\newcolumn % TODO: verify needed
+\\
+\\
+\emph{Dear Sir:\\
+\\
+ABC thanks you for being an ongoing customer of \ai products.  As your account is overdrawn, however, we are activating contract clause 3.15.  You are to report to the ABC \ai Skill Donation Facility at 324810 Lynch Way for immediate processing.  Failure to appear will not be tolerated.\\
+\\
+V/r,\\
+C. Tepes, CAO}
+
+\section{Entering The ABC Facility}
+
+The letter to Breaux is postmarked the day before yesterday, so the ABC facility is the latest lead on where he is.  It's back in town in a plain but fenced off industrial park.  The PCs need to gain access to the grounds. One entrance is the front gate staffed by a sleepy security guard.  For example, the PCs attempt to deceive the guard by posing as legitimate employees or complaining customers.
+
+\begin{GenesysTable}{p{1.5in}p{2in}}
+    Approach & \\
+    \df\df\stb \textbf{Social} to convince the guard to let them in & Gain legitimate entry, but interior guards aware of PC presence.\\
+    \ch\df\bbb \textbf{Stealth} to sneak by the guard & Gain entry without alerting ABC.\\
+    \df\df\stb \textbf{Coordination/Athletics} to climb fence & Gain entry but leave obvious mud tracks with \Threat {}. \\
+\end{GenesysTable}\\
+
+The ABC \ai Skill Donation Facility is a three story office and lab building with a front space devoted to retail.  A few lights are on, and the front door is actually unlocked (\ai Trenchcoats need to be able to easily drag uncooperative volunteers inside).
+
+The front retail area where PCs initially enter is currently unstaffed.  Dim lights illuminate a variety of \ai products like gloves, leggings, and sunglasses, but no trenchcoats.  There are also some informational brochures and building layout panels.  This is an opportunity for PCs to learn more about the technology behind \ai as well as the ``skill donation'' hallway Breaux is in.  Natural skill checks for learning this information are \df\df \textbf{Knowledge(Science)} or \df\df\stb \textbf{Knowledge(Mundane)} checks.  Things PCs can learn are:
+
+\begin{itemize}
+    \setlength\itemsep{-.5em}
+    \item \Success: Breaux is likely to be in the ``skill donation'' hallway on the second floor.
+    \item \Success: \ai requires humans to ``donate'' skills in a supernatural ritual, leaving them drained of those skills for some time.
+    \item \Advantage\Advantage: Two \ai Trenchcoats and a human guard are listed as on-duty security for this building.
+    \item \Threat\Threat: PCs catch a momentary glimpse of an \ai Glove skittering under the door to the stairs they need to take.  They each suffer 1 strain.
+    \item \Triumph: \ai products wear out quickly by design to encourage subscription.  PCs learn their weaknesses and gain +\bbb on all future attacks against \ai adversaries.
+\end{itemize}
+
+  Access to the upper floors requires a \df\df\stb\stb \textbf{Skulduggery} check to pick a locked door.
+
+\subsection{Hallway Interdiction (optional)}
+
+As they come out of the stairwell into the second floor hallway, the PCs see a struggle further down the hall.  One of the human guards in a bright blue, no doubt \ai, uniform is hauling a woman into one of the side rooms.  She is screaming, ``This is too much, it wasn't part of the contract!''  A quick \df\df \textbf{Perception} check identifies her as the marathoner seen losing in the title sequence.
+
+The guard is completely focused on the captive and does not see the PCs at all.  They can choose to ignore this situation; if so, the guard drags the marathoner into a side room for later skill draining.  If the PCs intervene, however, they have a social or physical encounter with the guard.  Emphasize that intervening in the players' choice, but their characters' motivations may influence their decision.
+
+\npc{\ai-enhanced Guard [Rival]}{3}{3}{2}{2}{2}{2}{13}{1}
+\npccontinued{0}{0}{
+    \vspace{0.7em}
+Human enhanced by \ai jacket to be a competent guard.  They are skilled at combat (when wearing the jacket) but can be outflanked.
+\begin{GenesysTable}{lll}
+    Skills & & \\
+       Athletics 2 \pd\pd\abd &  Discipline 2 \pd\pd &  Resilience 1 \pd\abd\abd\\
+       Coercion 2 \pd\pd & Melee 2 \pd\pd\abd & Vigilance 1 \pd\abd \\
+\end{GenesysTable}\\
+\begin{GenesysTable}{lp{2.4in}}
+    Attacks \& Abilities & \\
+       Baton & 5 dmg, \pd\pd\abd \textbf{Melee}, Engaged, Crit 4, Stun\\
+       Hallucination & On \Threat\Threat, the guard falls prone, drops what they're holding, or suffers some other inconvenient misfortune.
+\end{GenesysTable}
+}
+\vspace{0.5em}
+
+If the PCs rescue the woman, she is grateful and wants revenge on ABC.  She seethes that there's ``a cult maniac wearing all kinds of \ai gear'' draining skills from people against their will.  A \ch\df \textbf{Leadership} or other appropriate social skill can convince her to stay to help the PCs free Breaux as well.
+
+\section{Breaux's Sacrifice}
+
+A system of adjustable flags above doors indicates which examination rooms are currently in use for skill draining.  Besides the marathoner's, only one other is active.  That is Breaux's room.
+
+Listening at the door reveals a man's sobbing voice repeating, ``I'm so sorry, I'm so sorry!'' with no check required.  When the PCs open the door (or make a sufficient ruckus that Breaux opens it), however, they see a man dressed in multiple pieces of \ai holding a wicked-looked knife over a person strapped to the examination table.  He is about to strike.
+
+When the man turns, the PCs recognize him as Breaux.  He is wearing \ai gloves, some kind of \ai robe, and even a long-haired \ai wig.  His face is red from sobbing.  Whether the PCs hesitate or attack him directly, Breaux begs, ``Get this stuff off me, please!''
+
+The \ai wig is controlling Breaux's physical actions.  Each round, if the person on the table is within reach, he tries to stab them.  When he accumulates  \Success\Success\Success {}on such attacks (possibly across multiple checks) he kills them and gains an additional rank in \textbf{Athletics}, \textbf{Brawl}, and \textbf{Melee} as the knife absorbs their skills.  While holding the knife, Breaux spends at most one action each round trying to complete the sacrifice.  Otherwise, he attacks the nearest PC while crying apologies.  His ritual knife's Disorient quality reflects the skill drain it can inflict on victims (see page \pageref{ad:breaux} for his full profile).
+
+The marathoner, if present, considers Breaux a ``cult maniac'' and tries try to attack him, not realizing or caring that he is also a victim.  If convinced of his innocence, she instead adds +\bbb to one PC's roll each round of combat.
+
+Hiding in a closet is another \ai Trenchcoat.  It attempts to attack a dangerous PC and enwrap them.  Its eventual goal is to drag one of them to an empty examination room across the hall.  If there are 4 or more PCs, add a second \ai Trenchcoat to the encounter.  Along with Breaux's extra turn, this makes for 3 or 4 adversary turns in a round, which should be a challenging combat encounter.
+
+Each of Breaux's pieces of \ai gear grants him specific skills or abilities.  PCs can attempt to target specific pieces for removal or destruction.  Follow the standard rules for targeted attacks by requiring an Aim maneuver and adding +\stb\stb to such checks.  Additionally, removing the \ai Wig first requires an opposed \textbf{Coordination} check to grab it followed by an opposed \textbf{Athletics} check on a later turn to rip it off.  Attack rolls on \ai Wig suffer an extra difficulty upgrade to reflect the risk of hitting Breaux.
+
+If the PCs roll \Despair { }or \Threat\Threat\Threat { }against the \ai Wig (or they incapacitate Breaux), then Breaux starts to bleed out.  A PC must attempt to stabilize him with a \df\df\df \textbf{Medicine} check.  Other PCs can assist by scrounging for supplies in the examination room (\df\df\bbb \textbf{Perception}) or applying some relevant arcane knowledge with \df\df \textbf{Knowledge(Supernatural)}.  Each such successful check can upgrade the ability of medical stabilization check by making them potentially more effective then a generic Aid Another maneuver).
+
+If the PCs either remove the \ai Wig or incapacitate Breaux, the fight is effectively over.  He may babble, ``Cillarma Tepes is nuts!'' but is generally exhausted.  The \ai Trenchcoat and any remaining adversaries flee.  Nothing directly hinders the PCs' escape, but if they linger, trigger an alarm to encourage them to seek safety.
+
+Andre is relieved to see Breaux again, and they both confess their love for each other.  If the PCs have concrete evidence about ABC's wrongdoings, Andre offers to start legal proceedings against the company, though he cautions that it will take some time.  Similarly, the marathoner or victim on Breaux's table can assist the PCs in future adventures acting against ABC.  Most mundane people want nothing to do with the supernatural, so every ally the paranormal investigators gather is valuable.
+
+\newpage
+\nemesis{\ai Tech Breaux}{3}{3}{2}{2}{3}{3}{16}{15}
+\nemesiscontinued{3}{2}{2}{
+    \vspace{0.7em}
+Artisan controlled by multiple pieces of \ai.  Deadly with a knife.
+\begin{GenesysTable}{lll}
+    Skills & & \\
+       Athletics 2 \pd\pd\abd & Cool 1 \pd\abd\abd & Melee 3 \pd\pd\pd \\
+       Brawl 3 \pd\pd\pd & Discipline 1 \pd\abd\abd & Vigilance 1 \pd\abd\abd \\
+\end{GenesysTable}\\\label{ad:breaux}
+    \begin{GenesysTable}{lp{2in}}
+        Attacks \& Abilities & \\
+        Ritual Knife & 6 dmg, \pd\pd\pd \textbf{Melee}, Engaged, Crit 3, Vicious 1, Disorient 2\\
+       Adversary 1 & Upgrade checks made against this NPC once. \\
+       \ai Gloves & 3 ranks in \textbf{Melee/Brawl} \\
+        \ai Robes & Adds 2 defense (melee and ranged) \\
+        \ai Wig & 1 rank \textbf{Discipline/Vigilance} and gives Breaux an extra turn at the end of each round. \\
+        \ai Wig & \emph{Social} checks against Breaux made during \emph{physical} combat cause him to suffer strain as he tries to break free. \\
+\end{GenesysTable}\\
+}
+
+\section{Aftermath}
+
+    This is a narrative epilogue for the ``viewers'' of the television program, with the PCs remaining unaware of these details (until a possible future adventure).  If an \ai Trenchcoat escaped from the final combat, the camera follows it fleeing to an administrative ABC building.  Otherwise, a fresh one from another examination room fills a similar role.  In a dimly-lit executive office, the coat pantomimes the PCs' rescue of Breaux to the back of an expensive high-backed office chair.
+
+    The chair slowly rotates, revealing a stern woman in business-casual attire (notably, \emph{not} the bright blue of \ai products).  Showing little emotion, she calmly snaps her fingers.  The coat bursts into flames, continuing to flail even as it turns to ash.  The camera zooms out, and the viewers see a wall of supernatural artifacts.  Pulling back beyond the office door, the executive's name placard becomes visible, identifying her as, ``Cillarma Tepes, Chief Arcane Officer.''
+
+If you continue in this campaign setting, Cillarma is a long-term adversary, wielding both mundane corporate resources and supernatural abilities against the PCs and their allies.  ``Cillarma'' anagrams to ``Carmilla'', one of the earliest vampires popularized in English fiction.  Adapt her background (and name) as needed to your campaign.
+
+\section{Acknowledgements}
+
+This module was originally part of a special Twin Peaks-themed live RPG event at Celestia Collective (\url{https://www.celestiacollective.com/}).  Playtesters from Dicey Stories (\url{https://www.diceystories.com/}) and the Southern Arizona Gamers Association (\url{https://rincongames.com/}) also provided feedback and support.
+
+\end{multicols*}
+\end{document}
